@@ -146,7 +146,7 @@
     </verbProperties>
     <comps>
       <li Class = "CompProperties_AbilityGiveMentalState">
-        <compClass>CompAbilityEffect_GiveMentalState</compClass>
+        <compClass>Nephila.CompAbilityEffect_NephilaLust</compClass>
         <stateDef>Wander_Psychotic</stateDef>
         <psychic>True</psychic>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>

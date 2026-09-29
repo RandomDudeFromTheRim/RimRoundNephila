@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using RimWorld;
 using Verse;
@@ -38,8 +38,5 @@ namespace Nephila
         public bool firstResourceName;
 
         public string nephilaMilkProgessKeyString = "NephilaResourceProgress";
-
-        /// <summary>RimRound weight each gathered item takes off her.</summary>
-        public float kilosShedPerGather = 3f;
     }
 }

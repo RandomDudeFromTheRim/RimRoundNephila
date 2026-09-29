@@ -1,4 +1,3 @@
-using RimRound.Utilities;
 using RimWorld;
 using Verse;
 
@@ -15,7 +14,6 @@ namespace Nephila
     {
         const int CheckInterval = 300;
         const float SwellPerDose = 0.35f;
-        const float KilosPerDose = 6f;
 
         bool triggered;
 
@@ -36,7 +34,6 @@ namespace Nephila
             triggered = true;
             Severity = 1f;
             Swell(pawn, SwellPerDose);
-            RimRound.Utilities.HediffUtility.QueueWeightGain(pawn, KilosPerDose);
             Messages.Message("Nephila_BreastsSizeIncrease".Translate(pawn.LabelShort), pawn, MessageTypeDefOf.SilentInput, historical: false);
         }
 

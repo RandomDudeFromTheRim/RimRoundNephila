@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Loaded only with Vanilla Psycasts Expanded. The nephilim psy amp was a second psylink on the
+	brain; VPE hangs its whole psycast implant off every psylink it sees, so the amp would give
+	her a second, separate set of psycasts. Under VPE it is a plain levelled implant: its stat
+	tiers stay, and it opens the Nephilim path (PsycasterPathDef_Nephilim) instead.
+-->
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName="Nephila_PsyAmp"]/hediffClass</xpath>
+		<value>
+			<hediffClass>Hediff_Level</hediffClass>
+		</value>
+	</Operation>
+</Patch>

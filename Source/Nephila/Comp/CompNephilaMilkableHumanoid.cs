@@ -1,4 +1,3 @@
-using RimRound.Utilities;
 using RimWorld;
 using Verse;
 
@@ -6,7 +5,7 @@ namespace Nephila
 {
     /// <summary>
     /// A Nephila's clutch: cherubim cores gestate in her and are gathered once ready (by
-    /// herself or a colonist), shedding some of her weight with them. Only grown Nephila
+    /// herself or a colonist); a caste carries the clutch as mass until then (CompNephilaMass). Only grown Nephila
     /// gestate, and not while starving.
     /// </summary>
     public class CompNephilaMilkableHumanoid : ThingComp
@@ -66,9 +65,6 @@ namespace Nephila
                 if (MilkProps.milkThoughtMilked != null)
                     p.needs?.mood?.thoughts.memories.TryGainMemory(MilkProps.milkThoughtMilked, milker);
             }
-            // the clutch leaves her lighter
-            if (MilkProps.kilosShedPerGather > 0f)
-                RimRound.Utilities.HediffUtility.QueueWeightGain(p, -MilkProps.kilosShedPerGather * MilkProps.milkAmount);
             milkProgress = 0;
             return thing;
         }

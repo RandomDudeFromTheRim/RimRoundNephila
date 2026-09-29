@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using RimRound.Utilities;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -12,11 +11,12 @@ namespace Nephila
     /// caste. The nanites rebuild the body, so this makes a new pawn of the new race, but
     /// the person carries over: name, age, skills and passions, traits, backstory,
     /// ideoligion, relations, faction and guest status, work settings, looks, and her
-    /// RimRound weight. Whatever the new body can't wear is dropped where she stood.
+    /// weight: a caste keeps what she weighed and grows into its own mass over the days
+    /// (CompNephilaMass); a RimRound pawn takes it as RimRound weight. Whatever the new body can't wear is dropped where she stood.
     /// </summary>
     public static class NephilaTransformUtility
     {
-        public static Pawn Transform(Pawn old, PawnKindDef kind, RoyalTitleDef title, string letterLabelKey, string letterTextKey, float extraKilos = 0f)
+        public static Pawn Transform(Pawn old, PawnKindDef kind, RoyalTitleDef title, string letterLabelKey, string letterTextKey)
         {
             if (old == null || kind == null || !old.Spawned)
                 return null;
@@ -43,7 +43,7 @@ namespace Nephila
             old.equipment?.DropAllEquipment(cell, forbid: false);
             old.apparel?.DropAll(cell, forbid: false);
 
-            float weightSeverity = old.WeightHediff()?.Severity ?? -1f;
+            float kilos = KilosOf(old);
 
             MoveRelations(old, fresh);
             if (old.IsPrisonerOfColony)
@@ -54,10 +54,14 @@ namespace Nephila
             old.Destroy(DestroyMode.Vanish);
             GenSpawn.Spawn(fresh, cell, map, WipeMode.Vanish);
 
-            if (weightSeverity >= 0f)
-                RimRound.Utilities.HediffUtility.SetHediffSeverity(RimRound.Defs.HediffDefOf.RimRound_Weight, fresh, weightSeverity);
-            if (extraKilos != 0f)
-                RimRound.Utilities.HediffUtility.QueueWeightGain(fresh, extraKilos);
+            if (kilos > 0f)
+            {
+                if (fresh.TryGetComp<CompNephilaMass>() is CompNephilaMass mass)
+                    mass.SetFlesh(kilos);
+                else if (fresh.TryGetComp<RimRound.Comps.FullnessAndDietStats_ThingComp>() != null)
+                    RimRound.Utilities.HediffUtility.SetHediffSeverity(RimRound.Defs.HediffDefOf.RimRound_Weight, fresh,
+                        RimRound.Utilities.HediffUtility.KilosToSeverityWithBaseWeight(kilos));
+            }
 
             if (title != null && ModsConfig.RoyaltyActive && fresh.royalty != null && NephilaUtility.NephilaFaction is Faction nephila)
                 fresh.royalty.SetTitle(nephila, title, grantRewards: true, rewardsOnlyForNewestTitle: false, sendLetter: false);
@@ -70,6 +74,16 @@ namespace Nephila
                     letterTextKey.Translate(fresh.Name?.ToStringFull ?? fresh.LabelShort),
                     LetterDefOf.PositiveEvent, new LookTargets(fresh));
             return fresh;
+        }
+
+        /// <summary>What she weighs now: a caste's mass, or RimRound weight; 0 if neither.</summary>
+        static float KilosOf(Pawn p)
+        {
+            if (p.TryGetComp<CompNephilaMass>() is CompNephilaMass mass)
+                return mass.Kilos;
+            if (RimRound.Utilities.HediffUtility.WeightHediff(p) is Hediff weight)
+                return RimRound.Utilities.HediffUtility.SeverityToKilosWithBaseWeight(weight.Severity);
+            return 0f;
         }
 
         static void CarryOverPerson(Pawn old, Pawn fresh)

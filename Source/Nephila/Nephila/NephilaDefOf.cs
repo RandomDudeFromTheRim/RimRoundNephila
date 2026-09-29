@@ -27,6 +27,7 @@ namespace Nephila
         public static HediffDef NephilaMechaniteInhibitor;
         public static HediffDef NephilaInitialTransformationFromAnimal;
         public static HediffDef NephilaSwollenBreasts;
+        public static HediffDef NephilaMass;
 
         public static ThingDef Nephila;
         public static ThingDef NephilaHandmaiden;

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Loaded only with Vanilla Psycasts Expanded. VPE throws out the vanilla psycast system and
+	its psytrainers, so the Nephilim psycasts become a VPE path of their own. They follow VPE's
+	naming (VPE_<vanilla defName>): VPE's back-compatibility turns a missing Psytrainer_<name>
+	into Psytrainer_VPE_<name>, so the Nephila's psytrainer recipes and quest rewards find them.
+-->
+<Defs>
+
+	<Nephila.VPE.PsycasterPathDef_Nephilim>
+		<defName>Nephila_Nephilim</defName>
+		<label>nephilim</label>
+		<description>Nephilim psycasts are carried by the Nephila's mechanites: swelling bodies, stirring lust, and turning others into servants of the brood.</description>
+		<background>UI/Backgrounds/HarmonistPath</background>
+		<altBackground>UI/AlternativeBackgrounds/PathBG_Harmonist</altBackground>
+		<tab>Psycasts</tab>
+		<tooltip>The Nephilim developed these powers alongside their mechanites, and the mechanites are what carry them. Only a Nephila, or someone fitted with a nephilim psy amp, can walk this path.</tooltip>
+		<lockedReason>Nephila and nephilim psy amp bearers only</lockedReason>
+	</Nephila.VPE.PsycasterPathDef_Nephilim>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_LactationInduction</defName>
+		<label>induce lactation</label>
+		<description>Psionic power originally developed by the Nephilim. Alter a pawn's biology so that their breasts slowly swell and lactate. Only takes hold in grown bodies.</description>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<castTime>15</castTime>
+		<range>24.9</range>
+		<targetingParameters>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetAnimals>False</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>Nephila_Nephilim</path>
+				<level>1</level>
+				<order>1</order>
+				<psyfocusCost>0.02</psyfocusCost>
+				<entropyGain>8</entropyGain>
+				<psychic>true</psychic>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>NephilaInducedLactation</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Nephila_CallofLust</defName>
+		<label>nephilim call of lust</label>
+		<description>Psionic power originally developed by the Nephilim. Infest a grown pawn with psionically enhanced nephilim mechanites, driving them to a lust-induced psychotic wander. Lasts 15 seconds, affected by psychic sensitivity.</description>
+		<iconPath>UI/Abilities/Berserk</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<castTime>15</castTime>
+		<durationTime>900</durationTime>
+		<range>19.9</range>
+		<goodwillImpact>-75</goodwillImpact>
+		<targetingParameters>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetAnimals>True</canTargetAnimals>
+			<neverTargetIncapacitated>True</neverTargetIncapacitated>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>Nephila_Nephilim</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.04</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				<psychic>true</psychic>
+				<prerequisites>
+					<li>VPE_LactationInduction</li>
+				</prerequisites>
+			</li>
+			<li Class="Nephila.VPE.AbilityExtension_NephilaLust">
+				<stateDef>Wander_Psychotic</stateDef>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<durationScalesWithCaster>false</durationScalesWithCaster>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Nephila_SnekBomb</defName>
+		<label>serpent pulse</label>
+		<description>Psionic power originally designed by the Nephila. Infest everyone in a small area with nephilim serpent sickness, causing them to rapidly transform into friendly Nephila cherubim.</description>
+		<iconPath>UI/Abilities/AnimalBerserkPulse</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<castTime>60</castTime>
+		<range>34.9</range>
+		<radius>6</radius>
+		<hasAoE>true</hasAoE>
+		<targetMode>Location</targetMode>
+		<fleckOnTarget>PsycastAreaEffect</fleckOnTarget>
+		<fleckOnTargetScaleWithRadius>true</fleckOnTargetScaleWithRadius>
+		<goodwillImpact>-75</goodwillImpact>
+		<targetingParametersForAoE>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetAnimals>False</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParametersForAoE>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>Nephila_Nephilim</path>
+				<level>5</level>
+				<order>1</order>
+				<psyfocusCost>0.04</psyfocusCost>
+				<entropyGain>50</entropyGain>
+				<psychic>true</psychic>
+				<prerequisites>
+					<li>VPE_Nephila_CallofLust</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>NephilaSnekBombTransformation</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+</Defs>

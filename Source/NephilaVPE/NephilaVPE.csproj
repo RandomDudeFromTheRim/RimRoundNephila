@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Vanilla Psycasts Expanded support, loaded only with VPE (1.6/Mods/VPE). Build with Source/build.sh. -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>NephilaVPE</AssemblyName>
+    <RootNamespace>Nephila.VPE</RootNamespace>
+    <LangVersion>9.0</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DebugType>none</DebugType>
+    <OutputPath>../../1.6/Mods/VPE/Assemblies/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
+    <RimWorld>..\..\..\..</RimWorld>
+    <Managed>$(RimWorld)\RimWorldWin64_Data\Managed</Managed>
+    <Workshop>$(RimWorld)\..\..\workshop\content\294100</Workshop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(Managed)\Assembly-CSharp.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(Managed)\UnityEngine.CoreModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="mscorlib"><HintPath>$(Managed)\mscorlib.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><HintPath>$(Managed)\System.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System.Core"><HintPath>$(Managed)\System.Core.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="netstandard"><HintPath>$(Managed)\netstandard.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Nephila"><HintPath>..\..\1.6\Assemblies\Nephila.dll</HintPath><Private>False</Private></Reference>
+    <!-- Vanilla Psycasts Expanded and the Vanilla Expanded Framework (Workshop) -->
+    <Reference Include="VanillaPsycastsExpanded"><HintPath>$(Workshop)\2842502659\1.6\Assemblies\VanillaPsycastsExpanded.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="VEF"><HintPath>$(Workshop)\2023507013\1.6\Assemblies\VEF.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+</Project>

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- RimRound's weight system on the Nephila -->
+<!-- The castes eat like anyone else and carry their own mass (CompNephilaMass);
+     the human-equivalent race is drawn like a human and gets RimRound's whole weight system. -->
 <Patch>
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/comps</xpath>
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>140</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>140</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -25,16 +24,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>140</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>140</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -44,16 +41,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>315</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>315</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -63,16 +58,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>315</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>315</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -82,16 +75,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>880</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>880</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -101,16 +92,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>880</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>880</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -120,16 +109,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>1900</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>1900</kilos></li>
 				</comps>
 			</value>
 		</nomatch>
@@ -139,16 +126,14 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]/comps</xpath>
 			<value>
-				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li Class="Nephila.CompProperties_NephilaMass"><kilos>400</kilos></li>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]</xpath>
 			<value>
 				<comps>
-					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
-					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li Class="Nephila.CompProperties_NephilaMass"><kilos>400</kilos></li>
 				</comps>
 			</value>
 		</nomatch>

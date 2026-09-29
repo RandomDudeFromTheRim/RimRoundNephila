@@ -158,10 +158,8 @@
 						<li>Female_AverageNormal</li>
 					</headTypes>
 					<bodyTypes Inherit="False">
+						<!-- one body: the caste's art is drawn for it (and RimRound picks Naked_<bodyType> from the body folder) -->
 						<li>Female</li>
-						<li>Thin</li>
-						<li>Fat</li>
-						<li>Hulk</li>
 					</bodyTypes>
 					<bodyAddons>
 					</bodyAddons>
@@ -180,6 +178,7 @@
 					</extendedGraphics>
 				</head>
 				<body>
+					<path>Things/NephilaHandmaidens/Body/Naked_Female</path>
 					<extendedGraphics>
 						<Age For="HumanlikeBaby">Things/NephilaHandmaidens/Body/Naked_Female</Age>
 						<Age For="HumanlikeChild">Things/NephilaHandmaidens/Body/Naked_Female</Age>
@@ -372,6 +371,13 @@
 				</li>
 				<li Class="AlienRace.LifeStageAgeAlien">
 					<def>HumanlikeAdult</def>
+					<!-- drawn against RimRound's bodies of the same bulk (~315 kg); the head rises with her -->
+					<customDrawSize>(1.75, 1.75)</customDrawSize>
+					<customPortraitDrawSize>(1.75, 1.75)</customPortraitDrawSize>
+					<customHeadDrawSize>(1.3, 1.3)</customHeadDrawSize>
+					<customPortraitHeadDrawSize>(1.3, 1.3)</customPortraitHeadDrawSize>
+					<headOffset>(0.075, 0.138)</headOffset>
+					<headFemaleOffset>(0.075, 0.138)</headFemaleOffset>
 					<minAge>18</minAge>
 				</li>
 			</lifeStageAges>

@@ -1,30 +1,14 @@
-using RimRound.Utilities;
 using RimWorld;
 using Verse;
 
 namespace Nephila
 {
     /// <summary>
-    /// Brood weight: while a Nephila brood swells it adds to RimRound's weight, and a hediff
-    /// with this extension adds kilosPerDay at full severity (less while it is young).
-    /// </summary>
-    public class NephilaBroodExtension : DefModExtension
-    {
-        public float kilosPerDay;
-        /// <summary>Kilos added all at once when the brood completes and she changes caste.</summary>
-        public float kilosOnCompletion;
-    }
-
-    /// <summary>
-    /// A swelling brood: adds RimRound weight as it grows (NephilaBroodExtension), scaled by
-    /// how far along it is. The matron's own brood is just this; the others change caste.
+    /// A swelling brood. Its mass (NephilaMassExtension) weighs on her by how far along it is
+    /// (CompNephilaMass). The grand matron's own brood is just this; the others change caste.
     /// </summary>
     public class HediffWithComps_NephilaBrood : HediffWithComps
     {
-        const int WeightInterval = 2500;
-
-        protected NephilaBroodExtension Brood => def.GetModExtension<NephilaBroodExtension>();
-
         /// <summary>0 when it starts, 1 at its last stage.</summary>
         public float Progress
         {
@@ -33,13 +17,6 @@ namespace Nephila
                 float full = def.stages != null && def.stages.Count > 1 ? def.stages[def.stages.Count - 1].minSeverity : def.maxSeverity;
                 return full <= 0f || full > 1e6f ? 0f : UnityEngine.Mathf.Clamp01(Severity / full);
             }
-        }
-
-        public override void TickInterval(int delta)
-        {
-            base.TickInterval(delta);
-            if (pawn != null && pawn.Spawned && Brood is NephilaBroodExtension brood && brood.kilosPerDay > 0f && pawn.IsHashIntervalTick(WeightInterval, delta))
-                RimRound.Utilities.HediffUtility.QueueWeightGain(pawn, brood.kilosPerDay * Progress * WeightInterval / GenDate.TicksPerDay);
         }
     }
 
@@ -68,11 +45,9 @@ namespace Nephila
             }
         }
 
-        protected float CompletionKilos => Brood?.kilosOnCompletion ?? 0f;
-
         protected Pawn Become(string kindDefName, RoyalTitleDef title, string letterKey) =>
             NephilaTransformUtility.Transform(pawn, DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName), title,
-                letterKey + "Label", letterKey + "Description", CompletionKilos);
+                letterKey + "Label", letterKey + "Description");
     }
 
     /// <summary>Nephila sickness: a woman's body is taken over and rebuilt as a Nephila.</summary>

@@ -5,3 +5,7 @@ M='C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Man
 dotnet build Nephila.csproj -nologo -v:q -p:Deterministic=false "-p:FrameworkPathOverride=$M" "-p:TargetFrameworkDirectory=$M" 2>&1 \
   | grep -E "error|warning CS" | sed -E 's/ \[[^]]*\]$//' | sort -u
 ls -la ../../1.6/Assemblies/Nephila.dll
+# Vanilla Psycasts Expanded support (needs VPE and the Vanilla Expanded Framework from the Workshop)
+cd ../NephilaVPE
+dotnet build NephilaVPE.csproj -nologo -v:q -p:Deterministic=false "-p:FrameworkPathOverride=$M" "-p:TargetFrameworkDirectory=$M" 2>&1 | grep -E "error|warning CS" | sed -E 's/ \[[^]]*\]$//' | sort -u
+ls -la ../../1.6/Mods/VPE/Assemblies/NephilaVPE.dll

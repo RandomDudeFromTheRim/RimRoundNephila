@@ -184,10 +184,8 @@
 						<li>Female_AverageNormal</li>
 					</headTypes>
 					<bodyTypes Inherit="False">
+						<!-- one body: the caste's art is drawn for it (and RimRound picks Naked_<bodyType> from the body folder) -->
 						<li>Female</li>
-						<li>Hulk</li>
-						<li>Thin</li>
-						<li>Fat</li>
 					</bodyTypes>
 					<bodyAddons>
 					</bodyAddons>
@@ -197,15 +195,16 @@
 				<graphicPaths>
 					<head>
 						<extendedGraphics>
-							<Age For="HumanlikeBaby">Things/NephilaGrandMatron/Heads/Female_Average_NephNormal</Age>
-							<Age For="HumanlikeChild">Things/NephilaGrandMatron/Heads/Female_Average_NephNormal</Age>
-							<Age For="HumanlikeTeenager">Things/NephilaGrandMatron/Heads/Female_Average_NephNormal</Age>
+							<Age For="HumanlikeBaby">Things/NephilaGrandMatron/Heads/Blank</Age>
+							<Age For="HumanlikeChild">Things/NephilaGrandMatron/Heads/Blank</Age>
+							<Age For="HumanlikeTeenager">Things/NephilaGrandMatron/Heads/Blank</Age>
 							<Age For="HumanlikeAdult">
-								<path>Things/NephilaGrandMatron/Heads/Female_Average_NephNormal</path>
+								<path>Things/NephilaGrandMatron/Heads/Blank</path>
 							</Age>
 						</extendedGraphics>
 					</head>
 					<body>
+						<path>Things/NephilaGrandMatron/Body/Naked_Female</path>
 						<extendedGraphics>
 							<Age For="HumanlikeBaby">Things/NephilaGrandMatron/Body/Naked_Female</Age>
 							<Age For="HumanlikeChild">Things/NephilaGrandMatron/Body/Naked_Female</Age>
@@ -377,6 +376,13 @@
 				</li>
 				<li Class="AlienRace.LifeStageAgeAlien">
 					<def>HumanlikeAdult</def>
+					<!-- drawn against RimRound's bodies of the same bulk (~1900 kg); the head rises with her -->
+					<customDrawSize>(4.5, 4.5)</customDrawSize>
+					<customPortraitDrawSize>(4.5, 4.5)</customPortraitDrawSize>
+					<customHeadDrawSize>(4.5, 4.5)</customHeadDrawSize>
+					<customPortraitHeadDrawSize>(4.5, 4.5)</customPortraitHeadDrawSize>
+					<headOffset>(0.35, 1.19)</headOffset>
+					<headFemaleOffset>(0.35, 1.19)</headFemaleOffset>
 					<minAge>18</minAge>
 				</li>
 			</lifeStageAges>

@@ -403,9 +403,8 @@
       </li>	  
     </stages>
   	<modExtensions>
-			<li Class="Nephila.NephilaBroodExtension">
-				<kilosPerDay>3</kilosPerDay>
-				<kilosOnCompletion>20</kilosOnCompletion>
+			<li Class="Nephila.NephilaMassExtension">
+				<kilos>90</kilos>
 			</li>
 		</modExtensions>
 	</HediffDef>
@@ -515,9 +514,8 @@
       </li>	  
     </stages>
   	<modExtensions>
-			<li Class="Nephila.NephilaBroodExtension">
-				<kilosPerDay>4</kilosPerDay>
-				<kilosOnCompletion>35</kilosOnCompletion>
+			<li Class="Nephila.NephilaMassExtension">
+				<kilos>250</kilos>
 			</li>
 		</modExtensions>
 	</HediffDef>
@@ -627,9 +625,8 @@
       </li>	  
     </stages>
   	<modExtensions>
-			<li Class="Nephila.NephilaBroodExtension">
-				<kilosPerDay>5</kilosPerDay>
-				<kilosOnCompletion>0</kilosOnCompletion>
+			<li Class="Nephila.NephilaMassExtension">
+				<kilos>450</kilos>
 			</li>
 		</modExtensions>
 	</HediffDef>  
@@ -671,9 +668,8 @@
 		</li>	 
 	</stages>
   	<modExtensions>
-			<li Class="Nephila.NephilaBroodExtension">
-				<kilosPerDay>6</kilosPerDay>
-				<kilosOnCompletion>0</kilosOnCompletion>
+			<li Class="Nephila.NephilaMassExtension">
+				<kilos>700</kilos>
 			</li>
 		</modExtensions>
 	</HediffDef>  
@@ -1261,6 +1257,72 @@
 						<capacity>Moving</capacity>
 						<offset>-0.04</offset>
 					</li>
+				</capMods>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="Nephila.NephilaMassExtension">
+				<massShare>0.02</massShare>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+	<!-- A caste's mass (CompNephilaMass). Severity is kilos; the stages go by her mass against
+	     what her caste settles at, so minSeverity here is that share. -->
+	<HediffDef>
+		<defName>NephilaMass</defName>
+		<hediffClass>Nephila.Hediff_NephilaMass</hediffClass>
+		<label>mass</label>
+		<description>How much of her there is. A Nephila's gel settles at her caste's mass over the days - a new handmaiden fills out into her body, a starving one wastes away - and her broods, clutch and swollen breasts weigh on top of it.</description>
+		<defaultLabelColor>(0.75, 0.85, 1)</defaultLabelColor>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>100</initialSeverity>
+		<minSeverity>1</minSeverity>
+		<maxSeverity>100000</maxSeverity>
+		<stages>
+			<li>
+				<label>wasting</label>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<capMods>
+					<li><capacity>Moving</capacity><offset>-0.08</offset></li>
+					<li><capacity>Consciousness</capacity><offset>-0.05</offset></li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.75</minSeverity>
+				<label>thinned</label>
+				<capMods>
+					<li><capacity>Moving</capacity><offset>-0.03</offset></li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.92</minSeverity>
+				<label>settled</label>
+			</li>
+			<li>
+				<minSeverity>1.12</minSeverity>
+				<label>swelling</label>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<capMods>
+					<li><capacity>Moving</capacity><offset>-0.03</offset></li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.35</minSeverity>
+				<label>brimming</label>
+				<hungerRateFactor>1.2</hungerRateFactor>
+				<capMods>
+					<li><capacity>Moving</capacity><offset>-0.07</offset></li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.7</minSeverity>
+				<label>overflowing</label>
+				<hungerRateFactor>1.35</hungerRateFactor>
+				<capMods>
+					<li><capacity>Moving</capacity><offset>-0.12</offset></li>
 				</capMods>
 			</li>
 		</stages>

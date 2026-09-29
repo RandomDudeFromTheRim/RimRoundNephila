@@ -45,4 +45,6 @@
 	<Nephila_SerpentSicknessComplete>{0}'s body has given way to the serpent sickness. What slithers out of it is a cherubim.</Nephila_SerpentSicknessComplete>
 	<Nephila_NephilimBornLabel>Nephilim born</Nephila_NephilimBornLabel>
 	<Nephila_NephilimBornText>In a cataclysmic birth, {0} has come into this world. Following inscrutable programming, she has joined your colony.</Nephila_NephilimBornText>
+	<Nephila_MassTip>Settles at {0} kg; carrying {1} kg on top (broods, clutch, swollen breasts).</Nephila_MassTip>
+	<Nephila_AdultsOnly>{PAWN_labelShort} isn't grown; the call finds nothing to take hold of.</Nephila_AdultsOnly>
 </LanguageData>

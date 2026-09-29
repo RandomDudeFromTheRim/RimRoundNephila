@@ -190,8 +190,8 @@
       </li>		  
     </stages>
   	<modExtensions>
-			<li Class="Nephila.NephilaBroodExtension">
-				<kilosOnCompletion>60</kilosOnCompletion>
+			<li Class="Nephila.NephilaMassExtension">
+				<kilos>450</kilos>
 			</li>
 		</modExtensions>
 	</HediffDef>
