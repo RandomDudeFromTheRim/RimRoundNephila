@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+  <!--<IncidentDef>
+    <defName>Nephila_Clutchmother</defName>
+    <label>nephila clutch mother</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Nephila.IncidentWorker_NephilaClutchMother</workerClass>
+    <category>Misc</category>
+    <pointsScaleable>true</pointsScaleable>
+   	<earliestDay>0</earliestDay>
+    <gameCondition>NephiliticFog</gameCondition>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>0.12</baseChance>
+    <minRefireDays>90</minRefireDays>
+    <minDifficulty>2</minDifficulty>
+    <durationDays>2.5~7.5</durationDays>
+    <tale>NephiliticFog</tale>
+  </IncidentDef>-->
+
+<IncidentDef>
+    <defName>Nephila_Clutchmother</defName>
+    <label>nephilitic fog</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <category>Misc</category>
+    <pointsScaleable>true</pointsScaleable>
+   	<earliestDay>0</earliestDay>
+    <gameCondition>NephiliticFogCondition</gameCondition>
+    <letterDef>ThreatSmall</letterDef>
+	<letterLabel>nephilitic fog</letterLabel>
+	<letterText>It starts with a strange wind, kicking up white dust from some distant land. The dust sticks to the lungs and fills the air with a faint, sickly sweet smell. As the dust storm becomes intense enough to make it difficult to see, a large, snakelike creature emerges. It's abdomen is bulbous and swollen and it's clear that it is soon to give birth. The storm will pass within a week, but the serpent seems to be looking to nest. Deal with it swiftly or prepare for the worst.</letterText>	
+    <baseChance>0.12</baseChance>
+    <minRefireDays>90</minRefireDays>
+    <minDifficulty>2</minDifficulty>
+    <!--<durationDays>2.5~7.5</durationDays>-->
+    <durationDays>1.5~5.0</durationDays>	
+    <tale>NephiliticFog</tale>
+  </IncidentDef>
+
+</Defs>

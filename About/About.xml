@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RimRound: Nephila</name>
+	<author>RandomDudeFromTheRim (port); HPregAnon, BiasNil (original)</author>
+	<packageId>RandomDudeFromTheRim.RimRound.Nephila</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<description>The Nephila: gelatinous nanite-infested slime women caught in an endless cycle of swelling broods, rebuilt for RimWorld 1.6 as a companion to RimRound.
+
+A ground-up port of HPregAnon's Nephila HPreg Mod (and BiasNil's later update): the race and its castes (maidens, handmaidens, matrons, grand matrons, queen's guard), the cherubim eggs, the Nephilitic fog and Eden biome, their faction, titles and gear.
+
+What changed in the port:
+- No RimJobWorld. Reproductive organs come from Intimacy - Gender Works (with a few Nephila organs of its own), lactation from Lactation Expansion (or vanilla lactation without it).
+- Brood swelling feeds RimRound's weight system, and Nephila use RimRound's bodies as they grow.
+- Transformations, swelling and milking only ever touch adults (by life stage, so androids and other fast-maturing races count properly).
+- The code is rewritten: no per-tick mod-list scans, no errors from missing optional mods, transformed pawns keep their skills, traits, ideology and relations.
+
+Original mod by HPregAnon; 1.3-1.5 update by BiasNil.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>erdelf.HumanoidAlienRaces</packageId>
+			<displayName>Humanoid Alien Races</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>Niwatori401.RimRound</packageId>
+			<displayName>RimRound</displayName>
+			<downloadUrl>https://github.com/RandomDudeFromTheRim/RimRound</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>erdelf.HumanoidAlienRaces</li>
+		<li>Niwatori401.RimRound</li>
+		<li>lovelydovey.sex.witheuterpe</li>
+		<li>lovelydovey.sex.withrosaline</li>
+		<li>euterpe.milkytitfuck</li>
+	</loadAfter>
+</ModMetaData>

@@ -1,0 +1,2885 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+			<!--=====Adulthood=====-->
+
+<!-- Generic -->
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Musician</defName>
+    <title>Musician</title>
+    <titleShort>Musician</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a musician, playing soothing tunes for the ascended matron of her homeworld as she engaged in perpetual birth.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+	<skillGains>
+		<Artistic>6</Artistic>
+		<Social>2</Social>
+	</skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Musician</defName>
+    <title>Musician</title>
+    <titleShort>Musician</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a musician, playing soothing tunes for the ascended matron of her homeworld as she engaged in perpetual birth.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+		<Artistic>6</Artistic>
+		<Social>2</Social>
+    </skillGains>
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>
+	  <li>NephilaHandmaiden2_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Stylist</defName>
+    <title>Stylist</title>
+    <titleShort>Stylist</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a beautician for the burgeoning aristocracy of an up-and-coming frontier world as it was absorbed by the Nephilim. She was adept at chatting with clients, carefully trimming hair, and recommending the newest in weight supportive fashions to her ever-growing clients.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Artistic>2</Artistic>
+      <Social>6</Social>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Hive</defName>
+    <title>Hive Worker</title>
+    <titleShort>H-worker</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers living in a planet sized womb world--a planet subsumed by the nephila and under the process of being converted into the bulk of a single, planet-encompassing Nephilim entity. She worked in a massive production facility, overseeing the hulking worker drones serving as the architects of the world's evolution.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Crafting>2</Crafting>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>
+	  <li>NephilaHandmaiden2_Backstory</li>
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_Socialite</defName>
+    <title>Pampered Socialite</title>
+    <titleShort>Pampered</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being the favored daughter of a prominent glitterworld diplomat and their Nephila wife. She spent her young adulthood exploring every form of hedonism available to that world.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>5</Social>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li MayRequire="lovelydovey.sex.witheuterpe">
+                        <defName>SEX_Affectionate</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+    </forcedTraitsChance>	
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  
+      <li>Nephila2_Backstory</li> 
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden_Socialite</defName>
+    <title>Pampered Socialite</title>
+    <titleShort>Pampered</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being the favored daughter of a prominent glitterworld diplomat and their Nephila wife. She spent her young adulthood exploring every form of hedonism available to that world.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>5</Social>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li MayRequire="lovelydovey.sex.witheuterpe">
+                        <defName>SEX_Affectionate</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+                        <defName Degree ="1">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+    </forcedTraitsChance>	
+	<spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  
+	  <li>NephilaHandmaiden2_Backstory</li>
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaMatron_Socialite</defName>
+    <title>Pampered Socialite</title>
+    <titleShort>Pampered</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being the favored daughter of a prominent glitterworld diplomat and their Nephila wife. She spent her young adulthood exploring every form of hedonism available to that world.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>5</Social>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li MayRequire="lovelydovey.sex.witheuterpe">
+                        <defName>SEX_Affectionate</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+    </forcedTraitsChance>	
+	<spawnCategories>
+	  <li>NephilaMatron_Backstory</li>  
+	  <li>NephilaMatron2_Backstory</li>  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaGrandMatron_Ascended</defName>
+    <title>Nephilim Ascended</title>
+    <titleShort>Pampered</titleShort>
+    <baseDesc>{PAWN_nameDef} is an ascended of the nephilim: a Grand Matron. What little of her previous life she could remember, if she chose, she doesn't bother to. Her personality has long been subsumed, lost in a haze of gorging, fucking, and basking in the adoring praise of the proles who have fallen under the influence of her Mind Warmth.</baseDesc>
+    <bodyTypeMale>Female</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>10</Social>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li MayRequire="lovelydovey.sex.witheuterpe">
+                        <defName>SEX_Affectionate</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+    </forcedTraitsChance>	
+	<spawnCategories>
+	  <li>NephilaGrandMatron_Backstory</li>  
+	  <li>NephilaGrandMatron2_Backstory</li>  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_Constructor</defName>
+    <title>Construction worker</title>
+    <titleShort>Constructor</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers enjoying her work, engaging in the construction of large structures both in space and on solid ground as a constructor-mech pilot. While she didn't plan the buildings themselves, she took pride in her work.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Construction>5</Construction>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_SEngineer</defName>
+    <title>mech engineer</title>
+    <titleShort>Engineer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers working hard, day in, and day out, studying and fixing mechs for the Nephilim navy and Constructor Corps. She earned a reputation for being able to fix anything that was carried into her workshop, garnering much acclaim.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+	  <Crafting>6</Crafting>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>
+	  <li>NephilaQueensGuard_Backstory</li>	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden_SEngineer</defName>
+    <title>mech engineer</title>
+    <titleShort>Engineer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers working hard, day in, and day out, studying and fixing mechs for the Nephilim navy and Constructor Corps. She earned a reputation for being able to fix anything that was carried into her workshop, garnering much acclaim.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+	  <Crafting>6</Crafting>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  
+	  <li>NephilaHandmaiden2_Backstory</li>  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_FR</defName>
+    <title>First Responder</title>
+    <titleShort>Paramedic</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers frequently tending to minor workplace accidents, providing first-response care and first-aid to small injuries. While she scarcely had to deal with major accidents, her work taught her much about patching wounds.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>3</Medicine>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  
+      <li>Nephila2_Backstory</li> 
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden_FR</defName>
+    <title>First Responder</title>
+    <titleShort>Paramedic</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers frequently tending to minor workplace accidents, providing first-response care and first-aid to small injuries. While she scarcely had to deal with major accidents, her work taught her much about patching wounds.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>3</Medicine>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  
+	  <li>NephilaHandmaiden2_Backstory</li>  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaMatron_FR</defName>
+    <title>First Responder</title>
+    <titleShort>Paramedic</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers frequently tending to minor workplace accidents, providing first-response care and first-aid to small injuries. While she scarcely had to deal with major accidents, her work taught her much about patching wounds.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>3</Medicine>
+    </skillGains>
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+	  <li>NephilaMatron2_Backstory</li>	 
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+	
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_EcumenopolisS</defName>
+    <title>Ecumenopolis Scientist</title>
+    <titleShort>H-scientist</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers living in one of the densely populated womb worlds of the Nephilim. She worked in a massive science center with thousands of other intellectuals.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>
+    </spawnCategories>	
+	</AlienRace.AlienBackstoryDef>	
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Miner</defName>
+    <title>Resource-procurement Specialist</title>
+    <titleShort>RPS</titleShort>
+    <baseDesc>Resources are critical for expansion, and {PAWN_nameDef} remembers being one of many in charge of gathering them. She would go to deposits, program the constructor mechs to set up equipment, and do what was necessary to extract all valuable resources.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+	 <Construction>3</Construction>
+     <Intellectual>3</Intellectual>	  
+    </skillGains>
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Miner</defName>
+    <title>Resource-procurement Specialist</title>
+    <titleShort>RPS</titleShort>
+    <baseDesc>Resources are critical for expansion, and {PAWN_nameDef} remembers being one of many in charge of gathering them. She would go to deposits, program the constructor mechs to set up equipment, and do what was necessary to extract all valuable resources.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+	 <Construction>3</Construction>
+     <Intellectual>3</Intellectual>	  
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li> 	  
+	  <li>NephilaMatron2_Backstory</li> 
+    </spawnCategories>		
+</AlienRace.AlienBackstoryDef>	
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Explorer</defName>
+    <title>Exploration officer</title>
+    <titleShort>Explorer</titleShort>
+    <baseDesc>Exploration is always needed, be it across the surface of a planet, down in the depths of the ocean, or up in the darkest reaches of space, and {PAWN_nameDef} remembers being one who was out there searching. She searched, charted, logged, and explored every form of reproduction and fertility she could find, investigating new opportunities for her species.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>1</Melee>
+	        <Shooting>1</Shooting>
+	        <Artistic>1</Artistic>
+	        <Intellectual>1</Intellectual>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>	  
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Explorer</defName>
+    <title>Exploration officer</title>
+    <titleShort>Explorer</titleShort>
+    <baseDesc>Exploration is always needed, be it across the surface of a planet, down in the depths of the ocean, or up in the darkest reaches of space, and {PAWN_nameDef} remembers being one who was out there searching. She searched, charted, logged, and explored every form of reproduction and fertility she could find, investigating new opportunities for her species.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>1</Melee>
+	        <Shooting>1</Shooting>
+	        <Artistic>1</Artistic>
+	        <Intellectual>1</Intellectual>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  	  
+	  <li>NephilaHandmaiden2_Backstory</li>  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Explorer</defName>
+    <title>Exploration officer</title>
+    <titleShort>Explorer</titleShort>
+    <baseDesc>Exploration is always needed, be it across the surface of a planet, down in the depths of the ocean, or up in the darkest reaches of space, and {PAWN_nameDef} remembers being one who was out there searching. She searched, charted, logged, and explored every form of reproduction and fertility she could find, investigating new opportunities for her species.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>1</Melee>
+	        <Shooting>1</Shooting>
+	        <Artistic>1</Artistic>
+	        <Intellectual>1</Intellectual>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>  	  
+	  <li>NephilaMatron2_Backstory</li>  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+					    
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Pirate_Queen</defName>
+    <title>Pirate Queen</title>
+    <titleShort>Pirate</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers using her unusual social and physical appeal to entice a group of space pirates into her service. Establishing herself as the queen of her small section of space, she greedily devoured all the resources that her lackeys brought to her, growing to an enormous size.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+	        <Shooting>4</Shooting>
+	        <Social>-2</Social>
+	        <Intellectual>-2</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+                        <defName>Gourmand</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>25</chance>
+                    </li>					
+    </forcedTraitsChance>			
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Pirate_Queen</defName>
+    <title>Pirate Queen</title>
+    <titleShort>Pirate</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers using her unusual social and physical appeal to entice a group of space pirates into her service. Establishing herself as the queen of her small section of space, she greedily devoured all the resources that her lackeys brought to her, growing to an enormous size.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+	        <Shooting>4</Shooting>
+	        <Social>-2</Social>
+	        <Intellectual>-2</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+                        <defName>Gourmand</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>25</chance>
+                    </li>					
+    </forcedTraitsChance>	 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+	  <li>NephilaMatron2_Backstory</li>	
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Cultist</defName>
+    <title>Cultist</title>
+    <titleShort>Cultist</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers serving in an underground cult on a far away glitterworld. She used her unusual physical charms to pave the way for the planet's eventual subsuming into the Nephilim biomass.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+	        <Shooting>2</Shooting>
+	        <Social>2</Social>
+	        <Intellectual>-4</Intellectual>
+    </skillGains>
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Cultist</defName>
+    <title>Cultist</title>
+    <titleShort>Cultist</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers serving in an underground cult on a far away glitterworld. She used her unusual physical charms to pave the way for the planet's eventual subsuming into the Nephilim biomass.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+	        <Shooting>2</Shooting>
+	        <Social>2</Social>
+	        <Intellectual>-4</Intellectual>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>	  
+	  <li>NephilaHandmaiden2_Backstory</li>
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Crafter</defName>
+    <title>Weaponsmith</title>
+    <titleShort>Weaponsmith</titleShort>
+    <baseDesc>Any civilization finds themselves eventuially in war, either with themselves, or others. {PAWN_nameDef} remembers being a designer of weapons of war, and she, along with others of her design team, made and improved weapons that have killed many, many people.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Crafting>6</Crafting>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>
+	  <li>NephilaMatron2_Backstory</li>
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Scientist</defName>
+    <title>Scientist</title>
+    <titleShort>Scientist</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a researcher for the Nephilim. She dedicated her life to discovering the unknown.</baseDesc>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+    </skillGains> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+	  <li>NephilaMatron2_Backstory</li>	
+    </spawnCategories>  
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_MadamCurator</defName>
+    <title>Madam Curator</title>
+    <titleShort>Madam</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a madam curator of the Nephilim's xeno-enticement sect. Her job was to travel to worlds controlled by other sentients and entice them into volunteering to serve the sexual and reproductive needs of the Empire's many wanton, and quickly sexually distracted, matrons-in-training.</baseDesc>
+
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Animals>4</Animals>
+      <Social>-2</Social>
+    </skillGains>
+  	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>25</chance>
+                    </li>
+    </forcedTraitsChance> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>
+	  <li>NephilaMatron2_Backstory</li>
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Colonizer</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a lay-member of the Nephilim, dedicated to expanding their influence.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Plants>3</Plants>
+      <Construction>3</Construction>
+	<Cooking>3</Cooking>
+    </skillGains>   
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>
+	  <li>NephilaQueensGuard_Backstory</li>	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Doctor</defName>
+    <title>Doctor</title>
+    <titleShort>Doctor</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers dedicating her life to healing others.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>6</Medicine>
+    </skillGains>   
+    <spawnCategories>
+      <li>Nephila_Backstory</li>	  
+      <li>Nephila2_Backstory</li>
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Doctor</defName>
+    <title>Doctor</title>
+    <titleShort>Doctor</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers dedicating her life to healing others.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>6</Medicine>
+    </skillGains>    
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>   
+	  <li>NephilaHandmaiden2_Backstory</li>  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Doctor</defName>
+    <title>Doctor</title>
+    <titleShort>Doctor</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers dedicating her life to healing others.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>6</Medicine>
+    </skillGains>    
+    <spawnCategories> 
+	  <li>NephilaMatron_Backstory</li>	  
+	  <li>NephilaMatron2_Backstory</li>	
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Ambassador</defName>
+    <title>Ambassador</title>
+    <titleShort>Ambassador</titleShort>
+    <baseDesc>With the generally "xenophilic" opinion the Nephilim hold toward aliens, {PAWN_nameDef} remembers taking pride in her work as a foreign ambassador. She regularly met and kept goodwill with many xeno species.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>8</Social>
+    </skillGains>   	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>
+	  <li>NephilaMatron2_Backstory</li>
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_GrayOfficer</defName>
+    <title>Officer-In-Gray</title>
+    <titleShort>Gray Officer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers leading one of the infamous Squads of Gray, Nephila armed forces that use untameable gray goo nanites to convert whole planets to fuel for the Nephilim's growth.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Shooting>3</Shooting>
+      <Melee>3</Melee>
+     <Construction>2</Construction> 
+    </skillGains>   
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Nurse</defName>
+    <title>Nurse</title>
+    <titleShort>Nurse</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers making a living as a nurse working hospice care in a non-Nephilim influenced glitter world.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Social>3</Social>
+    </skillGains>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  
+      <li>Nephila2_Backstory</li>  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Nurse</defName>
+    <title>Nurse</title>
+    <titleShort>Nurse</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers making a living as a nurse working hospice care in a non-Nephilim influenced glitter world.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Social>3</Social>
+    </skillGains> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  
+	  <li>NephilaHandmaiden2_Backstory</li>  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_NavyCook</defName>
+    <title>Navy cook</title>
+    <titleShort>Cook</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers serving as a chef in a glitter world navy.
+</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Cooking>4</Cooking>
+    </skillGains>    
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  
+      <li>Nephila2_Backstory</li>  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_NavyCook</defName>
+    <title>Navy cook</title>
+    <titleShort>Cook</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers serving as a chef in a glitter world navy.
+</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Cooking>4</Cooking>
+    </skillGains>   	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>   
+	  <li>NephilaHandmaiden2_Backstory</li> 
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Shellshocked</defName>
+    <title>Survivor</title>
+    <titleShort>Survivor</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers serving in the Nephilim military. After serving on an invasion force against a rival army, she was the only survivor in her squad in a failed invasion attempt.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Construction>5</Construction>
+      <Social>-2</Social>
+	</skillGains>   
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Hydro</defName>
+    <title>Hydroponics worker</title>
+    <titleShort>Grower</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers working in a giant hydroponics facility on one of the fully converted womb worlds of the Nephilim. Given the sizes that they reach, Nephila Matrons and Grand Matrons require a great deal of food to survive. As a result, {PAWN_nameDef}'s expertise in planting, food preparation, and maintaining the machinery that kept the facility operational was highly valued. This importance, unfortunately, went to her head.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Plants>5</Plants>
+      <Construction>5</Construction>
+      <Social>-2</Social>	  
+    </skillGains>	
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  	  
+      <li>Nephila2_Backstory</li>  
+    </spawnCategories>        
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Hydro</defName>
+    <title>Hydroponics worker</title>
+    <titleShort>Grower</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers working in a giant hydroponics facility on one of the fully converted womb worlds of the Nephilim. Given the sizes that they reach, Nephila Matrons and Grand Matrons require a great deal of food to survive. As a result, {PAWN_nameDef}'s expertise in planting, food preparation, and maintaining the machinery that kept the facility operational was highly valued. This importance, unfortunately, went to her head.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Plants>5</Plants>
+      <Construction>5</Construction>
+      <Social>-2</Social>	  
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>
+	  <li>NephilaHandmaiden2_Backstory</li>   	  
+    </spawnCategories>        
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_ForgeInGray</defName>
+    <title>Forge-in-gray</title>
+    <titleShort>Forge</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered as a Forge-In-Gray, martially capable nephilim who birth monstrous guardians to flood nearby intractable battlefields.</baseDesc>
+    <bodyTypeMale>Female</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>3</Shooting>
+      <Melee>3</Melee>
+      <Animals>8</Animals>
+    </skillGains>  	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>
+	  <li>NephilaMatron2_Backstory</li>	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Desirer</defName>
+    <title>Transcendent desirer</title>
+    <titleShort>Desirer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers hailing from a Transcended Mother, a Grand Matron of the nephilim whose womb has grown so large that her original planet has been cored out to serve as a cradle for her insanely swollen womb. {PAWN_nameDef} served in one of the many medical contingents dedicated to preserving the motherworld, all the while secretly dreaming of one day transcending herself.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Construction>2</Construction>
+      <Medicine>4</Medicine>
+    </skillGains>
+  	<forcedTraitsChance>
+        <li MayRequire="lovelydovey.sex.witheuterpe">
+            <defName>SEX_Affectionate</defName>
+                <chance>35</chance>
+        </li>
+    </forcedTraitsChance>	
+    <spawnCategories>
+      <li>Nephila_Backstory</li>
+      <li>Nephila2_Backstory</li>	  
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Desirer</defName>
+    <title>Transcendent desirer</title>
+    <titleShort>Desirer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers hailing from a Transcended Mother, a Grand Matron of the nephilim whose womb has grown so large that her original planet has been cored out to serve as a cradle for her insanely swollen womb. {PAWN_nameDef} served in one of the many medical contingents dedicated to preserving the motherworld, all the while secretly dreaming of one day transcending herself.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Construction>2</Construction>
+      <Medicine>4</Medicine>
+    </skillGains>
+  	<forcedTraitsChance>
+        <li MayRequire="lovelydovey.sex.witheuterpe">
+            <defName>SEX_Affectionate</defName>
+                <chance>35</chance>
+        </li>
+    </forcedTraitsChance>	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  	  
+	  <li>NephilaHandmaiden2_Backstory</li>  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Desirer</defName>
+    <title>Transcendent desirer</title>
+    <titleShort>Desirer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers hailing from a Transcended Mother, a Grand Matron of the nephilim whose womb has grown so large that her original planet has been cored out to serve as a cradle for her insanely swollen womb. {PAWN_nameDef} served in one of the many medical contingents dedicated to preserving the motherworld, all the while secretly dreaming of one day transcending herself.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Construction>2</Construction>
+      <Medicine>4</Medicine>
+    </skillGains>
+  	<forcedTraitsChance>
+        <li MayRequire="lovelydovey.sex.witheuterpe">
+            <defName>SEX_Affectionate</defName>
+                <chance>35</chance>
+        </li>
+    </forcedTraitsChance> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li> 	  
+	  <li>NephilaMatron2_Backstory</li> 	
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Stripper</defName>
+    <title>Nephila exotic dancer</title>
+    <titleShort>Dancer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers spending her adulthood working at a glitterworld nightclub, giving shows for wealthy maiesiophiliacs and covertly recruiting support for the Nephilim. Her innovative "belly dances" became famous in the glitter worlds, and she developed a great stock of personal wealth.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>6</Social>
+	  <Artistic>3</Artistic>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance> 
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  
+	  <li>NephilaHandmaiden2_Backstory</li> 
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Stripper</defName>
+    <title>Nephila exotic dancer</title>
+    <titleShort>Dancer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers spending her adulthood working at a glitterworld nightclub, giving shows for wealthy maiesiophiliacs and covertly recruiting support for the Nephilim. Her innovative "belly dances" became famous in the glitter worlds, and she developed a great stock of personal wealth.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>6</Social>
+	  <Artistic>3</Artistic>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+	  <li>NephilaMatron2_Backstory</li>	
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Pornstar</defName>
+    <title>Holovid star</title>
+    <titleShort>Holo-star</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers making a name for herself performing in pregnancy themed holovids.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>2</Social>
+	  <Artistic>2</Artistic>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li MayRequire="lovelydovey.sex.witheuterpe">
+                        <defName>SEX_Affectionate</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>	  
+	  <li>NephilaHandmaiden2_Backstory</li>
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Pornstar</defName>
+    <title>Holovid star</title>
+    <titleShort>Holo-star</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers making a name for herself performing in pregnancy themed holovids.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>2</Social>
+	  <Artistic>2</Artistic>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li MayRequire="lovelydovey.sex.witheuterpe">
+                        <defName>SEX_Affectionate</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+	  <li>NephilaMatron2_Backstory</li>
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+
+			<!--=====Childhood=====-->
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_CapitalChild</defName>
+    <title>matron's child</title>
+    <titleShort>matron-in-training</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on the Nephilim capital planet of Amadit's Garden. She was born to the wealthy matron mother a powerful court established in one of the many low-gravity pleasure palaces orbiting the 'planet's' surface.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>4</Social>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 
+	</forcedHediffs>     
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>
+    </spawnCategories>  
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_GrandMatronChildhood</defName>
+    <title>grand matron childhood</title>
+    <titleShort>grand matron</titleShort>
+    <baseDesc>{PAWN_nameDef} was a child once, long before the nanites found her. She remembers that much and little else: whoever she was then was swallowed up by everything she has become since.</baseDesc>
+    <bodyTypeMale>Female</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>10</Social>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>100</chance>
+                    </li>
+    </forcedTraitsChance>	
+	<forcedHediffs>
+		<li>NephilaGrandMatronFecundity</li>
+ 		
+	</forcedHediffs>     
+    <spawnCategories>
+	  <li>NephilaGrandMatron_Backstory</li>
+    </spawnCategories>  
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+    <spawnCategories>
+      <li>Nephila_Backstory</li> 
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 	
+ 	
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_SpacerChild</defName>
+    <title>Spacer</title>
+    <titleShort>Spacer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a space ship and spending most of her childhood on one ship or another. The close quarters meant that she had to be friendly with her neighbors and had to know how to maintain the ship she was on.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>3</Social>
+      <Construction>3</Construction>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>    
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_SpacerChild</defName>
+    <title>Spacer</title>
+    <titleShort>Spacer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a space ship and spending most of her childhood on one ship or another. The close quarters meant that she had to be friendly with her neighbors and had to know how to maintain the ship she was on.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>3</Social>
+      <Construction>3</Construction>
+    </skillGains>  
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_SpacerChild</defName>
+    <title>Spacer</title>
+    <titleShort>Spacer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a space ship and spending most of her childhood on one ship or another. The close quarters meant that she had to be friendly with her neighbors and had to know how to maintain the ship she was on.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>3</Social>
+      <Construction>3</Construction>
+    </skillGains>    
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 		
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>	
+ 	<forcedTraitsChance>
+                    <li>
+                        <defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>   
+    <spawnCategories>
+      <li>Nephila_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>	
+ 	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>   
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>
+ 	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>
+ 	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Bully</defName>
+    <title>Bully</title>
+    <titleShort>Bully</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully. She enjoyed roughing up the other children, and was very good at avoiding getting caught.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>3</Melee>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>    
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_Bully</defName>
+    <title>Bully</title>
+    <titleShort>Bully</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully. She enjoyed roughing up the other children, and was very good at avoiding getting caught.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>3</Melee>
+    </skillGains>    
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Bully</defName>
+    <title>Bully</title>
+    <titleShort>Bully</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully. She enjoyed roughing up the other children, and was very good at avoiding getting caught.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>3</Melee>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 
+ 		
+	</forcedHediffs>     
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Rbully</defName>
+    <title>Repentant bully</title>
+    <titleShort>Repentant</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully, but then messing with someone who fought back. The experience left her scarred, and She prefers to avoid fighting at all.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>-2</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>	
+ 	<forcedTraitsChance>
+                    <li>
+                        <defName>Wimp</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>  			
+    <spawnCategories>
+      <li>Nephila_Backstory</li>	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_Rbully</defName>
+    <title>Repentant bully</title>
+    <titleShort>Repentant</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully, but then messing with someone who fought back. The experience left her scarred, and She prefers to avoid fighting at all.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>-2</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>	
+ 	<forcedTraitsChance>
+                    <li>
+                        <defName>Wimp</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>  			
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Rbully</defName>
+    <title>Repentant bully</title>
+    <titleShort>Repentant</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully, but then messing with someone who fought back. The experience left her scarred, and She prefers to avoid fighting at all.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>-2</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+ 	<forcedTraitsChance>
+                    <li>
+                        <defName>Wimp</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance> 
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 		
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Stargazer</defName>
+    <title>Stargazer</title>
+    <titleShort>Stargazer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the stars. Knowing that one day she could go out amongst them drove her through her education at a very directed pace.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>	
+	<forcedTraitsChance>
+                    <li>
+                        <defName Degree ="1">Industriousness</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Industriousness</defName>
+                        <chance>10</chance>
+                    </li>					
+    </forcedTraitsChance>
+    <spawnCategories>
+      <li>Nephila_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Stargazer</defName>
+    <title>Stargazer</title>
+    <titleShort>Stargazer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the stars. Knowing that one day she could go out amongst them drove her through her education at a very directed pace.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Industriousness</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Industriousness</defName>
+                        <chance>10</chance>
+                    </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_Stargazer</defName>
+    <title>Stargazer</title>
+    <titleShort>Stargazer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the stars. Knowing that one day she could go out amongst them drove her through her education at a very directed pace.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Industriousness</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Industriousness</defName>
+                        <chance>10</chance>
+                    </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 		
+	</forcedHediffs> 
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_MilitaryC</defName>
+    <title>Military child</title>
+    <titleShort>Militarist</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the Nephilim navy. She often visited military bases and watched ships leave their berthing.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Crafting>2</Crafting>
+	        <Shooting>2</Shooting>
+    </skillGains>
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_GaiaChild</defName>
+    <title>Gaia child</title>
+    <titleShort>Gaia</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a Gaia planet: a planet perfectly suited for nearly any carbon based life form. She benefited from a near perfect environment to grow up in, and grew up particularly sheltered.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Plants>3</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>	
+	<forcedTraitsChance>
+         <li>
+			 <defName Degree ="-1">Industriousness</defName>
+            <chance>35</chance>
+         </li>
+         <li>
+			 <defName Degree ="-2">Industriousness</defName>
+            <chance>10</chance>
+         </li>					
+    </forcedTraitsChance>	
+    <spawnCategories>
+      <li>Nephila_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_GaiaChild</defName>
+    <title>Gaia child</title>
+    <titleShort>Gaia</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a Gaia planet: a planet perfectly suited for nearly any carbon based life form. She benefited from a near perfect environment to grow up in, and grew up particularly sheltered.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Plants>3</Plants>
+    </skillGains>
+	<forcedTraitsChance>
+         <li>
+			 <defName Degree ="-1">Industriousness</defName>
+            <chance>35</chance>
+         </li>
+         <li>
+			 <defName Degree ="-2">Industriousness</defName>
+            <chance>10</chance>
+         </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 	
+ 	
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron_GaiaChild</defName>
+    <title>Gaia child</title>
+    <titleShort>Gaia</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a Gaia planet: a planet perfectly suited for nearly any carbon based life form. She benefited from a near perfect environment to grow up in, and grew up particularly sheltered.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Plants>3</Plants>
+    </skillGains>
+	<forcedTraitsChance>
+         <li>
+			 <defName Degree ="-1">Industriousness</defName>
+            <chance>35</chance>
+         </li>
+         <li>
+			 <defName Degree ="-2">Industriousness</defName>
+            <chance>10</chance>
+         </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 	
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila_Ecumenopolis</defName>
+    <title>Ecumenopolis child</title>
+    <titleShort>E-child</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born in a planet sized city. She had to grow up with a population of potentially trillions, crowded conditions, and a lifestyle geared towards industry and science.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Construction>2</Construction>
+      <Crafting>2</Crafting>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 	
+	</forcedHediffs>
+    <spawnCategories>
+      <li>Nephila_Backstory</li>	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaQG_Ecumenopolis</defName>
+    <title>Ecumenopolis child</title>
+    <titleShort>E-child</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born in a planet sized city. She had to grow up with a population of potentially trillions, crowded conditions, and a lifestyle geared towards industry and science.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Construction>2</Construction>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden_Ecumenopolis</defName>
+    <title>Ecumenopolis child</title>
+    <titleShort>E-child</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born in a planet sized city. She had to grow up with a population of potentially trillions, crowded conditions, and a lifestyle geared towards industry and science.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Construction>2</Construction>
+      <Crafting>2</Crafting>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_Gravity</defName>
+    <title>Grav colonizer</title>
+    <titleShort>Grav-er</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a high-gravity planet. As such, She is stronger than most.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>	
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>60</chance>
+        </li>
+    </forcedTraitsChance>	
+    <spawnCategories>
+      <li>Nephila_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaQG_Gravity</defName>
+    <title>Grav colonizer</title>
+    <titleShort>Grav-er</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a high-gravity planet. As such, She is stronger than most.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>	
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>60</chance>
+        </li>
+    </forcedTraitsChance> 		
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden_Gravity</defName>
+    <title>Grav colonizer</title>
+    <titleShort>Grav-er</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a high-gravity planet. As such, She is stronger than most.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>60</chance>
+        </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_Climber</defName>
+    <title>Climber</title>
+    <titleShort>Climber</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a climber as a kid, building strength by finding her way to the tops of trees. She was one of the last children in her class to surrender human-standard mobility.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>25</chance>
+        </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 		
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaMatron_Climber</defName>
+    <title>Climber</title>
+    <titleShort>Climber</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a climber as a kid, building strength by finding her way to the tops of trees. She was one of the last children in her class to surrender human-standard mobility.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>25</chance>
+        </li>
+    </forcedTraitsChance>	
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_Mud</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+ 		
+	</forcedHediffs>	
+    <spawnCategories>
+      <li>Nephila_Backstory</li> 	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaQG_Mud</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>	
+    <spawnCategories>
+	  <li>NephilaQueensGuard_Backstory</li>  	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden_Mud</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaMatron_Mud</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron_Backstory</li>  	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_CapitalChild</defName>
+    <title>matron's child</title>
+    <titleShort>matron-in-training</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on the Nephilim capital planet of Amadit's Garden. She was born to the wealthy matron mother a powerful court established in one of the many low-gravity pleasure palaces orbiting the 'planet's' surface.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>4</Social>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->
+ 		
+	</forcedHediffs>     
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>
+    </spawnCategories>  
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_GrandMatronChildhood</defName>
+    <title>grand matron childhood</title>
+    <titleShort>grand matron</titleShort>
+    <baseDesc>{PAWN_nameDef} was a child once, long before the nanites found her. She remembers that much and little else: whoever she was then was swallowed up by everything she has become since.</baseDesc>
+    <bodyTypeMale>Female</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>10</Social>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>100</chance>
+                    </li>
+    </forcedTraitsChance>	
+	<forcedHediffs>
+		<li>NephilaGrandMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->
+ 		
+	</forcedHediffs>     
+    <spawnCategories>
+	  <li>NephilaGrandMatron2_Backstory</li>
+    </spawnCategories>  
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+    <spawnCategories>
+      <li>Nephila2_Backstory</li>  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron2_DesignerChild</defName>
+    <title>Designer baby</title>
+    <titleShort>Designed</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being engineered to be a perfect child.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">Beauty</defName>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">Beauty</defName>
+                        <chance>75</chance>
+                    </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_SpacerChild</defName>
+    <title>Spacer</title>
+    <titleShort>Spacer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a space ship and spending most of her childhood on one ship or another. The close quarters meant that she had to be friendly with her neighbors and had to know how to maintain the ship she was on.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>3</Social>
+      <Construction>3</Construction>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 		
+	</forcedHediffs>    
+    <spawnCategories>
+      <li>Nephila2_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_SpacerChild</defName>
+    <title>Spacer</title>
+    <titleShort>Spacer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a space ship and spending most of her childhood on one ship or another. The close quarters meant that she had to be friendly with her neighbors and had to know how to maintain the ship she was on.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>3</Social>
+      <Construction>3</Construction>
+    </skillGains>    
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->
+ 		
+	</forcedHediffs>	
+ 	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+                        <defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>   
+    <spawnCategories>
+      <li>Nephila2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>
+ 	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+						<defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron2_ColonyChild</defName>
+    <title>Colonizer</title>
+    <titleShort>Colonizer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers growing up in a fledgling colony. She had to make do without decent anti-gravity assistance as she matured and grew naturally stronger as a result.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Plants>2</Plants>
+	        <Crafting>3</Crafting>
+	  	        <Construction>1</Construction>
+    </skillGains>
+ 	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="2">SpeedOffset</defName>
+                        <chance>15</chance>
+                    </li>
+                    <li>
+                        <defName Degree ="1">SpeedOffset</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+                        <defName>Brawler</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_Bully</defName>
+    <title>Bully</title>
+    <titleShort>Bully</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully. She enjoyed roughing up the other children, and was very good at avoiding getting caught.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>3</Melee>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs>    
+    <spawnCategories>
+      <li>Nephila2_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_Bully</defName>
+    <title>Bully</title>
+    <titleShort>Bully</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully. She enjoyed roughing up the other children, and was very good at avoiding getting caught.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>3</Melee>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 	
+ 		
+	</forcedHediffs>     
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_Rbully</defName>
+    <title>Repentant bully</title>
+    <titleShort>Repentant</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully, but then messing with someone who fought back. The experience left her scarred, and She prefers to avoid fighting at all.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>-2</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs>	
+ 	<forcedTraitsChance>
+                    <li>
+                        <defName>Wimp</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance>  			
+    <spawnCategories>
+      <li>Nephila2_Backstory</li>	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_Rbully</defName>
+    <title>Repentant bully</title>
+    <titleShort>Repentant</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a bully, but then messing with someone who fought back. The experience left her scarred, and She prefers to avoid fighting at all.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+      <Melee>-2</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+ 	<forcedTraitsChance>
+                    <li>
+                        <defName>Wimp</defName>
+                        <chance>60</chance>
+                    </li>										
+    </forcedTraitsChance> 
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>  	  
+    </spawnCategories>    
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_Stargazer</defName>
+    <title>Stargazer</title>
+    <titleShort>Stargazer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the stars. Knowing that one day she could go out amongst them drove her through her education at a very directed pace.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs>	
+	<forcedTraitsChance>
+                    <li>
+                        <defName Degree ="1">Industriousness</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Industriousness</defName>
+                        <chance>10</chance>
+                    </li>					
+    </forcedTraitsChance>
+    <spawnCategories>
+      <li>Nephila2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_Stargazer</defName>
+    <title>Stargazer</title>
+    <titleShort>Stargazer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the stars. Knowing that one day she could go out amongst them drove her through her education at a very directed pace.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Industriousness</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Industriousness</defName>
+                        <chance>10</chance>
+                    </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron2_Stargazer</defName>
+    <title>Stargazer</title>
+    <titleShort>Stargazer</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers always being fascinated by the stars. Knowing that one day she could go out amongst them drove her through her education at a very directed pace.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+                    <li>
+						<defName Degree ="1">Industriousness</defName>
+                        <chance>35</chance>
+                    </li>
+                    <li>
+						<defName Degree ="2">Industriousness</defName>
+                        <chance>10</chance>
+                    </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 		
+	</forcedHediffs> 
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_GaiaChild</defName>
+    <title>Gaia child</title>
+    <titleShort>Gaia</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a Gaia planet: a planet perfectly suited for nearly any carbon based life form. She benefited from a near perfect environment to grow up in, and grew up particularly sheltered.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Plants>3</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 		
+	</forcedHediffs>	
+	<forcedTraitsChance>
+         <li>
+			 <defName Degree ="-1">Industriousness</defName>
+            <chance>35</chance>
+         </li>
+         <li>
+			 <defName Degree ="-2">Industriousness</defName>
+            <chance>10</chance>
+         </li>					
+    </forcedTraitsChance>	
+    <spawnCategories>
+      <li>Nephila2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_GaiaChild</defName>
+    <title>Gaia child</title>
+    <titleShort>Gaia</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a Gaia planet: a planet perfectly suited for nearly any carbon based life form. She benefited from a near perfect environment to grow up in, and grew up particularly sheltered.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Plants>3</Plants>
+    </skillGains>
+	<forcedTraitsChance>
+         <li>
+			 <defName Degree ="-1">Industriousness</defName>
+            <chance>35</chance>
+         </li>
+         <li>
+			 <defName Degree ="-2">Industriousness</defName>
+            <chance>10</chance>
+         </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li> 	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaMatron2_GaiaChild</defName>
+    <title>Gaia child</title>
+    <titleShort>Gaia</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a Gaia planet: a planet perfectly suited for nearly any carbon based life form. She benefited from a near perfect environment to grow up in, and grew up particularly sheltered.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Plants>3</Plants>
+    </skillGains>
+	<forcedTraitsChance>
+         <li>
+			 <defName Degree ="-1">Industriousness</defName>
+            <chance>35</chance>
+         </li>
+         <li>
+			 <defName Degree ="-2">Industriousness</defName>
+            <chance>10</chance>
+         </li>					
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->
+ 	
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>  	  
+    </spawnCategories>   
+</AlienRace.AlienBackstoryDef>
+  
+<AlienRace.AlienBackstoryDef>
+    <defName>Nephila2_Ecumenopolis</defName>
+    <title>Ecumenopolis child</title>
+    <titleShort>E-child</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born in a planet sized city. She had to grow up with a population of potentially trillions, crowded conditions, and a lifestyle geared towards industry and science.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Construction>2</Construction>
+      <Crafting>2</Crafting>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 
+	</forcedHediffs>
+    <spawnCategories>
+      <li>Nephila2_Backstory</li>	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaHandmaiden2_Ecumenopolis</defName>
+    <title>Ecumenopolis child</title>
+    <titleShort>E-child</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born in a planet sized city. She had to grow up with a population of potentially trillions, crowded conditions, and a lifestyle geared towards industry and science.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Construction>2</Construction>
+      <Crafting>2</Crafting>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila2_Gravity</defName>
+    <title>Grav colonizer</title>
+    <titleShort>Grav-er</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a high-gravity planet. As such, She is stronger than most.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->
+ 		
+	</forcedHediffs>	
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>60</chance>
+        </li>
+    </forcedTraitsChance>	
+    <spawnCategories>
+      <li>Nephila2_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden2_Gravity</defName>
+    <title>Grav colonizer</title>
+    <titleShort>Grav-er</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a high-gravity planet. As such, She is stronger than most.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>60</chance>
+        </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 		
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>  	  
+    </spawnCategories>	
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila2_Climber</defName>
+    <title>Climber</title>
+    <titleShort>Climber</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a climber as a kid, building strength by finding her way to the tops of trees. She was one of the last children in her class to surrender human-standard mobility.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>25</chance>
+        </li>
+    </forcedTraitsChance>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaMatron2_Climber</defName>
+    <title>Climber</title>
+    <titleShort>Climber</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being a climber as a kid, building strength by finding her way to the tops of trees. She was one of the last children in her class to surrender human-standard mobility.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+ 	<forcedTraitsChance>
+        <li>
+            <defName>Tough</defName>
+            <chance>25</chance>
+        </li>
+    </forcedTraitsChance>	
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->	
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+<AlienRace.AlienBackstoryDef>
+	<defName>Nephila_Mud2</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 		
+	</forcedHediffs>	
+    <spawnCategories>
+      <li>Nephila2_Backstory</li> 	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaHandmaiden_Mud2</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaHandmaidenFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->			
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaHandmaiden2_Backstory</li>	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+	<defName>NephilaMatron_Mud2</defName>
+    <title>Digger</title>
+    <titleShort>Digger</titleShort>
+    <baseDesc>{PAWN_nameDef} remembers being born on a womb world in the early stages of conversion. It was still wooded, and {PAWN_nameDef} could frequently be found digging in the mud as a child, excavating potholes in the garden. She also learned a little about re-planting when she was forced to fix what was dug.</baseDesc>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Plants>1</Plants>
+    </skillGains>
+	<forcedHediffs>
+		<li>NephilaMatronFecundity</li>
+		<!--<li>NephilaMechaniteInhibitor</li>-->		
+ 		
+	</forcedHediffs> 	
+    <spawnCategories>
+	  <li>NephilaMatron2_Backstory</li>  	  
+    </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+	
+</Defs>

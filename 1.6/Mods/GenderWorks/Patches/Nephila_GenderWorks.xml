@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Gender Works gives each caste the gel womb (and the grand matron an ovipositor). -->
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					<extraOrgan>SEX_Ovipositor</extraOrgan>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					<extraOrgan>SEX_Ovipositor</extraOrgan>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]/modExtensions</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]/modExtensions</xpath>
+			<value>
+				<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+					<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="LoveyDoveySexWithRosaline.GenderWorksModExtension">
+						<femaleReproductiveReplacement>NephilaGelWomb</femaleReproductiveReplacement>
+					</li>
+				</modExtensions>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>

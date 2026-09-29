@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- ============================ Nephila Matron Vanilla Heads ========================== -->
+
+  <AlienRace.RaceSettings>
+    <defName>NephilaMatronVH_RaceSettings</defName>
+	  <pawnKindSettings>
+		<alienrefugeekinds>
+			<li>
+				<kindDefs>
+					<li>NephilaMatronRefugeeVH</li>
+				</kindDefs>
+				<chance>0.01</chance>
+			</li>
+		</alienrefugeekinds>
+		<alienslavekinds>
+			<li>
+				<kindDefs>
+					<li>NephilaMatronSlaveVH</li>
+				</kindDefs>
+				<chance>0.01</chance>
+			</li>
+		</alienslavekinds>
+		<startingColonists>
+		  <li>
+			<pawnKindEntries>
+			  <li>
+				<kindDefs>
+				  <li>NephilaMatronSlaveVH</li>
+				</kindDefs>
+				<chance>10.0</chance>
+			  </li>
+			</pawnKindEntries>
+			<factionDefs>
+			  <!--<li>PlayerColony</li>
+			  <li>PlayerTribe</li>-->		  
+			</factionDefs>
+		  </li>
+		</startingColonists>
+	  </pawnKindSettings>
+  </AlienRace.RaceSettings>		
+	
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+        <defName>NephilaMatronVH</defName>
+        <label>nephila matron</label>
+        <description>A Nephila matron. Swollen to near immobility, these hyperendowed, hyperfecund goo sluts gestate their spawn at a rate that is actually much slower than their less debilitated handmaiden inferiors. Their young, however, are the larger and more dangerous Seraphim, which serve both as defenders of the hive and a core ingredient for the ultimate nephila form: the Grand Matron. Nephila Matrons are slow near to the point of immobility without the aid of specialized palanquins, but the increased materials involved in their birth leaves them more likely to be adept communicators, researchers, and crafters.</description>
+			<comps>
+					<li Class="Nephila.CompProperties_NephilaMilkableHumanoid">
+					<milkDef>CoalescingSeraphim</milkDef>
+					<ticksUntilMilking>300000</ticksUntilMilking>
+					<milkAmount>2</milkAmount>
+					<milkThoughtMilker>NephilaGather</milkThoughtMilker>
+					<milkThoughtMilked>NephilaGatheredFrom</milkThoughtMilked>
+					<milkThoughtMilkedSelf>NephilaGatheredFromSelfMood</milkThoughtMilkedSelf>
+					<firstResourceName>False</firstResourceName>
+					<forbiddenJobsToInterrupt>
+						<li>GotoSafeTemperature</li>
+						<li>Wait_Combat</li>
+						<li>AttackStatic</li>
+						<li>AttackMelee</li>
+						<li>SocialFight</li>
+						<li>UseNeurotrainer</li>
+						<li>UseArtifact</li>
+						<li>Flee</li>
+						<li>FleeAndCower</li>
+						<li>Resurrect</li>
+						<li>BeatFire</li>
+						<li>ExtinguishSelf</li>
+						<li>Lovin</li>
+						<li>Rescue</li>
+						<li>Capture</li>
+						<li>TakeToBedToOperate</li>
+						<li>TakeWoundedPrisonerToBed</li>
+						<li>EscortPrisonerToBed</li>
+						<li>FeedPatient</li>
+						<li>TendPatient</li>
+					</forbiddenJobsToInterrupt>
+				</li>
+				  <!--<li Class="Nephila.CompProperties_EffectAura">
+					<PawnFilters>	
+					</PawnFilters>
+					<Effects>
+					  <li class="Nephila.WeightedEffect">
+						<Weight>5</Weight>
+						<Effect>MatronCloud</Effect>
+					  </li>
+					  <li class="Nephila.WeightedEffect">
+						<Weight>5</Weight>
+						<Effect>MatronCloud</Effect>
+					  </li>		  
+					</Effects>		
+				  </li>-->
+				<li Class="Nephila.CompProperties_EffectAura">
+				  <Radius>3</Radius>
+				  <Frequency>2750</Frequency>
+				  <Effects>
+					<li Class="Nephila.FilteredEffect">
+					  <Chance>1.0</Chance>
+					  <Effect>MatronCloud</Effect>
+					  <InitialSeverity>0.25</InitialSeverity>
+					  <SeverityGrowth>0.1</SeverityGrowth>
+				<Filter Class="Nephila.PawnFilter_And">
+				  <And>
+					<li Class="Nephila.PawnFilter_Flesh"></li>
+					<li Class="Nephila.PawnFilter_Faction">
+					  <AllowAlly>true</AllowAlly>
+					  <AllowNeutral>true</AllowNeutral>
+					  <AllowEnemy>false</AllowEnemy>
+					</li>
+				  </And>
+				</Filter>
+					</li>
+				  </Effects>
+				</li>  
+				<li>
+					<compClass>CompAttachBase</compClass>
+				</li>	
+			</comps>	
+		<modExtensions>
+			<li Class="Nephila.NephilaPawnTerrainHandler">
+				<tags>
+					<li>Nephila</li>
+				</tags>
+			</li>
+		</modExtensions>
+	<alienRace>
+		<generalSettings>
+			<maleGenderProbability>0.0</maleGenderProbability>
+			<canLayDown>true</canLayDown>
+			<immuneToAge>false</immuneToAge>
+			<humanRecipeImport>true</humanRecipeImport>
+			<minAgeForAdulthood>18</minAgeForAdulthood>
+			<maxDamageForSocialfight>2</maxDamageForSocialfight>
+			<forcedRaceTraitEntries>
+				<li>
+					<defName Degree ="1">ViolenceInhibition</defName>
+					<chance>50</chance>
+				</li>
+				<li>
+					<defName>ActualViolenceInhibition</defName>
+					<chance>50</chance>
+				</li>
+				<li>
+					<defName Degree ="2">ViolenceInhibition</defName>
+					<chance>50</chance>
+				</li>
+				<li>
+					<defName>Gay</defName>
+					<chance>35</chance>
+				</li>
+			</forcedRaceTraitEntries>
+			<alienPartGenerator>
+				<atlasScale>4</atlasScale>
+				<headTypes Inherit="False">
+					<!-- Allowed crown types -->
+					<li>Female_AverageNormal</li>
+				</headTypes>
+				<bodyTypes Inherit="False">
+						<li>Female</li>
+						<li>Thin</li>
+						<li>Fat</li>
+						<li>Hulk</li>
+				</bodyTypes>
+
+				<bodyAddons>
+				<!-- For other body parts -->
+				</bodyAddons>
+			</alienPartGenerator>
+		</generalSettings>
+
+		<graphicPaths>
+				<head>
+					<extendedGraphics>
+						<Age For="HumanlikeBaby">Things/NephilaMatrons/Heads/Female_Average_NephNormal</Age>
+						<Age For="HumanlikeChild">Things/NephilaMatrons/Heads/Female_Average_NephNormal</Age>
+						<Age For="HumanlikeTeenager">Things/NephilaMatrons/Heads/Female_Average_NephNormal</Age>
+						<Age For="HumanlikeAdult">
+							<path>Things/NephilaMatrons/Heads/Female_Average_NephNormal</path>
+						</Age>
+					</extendedGraphics>
+				</head>
+				<body>
+					<extendedGraphics>
+						<Age For="HumanlikeBaby">Things/NephilaMatrons/Body/Naked_Female</Age>
+						<Age For="HumanlikeChild">Things/NephilaMatrons/Body/Naked_Female</Age>
+						<Age For="HumanlikeTeenager">Things/NephilaMatrons/Body/Naked_Female</Age>
+						<Age For="HumanlikeAdult">Things/NephilaMatrons/Body/Naked_Female</Age>
+					</extendedGraphics>
+				</body>
+			</graphicPaths>
+            <!--<hairSettings>
+                <has>true</hasHair>
+				<hairTags>
+					<li>NephilaMatronTentacles</li>
+				</hairTags>				
+                <getsGreyAt>300</getsGreyAt>
+            </hairSettings>-->
+			<styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>true</hasStyle>
+						<styleTagsOverride>
+							<li>NephilaTentacles</li>
+						</styleTagsOverride>						
+                    </value>
+                </li>
+				<li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+				<li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>			
+			
+           <thoughtSettings>
+                <cannotReceiveThoughts>
+					<li>Naked</li>
+					<li>KnowGuestExecuted</li>				
+					<li>KnowColonistExecuted</li>
+					<li>KnowPrisonerDiedInnocent</li>
+					<li>KnowColonistDied</li>	
+					<li>TitleApparelRequirementNotMet</li>							
+                </cannotReceiveThoughts>				
+            </thoughtSettings>
+		<!-- Restrictions -->
+		<raceRestriction>
+	<apparelList>
+        <li>Apparel_NephilaMatronAura</li>
+        <li>Apparel_NephilaMatronShirt</li>
+        <li>Apparel_NephilaMatronDaisyDukes</li>
+        <li>Apparel_NephilaPalanquin</li>
+    </apparelList>
+	<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+            <recipeList>
+                <li>GenerateNephilaMatronHeartCore</li>
+				<!--<li>MakeApparel_NephilaMyceneanPlateHelmet</li>-->				
+				<li>MakeLactationInductionPsytrainer</li>	
+				<!--<li>MakeApparel_NephilaMyceneanPlate</li>
+				<li>MakeWeapon_NephStatue</li>-->
+				<li>MakeNephila_CallofLustPsytrainer</li>
+				<li>MakeNephila_SnekBomb</li>				
+            </recipeList>
+</raceRestriction>
+
+</alienRace>
+	<statBases>
+		<MarketValue>3300</MarketValue>
+		<Mass>30</Mass>
+		<MoveSpeed>1.0</MoveSpeed>
+		<Flammability>1.0</Flammability>
+		<ComfyTemperatureMin>14</ComfyTemperatureMin>
+		<ComfyTemperatureMax>28</ComfyTemperatureMax>
+		<ImmunityGainSpeed>1</ImmunityGainSpeed>
+		<CarryingCapacity>50</CarryingCapacity>
+		<GlobalLearningFactor>1.0</GlobalLearningFactor>
+		<WorkSpeedGlobal>1.0</WorkSpeedGlobal>
+		<GeneralLaborSpeed>1.0</GeneralLaborSpeed>
+		<!--Combat Stats-->
+		<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+		<ArmorRating_Heat>-0.1</ArmorRating_Heat>
+		<PainShockThreshold>1</PainShockThreshold>
+		<MentalBreakThreshold>0.03</MentalBreakThreshold>
+		<!-- Psychic and Eviromental-->
+		<PsychicSensitivity>0.0</PsychicSensitivity>
+		<ToxicResistance>1</ToxicResistance>
+		<ToxicEnvironmentResistance>1.0</ToxicEnvironmentResistance>
+		<MeatAmount>1</MeatAmount>
+		<RestRateMultiplier>1.0</RestRateMultiplier>
+		<EatingSpeed>1.0</EatingSpeed>
+		<ForagedNutritionPerDay>1.0</ForagedNutritionPerDay>
+		<LeatherAmount>35</LeatherAmount>
+		<!-- Other Stats -->
+		<NegotiationAbility>1.0</NegotiationAbility>
+		<SocialImpact>1.05</SocialImpact>
+		<TradePriceImprovement>1.0</TradePriceImprovement>
+		<RoyalFavorValue>1</RoyalFavorValue>
+		<StaggerDurationFactor>0</StaggerDurationFactor>
+	</statBases>
+
+	<tools>
+      <li>
+        <label>left tentacles</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>18</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right tentacles</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>18</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>		
+
+        <race>
+			<fleshType>NephilaMatronCore</fleshType>
+			<meatLabel>NephilaMatronCore</meatLabel>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+			<renderTree>Humanlike</renderTree>
+			<hasGenders>true</hasGenders>
+			<meatMarketValue>250</meatMarketValue>			
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>450</lifeExpectancy>
+			<leatherDef>Leather_Nephila</leatherDef>
+			<body>Human</body>			
+            <nameCategory>HumanStandard</nameCategory>
+            <foodType>OmnivoreHuman</foodType>	
+      <gestationPeriodDays>5.5</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, .20)</li>
+          <li>(2, .30)</li>
+          <li>(3, .30)</li>
+		  <li>(6, .10)</li>
+		  <li>(8, .10)</li>
+        </points>
+      </litterSizeCurve>
+			<lifeStageAges>
+				<li Class="AlienRace.LifeStageAgeAlien">
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li Class="AlienRace.LifeStageAgeAlien">
+					<def>HumanlikeChild</def>
+					<minAge>4</minAge>
+				</li>
+				<li Class="AlienRace.LifeStageAgeAlien">
+					<def>HumanlikeTeenager</def>
+					<minAge>14</minAge>
+				</li>
+				<li Class="AlienRace.LifeStageAgeAlien">
+					<def>HumanlikeAdult</def>
+					<minAge>18</minAge>
+				</li>
+			</lifeStageAges>
+
+			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+				<Firefighter>0</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>0</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<BasicWorker>0</BasicWorker>
+				<Warden>0</Warden>
+				<Handling>0</Handling>
+				<Cooking>0</Cooking>
+				<Hunting>0</Hunting>
+				<Construction>0</Construction>
+				<Growing>0</Growing>
+				<Mining>0</Mining>
+				<PlantCutting>0</PlantCutting>
+				<Smithing>0</Smithing>
+				<Tailoring>0</Tailoring>
+				<Art>0</Art>
+				<Crafting>0</Crafting>
+				<Hauling>0</Hauling>
+				<Cleaning>0</Cleaning>
+				<Research>0</Research>
+			</lifeStageWorkSettings>
+			
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+            <ageGenerationCurve>
+                <points>
+                    <li>(14,0)</li>
+                    <li>(16,100)</li>
+                    <li>(25,100)</li>
+                    <li>(35,30)</li>
+                    <li>(50,18)</li>
+                    <li>(65,10)</li>
+                    <li>(80,3)</li>
+                    <li>(100,0)</li>
+                </points>
+            </ageGenerationCurve>
+            <hediffGiverSets>
+                <li>OrganicStandard</li>
+            </hediffGiverSets>
+        </race>
+    <recipes>
+	  <li>RemoveNephilaMechaniteInhibitor</li>	
+	  <li>InstallNephilaMechaniteInhibitor</li>	
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+	  <li>InstallNephila_PsyAmp</li>
+	  <li>RemoveNephila_PsyAmp</li>
+	  <li>Nephila_DowngradeNephilaPsyAmp</li>
+	  <li>Nephila_UpgradeNephilaPsyAmp</li>	  	  
+    </recipes>	
+</AlienRace.ThingDef_AlienRace>
+
+</Defs>

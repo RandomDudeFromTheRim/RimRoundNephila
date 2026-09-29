@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseNephilaPawnKind">
+    <race>Nephila</race>
+    <combatPower>30</combatPower>
+    <!--<baseRecruitDifficulty>0.70</baseRecruitDifficulty>-->
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNephilaPawnKind">
+    <defName>NephilaPlayer</defName>
+    <label>nephila maiden</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <!--<royalTitleChance>1</royalTitleChance>
+    <titleRequired>NephilimSupplicant</titleRequired>-->			
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nephila_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>			
+    <apparelTags>
+      <li>Nephila</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>1000~1800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>
+  
+  
+   <PawnKindDef Abstract="True" Name="BaseNephilaHandmaidenPawnKind">
+    <race>NephilaHandmaiden</race>
+    <combatPower>30</combatPower>
+    <!--<baseRecruitDifficulty>0.75</baseRecruitDifficulty>-->
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNephilaHandmaidenPawnKind">
+    <defName>NephilaHandmaidenPlayer</defName>
+    <label>nephila handmaiden</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <!--<royalTitleChance>1</royalTitleChance>
+    <titleRequired>NephilimVeiledOne</titleRequired>-->		
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NephilaHandmaiden2_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>			
+    <apparelTags>
+      <li>NephilaHandmaiden</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>1000~3000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef> 
+  
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>Player_Nephila_Colonist</defName>
+    <label>employee</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <!--<royalTitleChance>1</royalTitleChance>
+    <titleRequired>NephilimVeiledOne</titleRequired>-->
+    <chemicalAddictionChance>0.01</chemicalAddictionChance>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>800~1200</apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <techHediffsChance>0.05</techHediffsChance>
+    <techHediffsMoney>1000~1800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>  
+  
+  
+   <PawnKindDef Abstract="True" Name="BaseNephilaMatronPawnKind">
+    <race>NephilaMatron</race>
+    <combatPower>25</combatPower>
+    <!--<baseRecruitDifficulty>0.80</baseRecruitDifficulty>-->
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNephilaMatronPawnKind">
+    <defName>NephilaMatronPlayer</defName>
+    <label>nephila matron</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <!--<royalTitleChance>1</royalTitleChance>
+    <titleRequired>NephilimGardenTender</titleRequired>-->		
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NephilaMatron_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>		
+    <apparelTags>
+      <li>NephilaMatron</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>1000~2500</techHediffsMoney>
+    <techHediffsMaxAmount>2</techHediffsMaxAmount>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>  
+  
+   <PawnKindDef Abstract="True" Name="BaseNephilaGrandMatronPawnKind">
+    <race>NephilaGrandMatron</race>
+    <combatPower>5</combatPower>
+    <!--<baseRecruitDifficulty>0.95</baseRecruitDifficulty>-->
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNephilaGrandMatronPawnKind">
+    <defName>NephilaGrandMatronPlayer</defName>
+    <label>nephila grand matron</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <!--<royalTitleChance>1</royalTitleChance>
+    <titleRequired>NephilimGrandMatronTitle</titleRequired>-->		
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NephilaGrandMatron_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>		
+    <apparelTags>
+      <li>NephilaGrandMatron</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>3000~4000</techHediffsMoney>
+    <techHediffsMaxAmount>3</techHediffsMaxAmount>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>   
+  
+   <PawnKindDef Abstract="True" Name="BaseNephilaQueensGuardPawnKind">
+    <race>NephilaQueensGuard</race>
+    <combatPower>45</combatPower>
+    <!--<baseRecruitDifficulty>0.85</baseRecruitDifficulty>-->
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNephilaQueensGuardPawnKind">
+    <defName>NephilaQueensGuardPlayer</defName>
+    <label>nephila queen's guard</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NephilaQueensGuard_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <!--<royalTitleChance>1</royalTitleChance>
+    <titleRequired>NephilimGrayOne</titleRequired>-->		
+    <apparelTags>
+      <li>NephilaQueensGuard</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>		
+    <techHediffsChance>0.25</techHediffsChance>
+    <techHediffsMoney>2000~2500</techHediffsMoney>
+    <techHediffsMaxAmount>2</techHediffsMaxAmount>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef>   
+ 
+  <PawnKindDef>
+    <defName>NephilaEscapedSlave</defName>
+    <label>escaped slave</label>
+    <combatPower>30</combatPower>
+    <race>NephilaHumanEquiv</race>
+	<defaultFactionType>PlayerColony</defaultFactionType>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NephilaEscapedSlave_Backstory</li>
+		  <li>Nephila_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>			
+    <backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
+    <isFighter>false</isFighter>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <apparelTags>  
+      <li>NephilaRoyalTier6</li>	 	  
+	</apparelTags>
+    <apparelRequired>
+      <li>Apparel_NephilaMyceneanDress</li>		  
+    </apparelRequired>		
+    <apparelMoney>0~2700</apparelMoney>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>800</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <invNutrition>1</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>28~44</initialResistanceRange>		
+  </PawnKindDef> 
+
+</Defs>

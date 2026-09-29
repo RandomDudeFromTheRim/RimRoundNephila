@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+    <defName>CorpsesNephila</defName>
+    <label>nephila maiden corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+  
+    <ThingCategoryDef>
+    <defName>CorpsesNephilaHandmaiden</defName>
+    <label>nephila handmaiden corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+  
+     <ThingCategoryDef>
+    <defName>CorpsesNephilaMatron</defName>
+    <label>nephila matron corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef> 
+
+     <ThingCategoryDef>
+    <defName>CorpsesNephilaQueensGuard</defName>
+    <label>nephila queen's guard corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+
+     <ThingCategoryDef>
+    <defName>NephilaHeartCores</defName>
+    <label>nephila heart gems</label>
+      <parent>StoneBlocks</parent>
+    </ThingCategoryDef>
+
+
+</Defs>

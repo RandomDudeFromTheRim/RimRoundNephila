@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaEscapedSlaveAdult</defName>
+    <title>Escaped Slave</title>
+    <titleShort>Escaped Slave</titleShort>
+    <baseDesc>{PAWN_nameDef} worked as slave in a local raider camp. She plotted for years to escape until, one day, she did. Lost in the wilderness, she has struggled to survive. Her time spent bathing in a newly discovered beautiful pool of gently glowing liquid has awakened new hope and purpose in her. She feels... heated. And excited.</baseDesc>
+	<bioAgeRange>16~34</bioAgeRange>
+    <slot>Adulthood</slot>
+    <skillGains>
+		<Crafting>3</Crafting>
+		<Construction>2</Construction>
+		<Social>2</Social>
+    </skillGains>
+    <spawnCategories>
+      <li>NephilaEscapedSlave_Backstory</li>
+    </spawnCategories>
+	<shuffleable>false</shuffleable>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>NephilaEscapedSlaveChild</defName>
+    <title>Escaped Slave Child</title>
+    <titleShort>Slave Child</titleShort>
+    <baseDesc>{PAWN_nameDef} grew up in captivity, always dreaming of freedom.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>2</Social>
+      <Crafting>1</Crafting>
+    </skillGains>
+    <spawnCategories>
+      <li>NephilaEscapedSlave_Backstory</li>
+    </spawnCategories>
+	<shuffleable>false</shuffleable>
+</AlienRace.AlienBackstoryDef>
+
+
+</Defs>

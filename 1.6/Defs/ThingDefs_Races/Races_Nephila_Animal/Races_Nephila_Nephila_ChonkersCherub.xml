@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseInsect">
+		<defName>Nephila_ChonkersCherub</defName>
+		<thingClass>Nephila.PawnNephilaChonkersCherub</thingClass>			
+		<label>nephilim clutch mother</label>
+		<description>Sometimes, the programming that controls a nephila cherub's immulated biology malfunctions, taking on aspects of the humanoid maidens. These clutch mothers swell with developing cherub young and will seek out new territory to lay their young. Their arrival in a region is often accompanied by the mutual arrival of a nephilitic dust storm.</description>
+		<statBases>
+      <Wildness>0.35</Wildness>
+			<MoveSpeed>2.00</MoveSpeed>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<MarketValue>900</MarketValue>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+		</statBases>
+    <tools>
+      <li>
+        <label>overdeveloped nano-infested fangs</label>
+        <capacities>
+          <li>NephilaVenomBite</li>
+        </capacities>
+        <power>23</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+		<comps>			
+			<li Class="CompProperties_EggLayer">
+				<eggUnfertilizedDef>RapidlyCoalescingCherubim</eggUnfertilizedDef>
+				<eggFertilizedDef>RapidlyCoalescingCherubim</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>1</eggLayIntervalDays>
+				<eggCountRange>
+					<min>1</min>
+					<max>3</max>
+				</eggCountRange>
+				<eggLayFemaleOnly>false</eggLayFemaleOnly>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="Nephila.NephilaPawnTerrainHandler">
+				<tags>
+					<li>Nephila</li>
+				</tags>
+			</li>
+		</modExtensions>			
+    <race>
+      <body>Snake</body>
+      <predator>true</predator>
+      <herdMigrationAllowed>false</herdMigrationAllowed>	  
+      <maxPreyBodySize>6</maxPreyBodySize>
+      <baseBodySize>6</baseBodySize>
+	  <baseHealthScale>2.2</baseHealthScale>
+      <baseHungerRate>1.1</baseHungerRate>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <leatherDef>Leather_Nephila</leatherDef>
+      <meatLabel>seraphimooze</meatLabel>
+      <trainability>Advanced</trainability>
+      <nuzzleMtbHours>16</nuzzleMtbHours>	  
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.99</manhunterOnDamageChance>
+      <nameOnTameChance>1</nameOnTameChance>
+      <lifeExpectancy>35</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Cobra_Wounded</soundWounded>
+          <soundDeath>Pawn_Cobra_Death</soundDeath>
+          <soundCall>Pawn_Cobra_Call</soundCall>
+          <soundAngry>Pawn_Cobra_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+			<li>AnimalAlpha</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>Nephila_ChonkersCherub</defName>
+		<race>Nephila_ChonkersCherub</race>	
+		<label>nephilim clutch mother</label>
+		<combatPower>600</combatPower>
+		<ecoSystemWeight>0.2</ecoSystemWeight>
+   		<canArriveManhunter>false</canArriveManhunter>
+
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ChonkerCherub</texPath>
+					<drawSize>1.2</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ChonkerCherub</texPath>
+					<drawSize>2.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ChonkerCherub</texPath>
+					<drawSize>3.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+					<drawSize>3.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>NephilaScenarioCocoonedOne</defName>
+    <label>cocooned one</label>
+    <description>The bulging womb of this poor humanoid is a furnace of activity as the nanites within steadily incubate a fully grown nephila maiden.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Furniture/CocoonedOne</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>	
+    <costList>
+	  <CocoonedOne>1</CocoonedOne>
+	  <CoalescingCherubim>1</CoalescingCherubim>
+    </costList>
+    <statBases>
+      <Mass>100</Mass>	
+      <WorkToBuild>25000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Cleanliness>-2</Cleanliness>
+	  <Flammability>1.5</Flammability> 
+	  <Beauty>10</Beauty>
+    </statBases>
+ 
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>true</useHitPoints>
+
+    <size>(2,2)</size>
+    <designationCategory>Misc</designationCategory>
+    <tickerType>Normal</tickerType>	
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(85,85,85,85)</glowColor>
+      </li>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>CoalescingNephila</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>
+          <min>1500000</min>
+          <max>1500000</max>
+        </spawnIntervalRange>
+        <spawnMaxAdjacent>40</spawnMaxAdjacent>
+        <spawnForbidden>false</spawnForbidden>
+        <saveKeysPrefix>CoalescingNephila</saveKeysPrefix>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>1500050</lifespanTicks>
+      </li>	 
+    </comps>
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>
+    </researchPrerequisites>	
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>NephilaCocoonedOne</defName>
+    <label>cocooned one</label>
+    <description>The bulging womb of this poor humanoid is a furnace of activity as the nanites within steadily incubate a fully grown nephila maiden.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Furniture/CocoonedOne</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+
+    <costList>
+	  <CocoonedOne>1</CocoonedOne>
+	  <CoalescingCherubim>1</CoalescingCherubim>
+    </costList>
+    <statBases>
+      <WorkToBuild>25000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Cleanliness>-2</Cleanliness>
+	  <Flammability>1.5</Flammability> 
+	  <Beauty>10</Beauty>
+    </statBases>
+ 
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>true</useHitPoints>
+
+    <size>(2,2)</size>
+    <designationCategory>Misc</designationCategory>
+    <tickerType>Normal</tickerType>	
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(85,85,85,85)</glowColor>
+      </li>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>CoalescingNephila</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>
+          <min>300000</min>
+          <max>300000</max>
+        </spawnIntervalRange>
+        <spawnMaxAdjacent>40</spawnMaxAdjacent>
+        <spawnForbidden>false</spawnForbidden>
+        <saveKeysPrefix>CoalescingNephila</saveKeysPrefix>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>300025</lifespanTicks>
+      </li>	
+    </comps>
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>
+    </researchPrerequisites>		
+  </ThingDef>
+
+  
+  <ThingDef ParentName="BuildingBase" Name="Turret_NephilaLustCannon">
+    <defName>Turret_NephilaLustCannon</defName>
+    <label>nephila guardian cherub</label>
+    <description>A specially mutated Nephila cherub that has sacrificed mobility for the ability to project a lust inducing nanite projectile. The lust distracts those effected by it, and can even drive them berserk! Solid, power-free early game turret, but has low range and must be fed meat regularly to avoid starvation.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/Security/Turret/NephilaGooTurretBase</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5, 2.5)</drawSize>
+      <damageData>
+        <rect>(0.0,0.0,0.0,0.0)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.5,0.35,1.4)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Buildings/Security/Turret/NephilaGooTurret_Top</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <Flammability>0.8</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>100</Mass>
+      <Beauty>2</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>progress toward starvation</fuelLabel>
+        <fuelConsumptionRate>1.5</fuelConsumptionRate>		
+        <fuelGizmoLabel>Hunger</fuelGizmoLabel>
+        <fuelFilter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </fuelFilter>
+		<destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>15</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.75</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>0.15</fuelMultiplier>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>One of your emplaced cherubim has starved to death!</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>35</costStuffCount>
+    <costList>
+      <NephilaGooTurretItem>1</NephilaGooTurretItem>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>32.9</specialDisplayRadius>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_NephilaTurret</turretGunDef>
+      <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+      <turretTopDrawSize>2</turretTopDrawSize>
+      <turretTopOffset>(0, 0.05)</turretTopOffset>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <uiIconScale>0.75</uiIconScale>
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>	  
+    </researchPrerequisites>		
+  </ThingDef>
+
+ 
+  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_TurretNephila</defName>
+    <label>nephila cherubim projectile</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/Nephila_Bullet_Rifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>CherubSpew</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <speed>18</speed>
+	  <stoppingPower>3</stoppingPower>
+    </projectile>
+  </ThingDef> 
+ 
+<!--===============Lust Shot=========================-->
+ 
+
+<!--==============End Lust Shot============-->
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_NephilaTurret</defName>
+    <label>nephila spewing cherubim</label>
+    <description>A rather unhappy spewing cherub removed from its den. Can be used as a weapon.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Security/Turret/NephilaGooTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <!--<menuHidden>true</menuHidden>-->
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.41</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <weaponTags Inherit="false">
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretNephila</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <minRange>0.0</minRange>
+        <range>15.0</range>
+        <ticksBetweenBurstShots>70</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>	  
+  
+  
+  
+  
+  <!--======================StartOfStatueTurret====================-->
+  
+    <ThingDef ParentName="BuildingBase" Name="Turret_NephilaTransformationCannon">
+    <defName>Turret_NephilaTransformationCannon</defName>
+    <label>nephila seraph statue</label>
+    <description>This nephilim carved statue exudes lust, and not just through the merits of its art. Infused with nephilim mechanites, it can damage those that come to close and even inflict nephila sickness.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/Security/Turret/NephilaStatueTurretBase</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5, 2.5)</drawSize>
+      <damageData>
+        <rect>(0.0,0.0,0.0,0.0)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.5,0.35,1.4)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Buildings/Security/Turret/NephilaStatueTurret_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>1450</MaxHitPoints>
+      <Flammability>0.3</Flammability>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>300</Mass>
+      <Beauty>8</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <NephilaGooTurretItem>1</NephilaGooTurretItem>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>32.9</specialDisplayRadius>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_NephilaTurretStatue</turretGunDef>
+      <turretBurstCooldownTime>6.0</turretBurstCooldownTime>
+      <turretTopDrawSize>2.5</turretTopDrawSize>
+      <turretTopOffset>(0, 0.05)</turretTopOffset>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <uiIconScale>0.75</uiIconScale>
+     <researchPrerequisites>
+      <li>SniperTurret</li>	 
+      <li>NephilaUnlocker</li>	  
+    </researchPrerequisites>		
+  </ThingDef>
+
+ 
+  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_TurretNephilaStatue</defName>
+    <label>statue beam</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/Nephila_Bullet_Rifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>StatueSpew</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>18</speed>
+	  <stoppingPower>3</stoppingPower>
+    </projectile>
+  </ThingDef> 
+ 
+<!--===============Transform Shot=========================-->
+ 
+
+<!--==============End Transform Shot============-->
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_NephilaTurretStatue</defName>
+    <label>nephila broken statue</label>
+    <description>A rather unhappy spewing cherub removed from its den. Can be used as a weapon.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Security/Turret/NephilaStatueTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <!--<menuHidden>true</menuHidden>-->
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.41</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <weaponTags Inherit="false">
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretNephilaStatue</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <minRange>0.0</minRange>
+        <range>15.0</range>
+        <ticksBetweenBurstShots>70</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>	  
+
+
+
+<!--========================GrandMatronBed===========================-->
+
+  <ThingDef ParentName="ArtableBedBase">
+    <defName>NephilaGrandMatronBed</defName>
+    <label>nephila resting pool</label>
+    <description>Deep in their fragrant grottoes, the Nephilim maintain pools of mechanites. All who enter will experience an exquisite tranquility, greatly aiding rest, and the nephila themselves will often melt into them, losing form and embracing the oceanic experience until they are ready to face another day.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Furniture/Bed/NephilaQueen</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+	<uiIconPath>Things/Buildings/Furniture/Bed/NephilaQueen_Icon</uiIconPath>	
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2800</WorkToBuild>
+      <Mass>45</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.80</Comfort>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+			<SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+	</statBases>
+    <size>(2,2)</size>		
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
+      </li>  
+    </comps>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Steel>80</Steel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <building>
+      <bed_healPerDay>10</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>  
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <designationHotKey>Misc5</designationHotKey>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>
+      <li>HospitalBed</li>	  
+    </researchPrerequisites>		
+  </ThingDef>
+
+  <ThingDef ParentName="LampBase">
+    <defName>Nephila_FountainLamp</defName>
+    <label>Nephilim Fountain Lamp</label>
+    <description>A stone fountain carved with the likenesses of well-known nephila maidens. The faint glow from the basin is quite pleasing to the eyes. The "stone" fountain is actually composed of trillions of semi-sentient nephila mechanites while the fountain's "water" is actually a liquified form of the original minerals used to create it. Fueled by humanoid milk, this object converts it to nephilitic scinillating milk, which can be gathered any time it is refilled.</description>
+    <!--<designatorDropdown>StandingLampColored</designatorDropdown>-->
+    <graphicData>
+      <texPath>Things/Buildings/Furniture/Nephila_FountainLamp</texPath>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <tickerType>Normal</tickerType>	
+    <costStuffCount>45</costStuffCount>
+    <statBases>
+      <Mass>6</Mass>
+      <WorkToBuild>7000</WorkToBuild>	  
+      <Beauty>15</Beauty>	  
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <!--<staticSunShadowHeight>0.17</staticSunShadowHeight>-->
+    <castEdgeShadows>True</castEdgeShadows>	
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(217,80,217,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.7</fuelConsumptionRate>
+        <fuelCapacity>15.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>HumanMilkNephila</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="Nephila.CompProperties_CreatesWaste">
+        <wasteProduct>IridiscentMilk</wasteProduct>
+        <wasteAmount>10</wasteAmount>
+      </li>	  
+    </comps>
+    <size>(2,2)</size>	
+    <techLevel>Medieval</techLevel>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+      <li>NephilaUnlocker</li>	  	  
+    </researchPrerequisites>
+  </ThingDef>
+
+	<!--<thingClass>TheEndTimes.Building_WallSconce</thingClass>-->
+      <!--<drawRotated>true</drawRotated>-->
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Nephila_WallLight</defName>
+    <label>nephilim wall sconce</label>
+    <description>This artistic wall sconce, designed for the nephilum, is meant to evoke the beauty of their two aspects: that of the serpent and that of the fecund goddess.</description>
+    <category>Building</category>
+	<thingCategories><li>Buildings</li></thingCategories>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <clearBuildingArea>false</clearBuildingArea>
+    <graphicData>
+      <texPath>Things/Buildings/Furniture/Sconce/NephilaNephilumWallSconce</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+	  <shaderType>CutoutComplex</shaderType>	  
+      <!--<damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>-->
+    </graphicData>
+	<minifiedDef>MinifiedThing</minifiedDef>
+    <uiIconPath>Things/Buildings/Furniture/Sconce/NephilaNephilumWallSconce_Icon</uiIconPath>
+    <!--<uiIconScale>0.85</uiIconScale>-->
+    <rotatable>true</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <!--<tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>-->
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <Mass>15</Mass>
+      <MaxHitPoints>130</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0</Flammability> 
+      <Beauty>5</Beauty>	    
+    </statBases>
+    <selectable>true</selectable>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <!--<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>-->
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+      <!--<li>Nephila.PlaceWorker_OnTopOfWallsNephila</li>-->
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(217,80,217,0)</glowColor>
+      </li>  
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>	  	  
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <researchPrerequisites>
+      <li>AdvancedFabrication</li>
+      <li>ComplexFurniture</li>	  
+      <li>NephilaUnlocker</li>	   
+    </researchPrerequisites>	
+  </ThingDef>
+  
+  
+  <!--==============Myilk==============-->
+   <ThingDef ParentName="BuildingBase">
+    <defName>Nephila_WallLight_milk</defName>
+    <label>nephilim wall sconce (milk)</label>
+    <description>This artistic wall sconce, designed for the nephilum, is meant to evoke the beauty of their two aspects: that of the serpent and that of the fecund goddess.\n\nThis scone is refueled with iridiscent milk. Fueled by humanoid milk, this object converts it to nephilitic scinillating milk, which can be gathered any time it is refilled.</description>
+    <category>Building</category>
+    <thingCategories>
+      <li>Buildings</li>
+    </thingCategories>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <clearBuildingArea>false</clearBuildingArea>
+    <graphicData>
+      <texPath>Things/Buildings/Furniture/Sconce/NephilaNephilumWallSconce</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <uiIconPath>Things/Buildings/Furniture/Sconce/NephilaNephilumWallSconce_Icon</uiIconPath>
+    <rotatable>true</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <tickerType>Normal</tickerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <Mass>15</Mass>
+      <MaxHitPoints>130</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>5</costStuffCount>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>	  
+      <!--<li>Nephila.PlaceWorker_OnTopOfWallsNephila</li>-->
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(217,80,217,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.5</fuelConsumptionRate>
+        <fuelCapacity>8.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>HumanMilkNephila</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="Nephila.CompProperties_CreatesWaste">
+        <wasteProduct>IridiscentMilk</wasteProduct>
+        <wasteAmount>6</wasteAmount>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+      <li>NephilaUnlocker</li>	  	  
+    </researchPrerequisites>	
+  </ThingDef>
+
+  
+  
+  
+
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapNephilaKrater</defName>
+    <label>nephila serpent's krater</label>	
+    <description>This delicate urn leaks a fine quantity of dormant nephilim mechanites. When disturbed, it can crack open, releasing the now awakened mechanites in a short explosion. Those unfortunate enough to breathe in the explosion's vapors will almost certainly be doomed to transform into nephila cherubim, ready to turn on and attack their erstwhile companions.</description>	
+    <thingClass>Building_TrapExplosive</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Buildings/Security/Nephila_SerpentsKrater</texPath>	  
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <IridiscentMilk>12</IridiscentMilk>
+    </costList>	
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>	
+    <uiIconPath>Things/Buildings/Security/Nephila_SerpentsKrater</uiIconPath>	
+    <uiIconOffset>(0,-0.14)</uiIconOffset>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <!--<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>-->
+    <statBases>
+      <Mass>2</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>1400</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-4</Beauty>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <designationCategory>Security</designationCategory>
+    <building>
+      <isTrap>true</isTrap>
+      <trapPeacefulWildAnimalsSpringChanceFactor>0.25</trapPeacefulWildAnimalsSpringChanceFactor>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>IEDs</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.5</explosiveRadius>
+        <explosiveDamageType>Nephila_SerpentBomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+    <specialDisplayRadius>2.5</specialDisplayRadius>	
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>
+
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>Nephila_Egghatch</defName>
+		<label>nephilum egg host</label>
+		<description>This semi-living sculpture, of Nephilum design, is composed of billions of nephilum mechanites. The nephila use such devices to safely store the many coalescing spheres of mechanites that they birth until they are ready to take full shape.</description>
+		<thingClass>Building_Storage</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/Furniture/NephilumEgghatch</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			  <shadowData>
+				<volume>(0.8,0.18,0.6)</volume>
+				<offset>(0,0,-0.23)</offset>
+			  </shadowData>			
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<stuffCategories>
+			<li>Stony</li>			
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Mass>8</Mass>
+			<WorkToBuild>600</WorkToBuild>
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<size>(2,1)</size>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>EggsUnfertilized</li>
+						<li>EggsFertilized</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationHotKey>Misc5</designationHotKey>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+      <li>NephilaUnlocker</li>	  		
+		</researchPrerequisites>
+		<!--<designationCategory>OldStyleFurniture</designationCategory>-->
+	</ThingDef>	
+
+  
+</Defs>

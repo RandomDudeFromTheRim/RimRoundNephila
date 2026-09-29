@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>NephilaAngelsNectar</defName>
+    <label>Angel's Nectar</label>
+    <description>Drawn straight from the tits of a Nephilim Seraphim or Queen's Guard, "angel's nectar" is a cheap luciferium equivalent that gives the same general benefits with greater ease of acquisition. Unfortunately, it's a drug for the desperate: any who take it are doomed to die as the mechanites prepare their bodies for a transformation they were never meant to undergo. For Nephilim Matrons, however, this drug can be a path to ascension, a means of achieving Grand Matronhood.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaAngelsNectar</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>35</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>NephilaPathToAscension</hediffDef>
+          <severity>6.5</severity>
+          <doToGeneratedPawnIfAddicted>false</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>NephilaAngelsNectar</chemical>
+        <addictiveness>1.00</addictiveness>
+        <needLevelOffset>1.00</needLevelOffset>
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>NephilaPathToAscension</defName>
+    <label>"the path to ascension"</label>
+    <description>Advanced Nephilim mechanites are improving this pawn's abilities. If the pawn fails to meet their criteria of Matronhood before they complete their reconstruction, they will murder their host.</description>		
+    <initialSeverity>0.001</initialSeverity>
+    <hediffClass>Nephila.HediffWithComps_NephilaMatronFullyPreggers</hediffClass> 		
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>		
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_HealPermanentWounds" />
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.1</severityPerDay>
+			</li>	
+		</comps>
+    <stages>
+      <li>
+		<label>Spring's Joy</label>
+        <painFactor>0.8</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.70</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.20</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+		<label>Summer's Temperance</label>
+        <minSeverity>40.0</minSeverity>			
+        <painFactor>0.85</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.10</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.65</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.10</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+		<label>Autumn's Reflections</label>
+        <minSeverity>60.0</minSeverity>			
+        <painFactor>0.9</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.6</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.05</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>	
+      <li>
+		<label>Final Winter</label>
+        <minSeverity>80.0</minSeverity>			
+        <painFactor>1.1</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.3</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>	
+      <li>
+		<label>Crescendo</label>
+        <minSeverity>85.0</minSeverity>			
+        <painFactor>1.8</painFactor>
+      </li>		  
+    </stages>
+  	<modExtensions>
+			<li Class="Nephila.NephilaBroodExtension">
+				<kilosOnCompletion>60</kilosOnCompletion>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+  <!-- Luciferium addiction -->
+
+  <ChemicalDef>
+    <defName>NephilaAngelsNectar</defName>
+    <label>angel's nectar</label>
+    <addictionHediff>NephilaAngelsNectarAddiction</addictionHediff>
+    <canBinge>true</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_NephilaAngelsNectar</defName>			
+    <needClass>Need_Chemical</needClass>
+    <label>angel's nectar</label>
+    <description>This person's body is enhanced by nephilim produced Angel's Nectar.\n\nWithout regular doses of the mechanites, they will die hideously. Excepting for the prepared and able Nephilim Matron, all who take regular doses of the mechanites will eventually die, too.</description>
+    <listPriority>45</listPriority>
+    <fallPerDay>0.15</fallPerDay>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>NephilaAngelsNectarAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <description>Incurable addiction to Nephilim Angel's Nectar.</description>			
+    <label>angel's nectar need</label>
+    <chemicalNeed>Chemical_NephilaAngelsNectar</chemicalNeed>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>unmet</label>
+        <painOffset>0.4</painOffset>
+        <lifeThreatening>true</lifeThreatening>
+        <deathMtbDays>10</deathMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.8</setMax>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.4</mtbDays>
+          </li>
+          	  
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+
+
+<!--========================================================Angel's Nectar 2===================================-->
+
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>NephilaAngelsNectarTwo</defName>
+    <label>Angel's Cream</label>
+    <description>Drawn straight from the tits of a Nephilim Queen's Guard, "angel's cream" is a more stable (less deadly) equivalent to Nephilim Angel's nectar. Once imbibed, it must be regularly fed on to avoid death (preferably straight from the source), but it does not lead to inevitable death.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaAngelsNectar</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>35</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>NephilaPathToAscensionTwo</hediffDef>
+          <severity>6.5</severity>
+          <doToGeneratedPawnIfAddicted>false</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>NephilaAngelsNectarTwo</chemical>
+        <addictiveness>1.00</addictiveness>
+        <needLevelOffset>1.00</needLevelOffset>
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>NephilaPathToAscensionTwo</defName>
+    <label>"the path to ascension"</label>
+    <description>Advanced Nephilim mechanites are substantially improving this pawn's abilities. This pawn can never stop drinking the cream from a Queen's Guard's tits or they will die.</description>		
+    <initialSeverity>0.001</initialSeverity>
+    <hediffClass>Hediff_High</hediffClass> 		
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>		
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_HealPermanentWounds" />
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.1</severityPerDay>
+			</li>	
+		</comps>
+    <stages>
+      <li>
+		<label>Spring's Joy</label>
+        <painFactor>0.8</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.05</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.10</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+		<label>Summer's Temperance</label>
+        <minSeverity>40.0</minSeverity>			
+        <painFactor>0.85</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.10</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.45</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+		<label>Autumn's Reflections</label>
+        <minSeverity>60.0</minSeverity>			
+        <painFactor>0.9</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.6</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.2</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>	
+      <li>
+		<label>Final Winter</label>
+        <minSeverity>80.0</minSeverity>			
+        <painFactor>0.9</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.7</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.3</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>	
+      <li>
+		<label>Crescendo</label>
+        <minSeverity>85.0</minSeverity>			
+        <painFactor>0.8</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.65</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.25</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>		  
+    </stages>
+  </HediffDef>
+
+  <!-- Luciferium addiction -->
+
+  <ChemicalDef>
+    <defName>NephilaAngelsNectarTwo</defName>
+    <label>angel's cream</label>
+    <addictionHediff>NephilaAngelsNectarAddiction</addictionHediff>
+    <canBinge>true</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_NephilaAngelsNectarTwo</defName>			
+    <needClass>Need_Chemical</needClass>
+    <label>angel's cream</label>
+    <description>This person's body is enhanced by nephilim produced Angel's Cream.\n\nWithout regular doses of the mechanites, they will die hideously.</description>
+    <listPriority>45</listPriority>
+    <fallPerDay>0.15</fallPerDay>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>NephilaAngelsNectarAddictionTwo</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <description>Incurable addiction to Nephilim Angel's Cream.</description>			
+    <label>angel's cream need</label>
+    <chemicalNeed>Chemical_NephilaAngelsNectarTwo</chemicalNeed>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>unmet</label>
+        <painOffset>0.4</painOffset>
+        <lifeThreatening>true</lifeThreatening>
+        <deathMtbDays>10</deathMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.8</setMax>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.4</mtbDays>
+          </li>
+          	  
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+
+
+
+<!--=====================================================End Angel's Nectar 2=====================================-->
+
+
+
+
+
+
+
+  
+  
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>NephilaGoJuice</defName>
+    <label>Cherub Sap</label>
+    <description>Roughly equivalent to Go-Juice, though more mild, Cherub Sap is made by isolating certain basic compounds from nephilim derived Iridiscent Milk. Quite a solid pick-me up and in common use by servants and soldiers in the Nephilim Imperial territories.</description>
+    <descriptionHyperlinks>
+      <HediffDef>NephilaGoJuiceHigh</HediffDef>
+      <HediffDef>NephilaGoJuiceAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoJuice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>53</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.40</joy>
+      <drugCategory>Hard</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>NephilaGoJuiceHigh</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>GoJuice</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.4</offset>
+          <toleranceChemical>NephilaGoJuice</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+          <offset>0.15</offset>
+        </li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed" MayRequire="lovelydovey.sex.witheuterpe">
+					<need>SEX_Intimacy</need>
+					<offset>-0.25</offset>
+				</li>		
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>NephilaUnlocker</researchPrerequisite> 
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <IridiscentMilk>2</IridiscentMilk>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>NephilaGoJuice</chemical>
+        <addictiveness>0.026</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>NephilaGoJuiceHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on cherub sap</label>
+    <labelNoun>a cherub sap high</labelNoun>
+    <description>Cherub sap in the bloodstream. It supercharges combat-related abilities and instantly increases psyfocus when first injected.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.75</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painFactor>0.1</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.15</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.3</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.35</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>NephilaGoJuiceHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>NephilaGoJuiceHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on go-juice</label>
+        <description>I feel pumped but steady. I am the bullet in flight, ready to cut through you.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!-- Go-juice addiction -->
+
+  <ChemicalDef>
+    <defName>NephilaGoJuice</defName>
+    <label>go-juice</label>
+    <addictionHediff>NephilaGoJuiceAddiction</addictionHediff>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_NephilaGoJuice</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>cherub sap</label>
+    <description>Because of a cherub sap addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.2</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>NephilaGoJuiceAddiction</defName>
+    <label>cherub sap addiction</label>
+    <description>A chemical addiction to cherub sap. Long-term presence of cherub sap has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of cherub sap, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <chemicalNeed>Chemical_NephilaGoJuice</chemicalNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.065</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <painFactor>3</painFactor>
+        <restFallFactorOffset>0.1</restFallFactorOffset>
+        <hungerRateFactorOffset>0.7</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.40</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>30</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>NephilaGoJuiceWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>NephilaGoJuiceAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>go-juice withdrawal</label>
+        <description>I'm all fuzzy and can't think straight. My limbs feel heavy, I'm tired and hungry, everything hurts. And why won't my eyes focus properly?</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>NephilaGoJuiceTolerance</defName>
+    <label>cherub sap tolerance</label>
+    <description>A built-up tolerance to cherub sap. The more severe this tolerance is, the more cherub sap it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.025</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>NephilaGoJuice</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <minSeverity>0.75</minSeverity>
+        <baseMtbDays>140</baseMtbDays>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>  
+  
+  
+  
+  
+  
+  
+  
+<!--=================================NephilaTransformationConcoction================================-->
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>NephilaEmbracementJuice</defName>
+    <label>Nephilim Maiden's Embrace</label>
+    <description>This drug, made by carefully embalming a nascent nephilim cherub within a decater of scintilating milk, confers upon those who drink it the "Maiden's Embrace." That is, it infects pawns with Nephila Sickness and all that that entails.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Beer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>53</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.40</joy>
+      <drugCategory>Hard</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Swallow {0}</ingestCommandString>
+      <ingestReportString>Swallowing {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>NephilaInitialTransformationFromAnimal</hediffDef>
+          <severity>0.5</severity>
+        </li>	
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.1</offset>
+          <toleranceChemical>NephilaEmbracementJuice</toleranceChemical>
+        </li>		
+      </outcomeDoers>
+    </ingestible>
+	<comps>
+      <li Class="CompProperties_Drug">
+        <chemical>NephilaEmbracementJuice</chemical>
+        <addictiveness>0.026</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li>
+    </comps>	
+    <recipeMaker>
+      <researchPrerequisite>NephilaUnlocker</researchPrerequisite> 
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <IridiscentMilk>15</IridiscentMilk>
+	  <CoalescingCherubim>1</CoalescingCherubim>
+    </costList>
+  </ThingDef>
+  
+	<HediffDef>
+		<defName>NephilaEmbracementJuiceEffect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>embracement glow</label>
+		<description>Nephilim Maiden's Embrace's effects.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>1.33</restFallFactor>
+				<statOffsets>
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">1</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<ThoughtDef>
+		<defName>NephilaEmbracementJuiceEffect</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>NephilaEmbracementJuiceEffect</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Nephilim Maiden's Embrace Glow</label>
+				<description>I can feel them in my brain.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Ambrosia addiction -->
+	<ChemicalDef>
+		<defName>NephilaEmbracementJuice</defName>
+		<label>nephilim maiden's embrace</label>
+		<addictionHediff>NephilaEmbracementJuiceAddiction</addictionHediff>
+		<toleranceHediff>NephilaEmbracementJuiceTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+	
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>Chemical_NephilaEmbracementJuice</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>nephilim maiden's embrace</label>
+		<description>Person is now hooked on urchin tendrils. Without them, their bedroom performance may fall.</description>
+		<listPriority>10</listPriority>
+	</NeedDef>
+	
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>NephilaEmbracementJuiceTolerance</defName>
+		<label>nephilim maiden's embrace tolerance</label>
+		<description>Nephilim Maiden's Embrace effects tolerance.</description>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.020</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>NephilaEmbracementJuice</chemical>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="AddictionBase">
+		<defName>NephilaEmbracementJuiceAddiction</defName>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<label>nephilim maiden's embrace addiction</label>
+		<description>Effects of nephilim maiden's embrace addiction.</description>
+		<chemicalNeed>Chemical_UrchinTendrils</chemicalNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+			</li>
+		</stages>
+	</HediffDef>
+		
+	<ThoughtDef>
+		<defName>NephilaEmbracementJuiceWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>NephilaEmbracementJuiceAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>nephilim maiden's embrace withdrawal</label>
+				<description>I just feel nothing down there.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>  
+  
+  
+  
+</Defs>

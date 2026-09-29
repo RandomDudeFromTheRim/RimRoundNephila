@@ -1,0 +1,904 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============== Empire titles - Player gettable non-psycaster ============================= -->
+
+  <RoyalTitleDef Abstract="True" Name="BaseNephilimEmpireTitle" >
+    <tags>
+      <li>NephilimEmpireTitle</li>	  
+    </tags>
+    <awardThought>GainedTitle</awardThought>
+    <lostThought>LostTitle</lostThought>
+    <recruitmentResistanceOffset>10</recruitmentResistanceOffset>
+	<changeHeirQuestPoints>100</changeHeirQuestPoints>	
+    <disabledWorkTags>
+      <li>None</li>
+    </disabledWorkTags>	
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimEmpireTitle">
+    <defName>NephilimCourtesan</defName>
+    <label>nephilim courtesan</label>
+    <description>The Nephilim title of freeholder gives a courtesan of the nephilim faction the right to own productive private property.\n\nFor the nephilim, most courtesans own no more than a tiny shop or taxi, but some can become very wealthy as merchants, entrepreneurs, or investors.</description>
+    <seniority>0</seniority>
+    <favorCost>1</favorCost>	
+    <changeHeirQuestPoints>1000</changeHeirQuestPoints>
+  </RoyalTitleDef>
+
+  <!-- ============== Empire titles - Player gettable psycaster ============================= -->
+
+  <RoyalTitleDef Abstract="True" Name="BaseNephilimTitlePsycaster" ParentName="BaseNephilimEmpireTitle" >
+    <!--<tags>
+      <li>NephilimEmpireTitle</li>	  
+    </tags>--> 
+    <favorCost>100</favorCost>
+    <changeHeirQuestPoints>1000</changeHeirQuestPoints>	
+    <rewards>
+	<PsychicAmplifier>1</PsychicAmplifier>	  
+    </rewards>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimTitlePsycaster">
+    <defName>NephilimSupplicant</defName>
+    <label>nephilim supplicant</label>
+    <description>The Nephilim title of supplicant is held by those who serve the nephilim court in an important, specific way. While it is not a noble title and offers no economic rights beyond those of a courtesan, it does give the holder the right to use low-level psychic abilities.\n\nIn Nephilim dominated space, this title is often held by Maidens and non-nephilim sympathizers who have proven their worth.</description>
+    <seniority>105</seniority>
+    <favorCost>6</favorCost>
+    <changeHeirQuestPoints>1200</changeHeirQuestPoints>
+    <recruitmentResistanceOffset>10</recruitmentResistanceOffset> 
+	<commonality>1</commonality>
+	<maxPsylinkLevel>1</maxPsylinkLevel>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimTitlePsycaster">
+    <defName>NephilimVeiledOne</defName>
+    <label>nephilim veiled one</label>
+    <description>The Nephilim title of veiled one is held by individuals at the lowest level of noble rank in the empire. Veiled ones are subordinate nobles, typically of the Maiden or Handmaiden class, who mostly do what their liege lord tells them.\n\nIn the Nephilim Empire, veiled ones help run the small "gardens" that constitute the equivalent of other humanoids' cities and colonial keeps.</description>
+    <seniority>205</seniority>
+    <favorCost>6</favorCost>
+    <minExpectation>Moderate</minExpectation>
+    <changeHeirQuestPoints>1200</changeHeirQuestPoints>
+	<permitPointsAwarded>1</permitPointsAwarded>
+    <commonality>1</commonality>	
+    <permits>
+	  <li>Nephila_TradeCaravan</li>	  
+	  <li>Nephila_TradeSettlement</li>
+	  <li>Nephila_TradeOrbital_Bulk</li>
+	  <li>Nephila_TradeOrbital_Animal</li>	
+      <li>CallNephilimMilitaryAidSmall</li>
+    </permits>
+    <requiredApparel>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>UpperHead</li>
+          <li>FullHead</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>RoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+    </requiredApparel>
+    <foodRequirement>
+      <minQuality>MealSimple</minQuality>
+      <allowedTypes>Processed, Liquor</allowedTypes>
+      <allowedDefs>
+        <li>Ambrosia</li>
+        <li>Milk</li>
+        <li>RawBerries</li>
+      </allowedDefs>
+    </foodRequirement>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimTitlePsycaster">
+    <defName>NephilimGrayOne</defName>
+    <label>gray one</label>
+    <labelFemale>gray one</labelFemale>
+    <description>The Nephilim title of Gray One is held by members of the Nephilim military who have demonstrated particular valor. Frequently given to members of the Matron "gray furnace" military birthing corps, Queen's Guard royal constabulary, and mercenary humanoids who have proven themselves through incredible valor, the Gray One title is coveted by those who wish to rise to the highest military echelons in the Nephilim war engine</description>
+    <seniority>305</seniority>
+    <favorCost>8</favorCost>
+    <minExpectation>High</minExpectation>
+    <changeHeirQuestPoints>1600</changeHeirQuestPoints>
+    <commonality>1</commonality>
+	<permitPointsAwarded>1</permitPointsAwarded>
+    <permits>
+      <li>CallNephilimMilitaryAidSmall</li>
+      <li>CallNephilimMilitaryAidLarge</li>
+	  <li>Nephila_TradeSettlement</li>
+	  <li>Nephila_TradeOrbital_Bulk</li>
+	  <li>Nephila_TradeOrbital_Slaves</li>
+	  <li>Nephila_TradeOrbital_Prosthetics</li>
+	  <li>Nephila_TradeOrbital_Animal</li>	  
+    </permits>
+    <requiredApparel>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>UpperHead</li>
+          <li>FullHead</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>RoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+    </requiredApparel>
+  </RoyalTitleDef>
+
+
+
+
+  <RoyalTitleDef ParentName="BaseNephilimTitlePsycaster">
+    <defName>NephilimGardenTender</defName>
+    <label>nephilim garden tender</label>
+    <description>The Nephilim title of garden tender is a bridge between the service-oriented lower titles below and the power-holding nobility above.\n\nIn the Nephilim Empire, garden tenders usually hold high ranking titles in a Nephilim Garden's ruling council, either executing the will of a presiding Grand Matron or tending to local issues themselves should a Grand Matron not yet exist. At war, they take authority over the smallest combat units that fight independently. On the ground, a garden tender will lead a troop cohort. In the fleet, a garden tender will captain a destroyer or a combat group. This class is typically filled with Matrons and Queen's Guard, though exceptional Handmaidens and non-Nephilim have been known to rise up the ranks.</description>
+    <seniority>401</seniority>
+    <favorCost>6</favorCost>
+    <minExpectation>Moderate</minExpectation>
+    <changeHeirQuestPoints>1200</changeHeirQuestPoints>
+    <commonality>1</commonality>	
+    <disabledWorkTags>
+      <li>Cleaning</li>
+    </disabledWorkTags>
+    <permits>
+      <li>CallNephilimMilitaryAidSmall</li>
+	  <li>Nephila_TradeSettlement</li>
+	  <li>Nephila_TradeOrbital_Bulk</li>
+	  <li>Nephila_TradeOrbital_Slaves</li>
+	  <li>Nephila_TradeOrbital_Prosthetics</li>
+	  <li>Nephila_TradeOrbital_Drugs</li>
+	  <li>Nephila_TradeOrbital_Animal</li>	  
+    </permits>
+    <requiredApparel>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>UpperHead</li>
+          <li>FullHead</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>RoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+    </requiredApparel>
+    <throneRoomRequirements>
+      <li Class="RoomRequirement_ThingAnyOf">
+        <things>
+          <li>Throne</li>
+          <li>GrandThrone</li>
+        </things>
+      </li>
+      <li Class="RoomRequirement_Area">
+        <area>12</area>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFloored</labelKey>
+        <tags>
+          <li>Floor</li>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Brazier</thingDef>
+        <count>2</count>
+      </li>
+      <li Class="RoomRequirement_AllThingsAreGlowing">
+        <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+        <thingDef>Brazier</thingDef>
+      </li>
+    </throneRoomRequirements>
+    <bedroomRequirements>
+      <li Class="RoomRequirement_Area">
+        <area>8</area>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFloored</labelKey>
+        <tags>
+          <li>Floor</li>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingAnyOf">
+        <things>
+          <li>DoubleBed</li>
+          <li>RoyalBed</li>
+        </things>
+      </li>
+    </bedroomRequirements>
+    <foodRequirement>
+      <minQuality>MealSimple</minQuality>
+      <allowedTypes>Processed, Liquor</allowedTypes>
+      <allowedDefs>
+        <li>Ambrosia</li>
+        <li>Milk</li>
+        <li>RawBerries</li>
+      </allowedDefs>
+    </foodRequirement>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimTitlePsycaster">
+    <defName>NephilimBaroness</defName>
+    <label>nephilim baroness</label>
+    <labelFemale>nephilim baroness</labelFemale>
+    <description>The Nephilim title of barones is the lowest of the middle nobility. While lower titles focus on personal service at war or commerce under a lord, baronesses hold title as semi-independent rulers. Each baroness is subordinate to their liege lord, but their obligations are mostly in supplying wealth and troops, and not in personal service.\n\nIn the Nephilim Empire, a baroness will typically own a city sector, mining colony, or similar outfit. At wartime, a baroness may captain a capital ship in name, or control a regiment of troops. \n\nIn keeping with the largely matriarchal power structures within the Nephilim empire, Baronesses are assumed to have a feminine gender, though male baronesses--incredible non-nephilim of considerable ability--do exist.</description>
+    <seniority>501</seniority>
+    <favorCost>14</favorCost>
+    <minExpectation>Noble</minExpectation>
+    <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+    <changeHeirQuestPoints>2800</changeHeirQuestPoints>
+    <commonality>1</commonality>
+    <suppressIdleAlert>true</suppressIdleAlert>
+    <decreeMtbDays>35</decreeMtbDays>
+    <decreeMentalBreakCommonality>5</decreeMentalBreakCommonality>
+    <decreeTags>
+      <li>All</li>
+	  <li>NephilaDecree</li>	  
+    </decreeTags>
+    <disabledJoyKinds>
+      <li>Gaming_Dexterity</li>
+    </disabledJoyKinds>
+    <disabledWorkTags>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+      <li>PlantWork</li>
+      <li>Mining</li>
+      <li>Animals</li>
+    </disabledWorkTags>
+    <permits>
+	  <li>Nephila_TradeSettlement</li>
+	  <li>Nephila_TradeOrbital_Bulk</li>
+	  <li>Nephila_TradeOrbital_Slaves</li>
+	  <li>Nephila_TradeOrbital_Prosthetics</li>
+	  <li>Nephila_TradeOrbital_Drugs</li>
+	  <li>Nephila_TradeOrbital_Weapons</li>
+	  <li>Nephila_TradeOrbital_Animal</li>
+	  <li>Nephila_TradeOrbital_ExoticAnimal</li>
+      <li>CallNephilimMilitaryAidSmall</li>
+      <li>CallNephilimMilitaryAidLarge</li>
+      <li>CallNephilimMilitaryAidGrand</li>
+    </permits>
+    <requiredApparel>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier5</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier5</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>UpperHead</li>
+          <li>FullHead</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>RoyalTier5</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier5</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+    </requiredApparel>
+    <throneRoomRequirements>
+      <li Class="RoomRequirement_ThingAnyOf">
+        <things>
+          <li>Throne</li>
+          <li>GrandThrone</li>
+        </things>
+      </li>
+      <li Class="RoomRequirement_Area">
+        <area>40</area>
+      </li>
+      <li Class="RoomRequirement_Impressiveness">
+        <impressiveness>80</impressiveness>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFineFloored</labelKey>
+        <tags>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Brazier</thingDef>
+        <count>2</count>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Column</thingDef>
+        <count>4</count>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Drape</thingDef>
+        <count>2</count>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>Harpsichord</thingDef>
+      </li>
+      <li Class="RoomRequirement_AllThingsAreGlowing">
+        <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+        <thingDef>Brazier</thingDef>
+      </li>
+    </throneRoomRequirements>
+    <bedroomRequirements>
+      <li Class="RoomRequirement_Area">
+        <area>20</area>
+      </li>
+      <li Class="RoomRequirement_Impressiveness">
+        <impressiveness>50</impressiveness>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFloored</labelKey>
+        <tags>
+          <li>Floor</li>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingAnyOf">
+        <things>
+          <li>RoyalBed</li>
+        </things>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>EndTable</thingDef>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>Dresser</thingDef>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Drape</thingDef>
+        <count>1</count>
+      </li>
+    </bedroomRequirements>
+    <foodRequirement>
+      <minQuality>MealFine</minQuality>
+      <allowedTypes>Processed, Liquor</allowedTypes>
+      <allowedDefs>
+        <li>Ambrosia</li>
+        <li>Milk</li>
+        <li>RawBerries</li>
+        <li>InsectJelly</li>
+      </allowedDefs>
+    </foodRequirement>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimTitlePsycaster">
+    <defName>NephilimCountess</defName>
+    <label>nephilim countess</label>
+    <labelFemale>nephilim countess</labelFemale>	
+    <description>The Nephilim title of countess is the middle rank of middle nobility.\n\nIn the Nephilim Empire, a countess would hold title to a Garden, presiding over a ruling counsel in the absence of a Grand Matron. They might also have a small personal fleet, possibly including capital ships.</description>
+    <seniority>601</seniority>
+    <favorCost>20</favorCost>
+    <minExpectation>Royal</minExpectation>
+    <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+    <changeHeirQuestPoints>3500</changeHeirQuestPoints>
+    <recruitmentResistanceOffset>10</recruitmentResistanceOffset>
+    <commonality>1</commonality>
+    <suppressIdleAlert>true</suppressIdleAlert>
+    <decreeMtbDays>20</decreeMtbDays>
+    <decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
+    <decreeTags>
+      <li>All</li>
+	  <li>NephilaDecree</li>	  
+    </decreeTags>
+    <disabledJoyKinds>
+      <li>Gaming_Dexterity</li>
+    </disabledJoyKinds>
+    <disabledWorkTags>
+      <li>Commoner</li>
+    </disabledWorkTags>
+    <permits>
+	  <li>Nephila_TradeSettlement</li>
+	  <li>Nephila_TradeOrbital_Bulk</li>
+	  <li>Nephila_TradeOrbital_Slaves</li>
+	  <li>Nephila_TradeOrbital_Prosthetics</li>
+	  <li>Nephila_TradeOrbital_Drugs</li>
+	  <li>Nephila_TradeOrbital_Weapons</li>
+	  <li>Nephila_TradeOrbital_Exotic</li>
+	  <li>Nephila_TradeOrbital_Animal</li>
+	  <li>Nephila_TradeOrbital_ExoticAnimal</li>
+      <li>CallNephilimMilitaryAidSmall</li>
+      <li>CallNephilimMilitaryAidLarge</li>
+      <li>CallNephilimMilitaryAidGrand</li>
+    </permits>
+    <requiredApparel>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier5</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier6</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier6</li>
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>UpperHead</li>
+          <li>FullHead</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>RoyalTier5</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier5</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+    </requiredApparel>
+    <throneRoomRequirements>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>GrandThrone</thingDef>
+      </li>
+      <li Class="RoomRequirement_Area">
+        <area>60</area>
+      </li>
+      <li Class="RoomRequirement_Impressiveness">
+        <impressiveness>100</impressiveness>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFineFloored</labelKey>
+        <tags>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Brazier</thingDef>
+        <count>2</count>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Column</thingDef>
+        <count>6</count>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Drape</thingDef>
+        <count>2</count>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>Piano</thingDef>
+      </li>
+      <li Class="RoomRequirement_AllThingsAreGlowing">
+        <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+        <thingDef>Brazier</thingDef>
+      </li>
+    </throneRoomRequirements>
+    <bedroomRequirements>
+      <li Class="RoomRequirement_Area">
+        <area>25</area>
+      </li>
+      <li Class="RoomRequirement_Impressiveness">
+        <impressiveness>60</impressiveness>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFineFloored</labelKey>
+        <tags>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingAnyOf">
+        <things>
+          <li>RoyalBed</li>
+        </things>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>EndTable</thingDef>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>Dresser</thingDef>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Drape</thingDef>
+        <count>1</count>
+      </li>
+    </bedroomRequirements>
+    <foodRequirement>
+      <minQuality>MealFine</minQuality>
+      <allowedTypes>Processed, Liquor</allowedTypes>
+      <allowedDefs>
+        <li>Ambrosia</li>
+        <li>Milk</li>
+        <li>RawBerries</li>
+        <li>InsectJelly</li>
+      </allowedDefs>
+    </foodRequirement>
+  </RoyalTitleDef>
+
+  <!-- ============== Empire titles - NPC only psycaster ============================= -->
+
+
+  <RoyalTitleDef Abstract="True" Name="BaseNephilimEmpireTitleNPC" ParentName="BaseNephilimEmpireTitle" >
+    <minExpectation>Royal</minExpectation>
+    <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+    <recruitmentResistanceOffset>10</recruitmentResistanceOffset>
+    <suppressIdleAlert>true</suppressIdleAlert>
+    <disabledJoyKinds>
+      <li>Gaming_Dexterity</li>
+    </disabledJoyKinds>
+    <disabledWorkTags>
+      <li>Commoner</li>
+    </disabledWorkTags>
+    <decreeMtbDays>10</decreeMtbDays>
+    <decreeMentalBreakCommonality>15</decreeMentalBreakCommonality>
+	
+    <decreeTags>
+      <li>All</li>
+	  <li>NephilaDecree</li>	  
+    </decreeTags>
+	
+    <permits>
+	  <li>Nephila_TradeSettlement</li>
+	  <li>Nephila_TradeOrbital_Bulk</li>
+	  <li>Nephila_TradeOrbital_Slaves</li>
+	  <li>Nephila_TradeOrbital_Prosthetics</li>
+	  <li>Nephila_TradeOrbital_Drugs</li>
+	  <li>Nephila_TradeOrbital_Weapons</li>
+	  <li>Nephila_TradeOrbital_Exotic</li>
+	  <li>Nephila_TradeOrbital_Animal</li>
+	  <li>Nephila_TradeOrbital_ExoticAnimal</li>
+      <li>CallNephilimMilitaryAidLarge</li>
+      <li>CallNephilimMilitaryAidGrand</li>
+    </permits>
+	
+    <requiredApparel>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier2</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier2</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>			  
+        </allowedTags>
+      </li>
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier5</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier5</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>		  
+        </allowedTags>
+      </li>
+	  
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>Torso</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>NephilimRoyalTier6</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier6</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>		  
+        </allowedTags>
+      </li>
+	  
+      <li>
+        <bodyPartGroupsMatchAny>
+          <li>UpperHead</li>
+          <li>FullHead</li>
+        </bodyPartGroupsMatchAny>
+        <requiredTags>
+          <li>RoyalTier7</li>
+        </requiredTags>
+        <allowedTags>
+          <li>RoyalTier7</li>		
+          <li>RoyalCombatGear</li>
+          <li>Psychic</li>
+		  <li>NephilaMatron</li>
+		  <li>NephilaMaiden</li>
+		  <li>NephilaHandmaiden</li>
+		  <li>NephilaMaidenMilitary</li>
+		  <li>NephilaHandmaidenMilitary</li>
+		  <li>NephilaMatronMilitary</li>
+        </allowedTags>
+      </li>
+	  
+    </requiredApparel>
+    <throneRoomRequirements>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>GrandThrone</thingDef>
+      </li>
+      <li Class="RoomRequirement_Area">
+        <area>60</area>
+      </li>
+      <li Class="RoomRequirement_Impressiveness">
+        <impressiveness>100</impressiveness>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFineFloored</labelKey>
+        <tags>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Brazier</thingDef>
+        <count>2</count>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Column</thingDef>
+        <count>6</count>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>Piano</thingDef>
+      </li>
+      <li Class="RoomRequirement_AllThingsAreGlowing">
+        <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+        <thingDef>Brazier</thingDef>
+      </li>
+    </throneRoomRequirements>
+    <bedroomRequirements>
+      <li Class="RoomRequirement_Area">
+        <area>30</area>
+      </li>
+      <li Class="RoomRequirement_Impressiveness">
+        <impressiveness>65</impressiveness>
+      </li>
+      <li Class="RoomRequirement_TerrainWithTags">
+        <labelKey>RoomRequirementAllFineFloored</labelKey>
+        <tags>
+          <li>FineFloor</li>
+        </tags>
+      </li>
+      <li Class="RoomRequirement_ThingAnyOf">
+        <things>
+          <li>RoyalBed</li>
+        </things>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>EndTable</thingDef>
+      </li>
+      <li Class="RoomRequirement_Thing">
+        <thingDef>Dresser</thingDef>
+      </li>
+      <li Class="RoomRequirement_ThingCount">
+        <thingDef>Drape</thingDef>
+        <count>1</count>
+      </li>
+    </bedroomRequirements>
+    <foodRequirement>
+      <minQuality>MealFine</minQuality>
+      <allowedTypes>Processed, Liquor</allowedTypes>
+      <allowedDefs>
+        <li>Ambrosia</li>
+        <li>Milk</li>
+        <li>RawBerries</li>
+        <li>InsectJelly</li>
+      </allowedDefs>
+    </foodRequirement>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimEmpireTitleNPC">
+    <defName>NephilimDuchess</defName>
+    <label>nephilim duchess</label>
+    <labelFemale>nephilim duchess</labelFemale>
+    <description>The Nephilim title of duchess is the highest of the middle nobility.\n\nIn the Nephilim Empire, duchesses control provinces, mega-gardens, or moons. At war, a duke can field a division-level force, or a fleet with capital ships an dozens of support craft.</description>
+    <seniority>705</seniority>
+    <commonality>1</commonality>	
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimEmpireTitleNPC">
+    <defName>NephilimConsul</defName>
+    <label>nephilim consul</label>
+    <description>Nephilim Consuls are Maidens, Handmaidens, and humanoid sympathizers who have proven themselves invaluable to the Nephilim Empire but are, for one reason or another, not qualified for Grand Matronhood.\n\nThese individuals occupy the highest rank that can be achieved in the Nephilim government without at least achieving Grand Matronhood.</description>
+    <seniority>805</seniority>
+    <commonality>0.6</commonality>	
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="BaseNephilimEmpireTitleNPC">
+    <defName>NephilimGrandMatronTitle</defName>
+    <label>grand matron</label>
+    <description>Nephilim Grand Matrons are the undisputed rulers of the Nephilim. While Ascended Matrons technically hold the highest rank in the hierarchy, their insane physical circumstances and hyperfecundity leave them too self-absorbed and mind-blasted to effectively rule an empire. The Grand Matrons, though swollen near to the point of immobility, are still able to lord over those beneath them, organizing the affairs of a galactice empire through mouths filled with delectable foods and lustful moans.</description>
+    <seniority>905</seniority>
+    <rewards>
+	<PsychicAmplifier>1</PsychicAmplifier>	  
+    </rewards>	
+    <commonality>0.1</commonality>	
+  </RoyalTitleDef>
+
+  <!-- Emperor should never appear in the game in any way, it's just here for completeness on UI lists etc. -->
+  <RoyalTitleDef ParentName="BaseNephilimEmpireTitleNPC">
+    <defName>NephilimAscendedMatron</defName>
+    <label>ascended matron</label>
+    <labelFemale>ascended matron</labelFemale>
+    <description>An ascended matron is a Nephilim Grand Matron who has absorbed the planet she was birthed on. As much stellar object as goo girl, ascended matrons exist at the top of the Nephilim hierarchy, churning out huge quantities of mechanite infused "star ships" to spearhead Nephilim armadas. \n\nAscended Matronhood is the ideal of all Nephilim, and new Nephilim colonies will seek to conquer the world they are on so that one of their own can ascend as quickly as possible.</description>
+    <seniority>1005</seniority>
+    <commonality>0.0</commonality>
+  </RoyalTitleDef>
+
+</Defs>

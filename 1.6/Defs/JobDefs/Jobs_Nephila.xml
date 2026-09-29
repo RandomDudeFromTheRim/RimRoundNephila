@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>NephilaMilkyLover</defName>
+		<driverClass>Nephila.JobDriver_MilkHumanoid</driverClass>
+		<reportString>assisting TargetA in birthing.</reportString>
+	</JobDef>			
+	<JobDef>
+		<defName>NephilaMilkySelf</defName>
+		<driverClass>Nephila.JobDriver_NephilaMilkSelf</driverClass>
+		<reportString>giving birth.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>QGMilkyLover</defName>
+		<driverClass>Nephila.JobDriver_MilkQueensGuard</driverClass>
+		<reportString>milking TargetA.</reportString>
+	</JobDef>			
+	<JobDef>
+		<defName>QGMilkySelf</defName>
+		<driverClass>Nephila.JobDriver_NephilaMilkQueensGuardSelf</driverClass>
+		<reportString>milking self.</reportString>
+	</JobDef>	
+	
+	
+	
+		
+	
+  	
+  
+ 	 
+		
+
+	
+</Defs>

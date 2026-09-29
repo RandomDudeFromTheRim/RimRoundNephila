@@ -1,0 +1,37 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Fertile Fields [1.1]</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<!-- Terrain Affordance Adds -->
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>Defs/TerrainDef[defName = "Neph_NephilaSoil"]/affordances</xpath>
+					<value>
+						<li>SoilF</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>Defs/TerrainDef[defName = "Neph_NephilaMossyTerrain"]/affordances</xpath>
+					<value>
+						<li>SoilMarshy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>Defs/TerrainDef[defName = "Neph_NephilaSoilRich"]/affordances</xpath>
+					<value>
+						<li>SoilRich</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>

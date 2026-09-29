@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Forsakens: Fauna</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="FO_DarkVandal"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.003</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="FO_DuskProwler"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.003</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="FO_RMurkling"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="FO_ShadowCharger"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="FO_Thunderox"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.003</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

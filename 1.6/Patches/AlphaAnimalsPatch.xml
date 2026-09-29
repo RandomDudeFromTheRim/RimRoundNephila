@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Aerofleet"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.3</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Agaripawn"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Agaripod"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.5</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_AnimusVox"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.05</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_BloodShrimp"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_BoulderMit"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Bumbledrone"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.17</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_CrystalMit"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_DuskRat"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Feralisk"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.1</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_FissionMouse"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_GreenGoo"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.7</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Helixien"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.02</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+	
+
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Mantrap"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_MycoidColossus"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.05</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_NightAve"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.15</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Nightling"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_NightMule"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_NightRam"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_OvergrownColossus"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.02</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_PebbleMit"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Plasmorph"]/race/wildBiomes</xpath>
+					<value>
+						
+							<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+						
+					</value>
+				</li>
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_RoughPlatedMonitor"]/race/wildBiomes</xpath>
+					<value>
+
+
+						<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_RedGoo"]/race</xpath>
+					<value>
+						<wildBiomes>
+							<Nephila_NephiliticEden>0.35</Nephila_NephiliticEden>
+						</wildBiomes>
+
+					</value>
+				</li>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Swarmling"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+
+					</value>
+				</li>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Wildpawn"]/race/wildBiomes</xpath>
+					<value>
+						<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_Wildpod"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_MeadowAve"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.5</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>	
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName="AA_RoyalAve"]/race/wildBiomes</xpath>
+					<value>
+
+						<Nephila_NephiliticEden>0.1</Nephila_NephiliticEden>
+
+
+					</value>
+				</li>					
+				
+				<!-- Animals I haven't added to any Alpha Biomes
+				
+				Bed Bug, Chameleon Yak, Desert Ave, Frost Ave, Groundrunner, Meadow Ave,
+				Needlepost, Needleroll, Radyak, Royal Ave, Sand Lion, Sand Squid, Shock Goat,
+				Teratogenic Originator, Thermadon			
+				
+				-->
+
+
+
+				<!-- Caravan animals -->
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/BiomeDef[defName="Nephila_NephiliticEden"]/allowedPackAnimals</xpath>
+					<value>
+
+						<li>AA_NightMule</li>
+						<li>AA_CrepuscularBeetle</li>
+
+					</value>
+				</li>
+
+
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

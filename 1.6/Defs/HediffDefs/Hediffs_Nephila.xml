@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>Nephila_UniqueFertility</defName>
+		<label>nephila fertility</label>
+    <labelNoun>nephila fertility</labelNoun>
+    <description>The hyperactive sex drive and reproductive organs of a Nephilim Maiden.</description>		
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<stages>
+			<li>
+				<!--<capMods>
+					<li>
+						<capacity>Reproduction</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>-->
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+
+
+	<HediffDef>
+		<defName>MaidenCloud</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>maiden aura</label>
+		<description>A maiden or queen's guard's mechanite aura increases the lust of nearby pawns while slightly buffing their concentration as they strive to please her.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.04</offset>
+				  </li>
+				</capMods>			
+				<statOffsets>
+					<!--<Consciousness>0.9</Consciousness>-->
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">0.55</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>HandmaidenCloud</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>handmaiden aura</label>
+		<description>A handmaiden's mechanite aura increases the lust of nearby pawns while slightly buffing their concentration as they strive to please her.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.07</offset>
+				  </li>
+				</capMods>			
+				<statOffsets>
+					<!--<Consciousness>0.9</Consciousness>-->
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">0.6</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>MatronCloud</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>matron aura</label>
+		<description>A matron's mechanite aura increases the lust of nearby pawns while slightly buffing their concentration as they strive to please her.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.1</offset>
+				  </li>
+				</capMods>			
+				<statOffsets>
+					<!--<Consciousness>0.9</Consciousness>-->
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">0.65</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GrandMatronCloud</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>grand matron aura</label>
+		<description>A grand matron's mechanite cloud invades the minds of nearby pawns, substantially increasing their work capacity while driving them near-mad with lust.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.25</offset>
+				  </li>
+				</capMods>			
+				<statOffsets>
+					<!--<Consciousness>0.9</Consciousness>-->
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">1.5</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+		
+	<HediffDef>
+		<defName>NephilaBreasts</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>stupidly enormous slime breasts</label>
+		<labelNoun>a pair of stupidly enormous slime breasts</labelNoun>
+		<description>Heaving, jiggling, and leaking...</description>
+		<defaultLabelColor>(1, 0.55, 0.8)</defaultLabelColor>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<statOffsets>
+					<SEX_LactationPerDay MayRequire="euterpe.milkytitfuck">1</SEX_LactationPerDay>
+					<SEX_LactationCapacity MayRequire="euterpe.milkytitfuck">1.5</SEX_LactationCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>NephilaSlimeBreasts</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>rows of leaking slime tits</label>
+		<labelNoun>rows of leaking slime tits</labelNoun>
+		<description>A true canyon of wobbling cleavage.</description>
+		<defaultLabelColor>(1, 0.55, 0.8)</defaultLabelColor>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<statOffsets>
+					<SEX_LactationPerDay MayRequire="euterpe.milkytitfuck">2</SEX_LactationPerDay>
+					<SEX_LactationCapacity MayRequire="euterpe.milkytitfuck">3</SEX_LactationCapacity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Nephila_LustNanites</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Nanite induced lust</label>
+    <labelNoun>a case of nanite induced lust</labelNoun>
+    <description>A nanite infection that drives those possessed of it mad with lust.</description>		
+		<defaultLabelColor>(0.5, 0.7, 0.45)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Slight</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.95</postFactor>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.95</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.95</postFactor>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<postFactor>0.95</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Berserk</mentalState>
+						<mtbDays>0.04</mtbDays>
+					</li>
+				</mentalStateGivers>				
+				<statOffsets>				</statOffsets>
+			</li>
+			<li>
+				<label>Acute</label>
+				<minSeverity>0.2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.80</postFactor>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.80</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.80</postFactor>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<postFactor>0.80</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Berserk</mentalState>
+						<mtbDays>0.002</mtbDays>
+					</li>
+				</mentalStateGivers>				
+				<statOffsets>				</statOffsets>
+			</li>
+			<li>
+				<label>Singing</label>
+				<minSeverity>0.501</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.5</postFactor>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.7</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.5</postFactor>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<postFactor>0.5</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Berserk</mentalState>
+						<mtbDays>0.00002</mtbDays>
+					</li>
+				</mentalStateGivers>				
+				<statOffsets>				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>NephilaFecundity</defName>
+    <label>gooey belly</label>
+    <labelNoun>a gooey belly</labelNoun>
+    <description>The subtle swell of a Nephilim Maiden. You can almost see it growing plumper and more ponderous by the hour.</description>	
+	<defaultLabelColor>(1, 0.41, 0.81)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+	<tendable>false</tendable>
+	<isBad>false</isBad>	
+    <initialSeverity>0.001</initialSeverity>
+    <hediffClass>Nephila.HediffWithComps_NephilaMaidenFullyPreggers</hediffClass> 
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>2.2</severityPerDay>
+      </li>
+    </comps>	
+    <stages>
+      <li>
+        <label>slight convexity</label>
+		<hungerRateFactorOffset>.03</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.95</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.97</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>25.0</minSeverity>
+        <label>just visible</label>
+		<hungerRateFactorOffset>.5</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.95</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.95</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+      <li>
+        <minSeverity>50.0</minSeverity>
+        <label>swollen</label>
+		<hungerRateFactorOffset>.07</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<vomitMtbDays>3</vomitMtbDays>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.92</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>70.0</minSeverity>
+        <label>pregnant looking</label>
+		<hungerRateFactorOffset>.1</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<vomitMtbDays>3</vomitMtbDays>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+      <li>
+        <minSeverity>99.0</minSeverity>
+        <label>massively pregnant looking</label>
+		<hungerRateFactorOffset>.13</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.87</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+    </stages>
+  	<modExtensions>
+			<li Class="Nephila.NephilaBroodExtension">
+				<kilosPerDay>3</kilosPerDay>
+				<kilosOnCompletion>20</kilosOnCompletion>
+			</li>
+		</modExtensions>
+	</HediffDef>
+  
+  <HediffDef ParentName="InfectionBase">
+    <defName>NephilaHandmaidenFecundity</defName>
+    <label>brood swollen pregnancy</label>
+    <labelNoun>a brood swollen pregnancy</labelNoun>
+    <description>The absurd "pregnancy" of a Nephilim Handmaiden. Taut and quivering, this gooey belly dominates its owner's life, given its debilitating size and the urge to fill it that she is perpetually gripped by.</description>	
+	<defaultLabelColor>(1, 0.41, 0.81)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+	<isBad>false</isBad>
+	<tendable>false</tendable>
+    <initialSeverity>0.001</initialSeverity>
+    <hediffClass>Nephila.HediffWithComps_NephilaHandMaidenFullyPreggers</hediffClass> 
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>1.8</severityPerDay>
+      </li>
+    </comps>		
+    <stages>
+      <li>
+        <label>huge</label>
+		<hungerRateFactorOffset>0.05</hungerRateFactorOffset>
+		<statOffsets>		</statOffsets>		
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.87</postFactor>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <minSeverity>35.0</minSeverity>		  
+        <label>enormous</label>	
+		<hungerRateFactorOffset>0.1</hungerRateFactorOffset>
+		<statOffsets>		</statOffsets>		
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+      <li>
+        <minSeverity>55.0</minSeverity>
+        <label>truly enormous</label>
+		<hungerRateFactorOffset>0.2</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>65.0</minSeverity>
+        <label>absurd</label>
+		<hungerRateFactorOffset>0.3</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.82</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+      <li>
+        <minSeverity>99.0</minSeverity>
+        <label>debilitating</label>
+		<hungerRateFactorOffset>0.4</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+    </stages>
+  	<modExtensions>
+			<li Class="Nephila.NephilaBroodExtension">
+				<kilosPerDay>4</kilosPerDay>
+				<kilosOnCompletion>35</kilosOnCompletion>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>NephilaMatronFecundity</defName>
+    <label>hyperpregnancy</label>
+    <labelNoun>a gooey hyperpregnancy</labelNoun>
+    <description>This taut, gooey belly dwarfs the pensive form of the Nephilim Matron attached to it. The organ rumbles ominously as she stuffs it fuller and fuller, and the forms of her numerous Seraphim young can be seen writhing just under its paper-thin flesh.</description>	
+	<defaultLabelColor>(1, 0.41, 0.81)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+	<isBad>false</isBad>
+	<tendable>false</tendable>
+    <initialSeverity>0.001</initialSeverity>
+    <hediffClass>Nephila.HediffWithComps_NephilaBrood</hediffClass>	
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.83</severityPerDay>
+      </li>
+    </comps>	
+    <stages>
+      <li>
+        <label>disabling</label>
+		<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+		<statOffsets>		</statOffsets>		
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>35.0</minSeverity>	  
+        <label>unbelievable</label>
+		<hungerRateFactorOffset>0.6</hungerRateFactorOffset>
+		<statOffsets>		</statOffsets>		
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.77</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+      <li>
+        <minSeverity>55.0</minSeverity>
+        <label>couch sized</label>
+		<hungerRateFactorOffset>0.7</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.75</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.75</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>70.0</minSeverity>
+        <label>cart crushing</label>
+		<hungerRateFactorOffset>0.8</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.75</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.72</postFactor>
+          </li>
+        </capMods>
+      </li>	 
+      <li>
+        <minSeverity>99.0</minSeverity>
+        <label>room filling</label>
+		<hungerRateFactorOffset>0.9</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<!--<vomitMtbDays>2</vomitMtbDays>-->	
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.7</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.7</postFactor>
+          </li>
+        </capMods>
+      </li>	  
+    </stages>
+  	<modExtensions>
+			<li Class="Nephila.NephilaBroodExtension">
+				<kilosPerDay>5</kilosPerDay>
+				<kilosOnCompletion>0</kilosOnCompletion>
+			</li>
+		</modExtensions>
+	</HediffDef>  
+  
+    <HediffDef ParentName="InfectionBase">
+    <defName>NephilaGrandMatronFecundity</defName>
+		<hediffClass>Nephila.HediffWithComps_NephilaBrood</hediffClass>
+	<defaultLabelColor>(1, 0.41, 0.81)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+	<isBad>false</isBad>
+	<tendable>false</tendable>
+	<label>brood queen's womb</label>
+    <labelNoun>a brood queen's womb</labelNoun>
+    <description>Were it not for the hypertrophied tentacle "wings" emerging from this Nephilim Grand Matron's back, she would have been crushed under the planetary girth of her womb long ago. As it is, her gooey tentacles work full time to soothe the quaking organ, keeping it moist and pampered even as it remains inches from cataclysmic rupture. The Grand Matron either doesn't care how dangerous her growth or become, or finds it a turn-on. She has achieved her aim of becoming nothing more than a "baby" factory, and the world will tremble under the weight of her many young.</description>	
+    <initialSeverity>0.001</initialSeverity>
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.83</severityPerDay>
+      </li>
+    </comps>	
+    <stages>
+		<li>
+        <label>mind bogglingly enormous</label>		
+		<hungerRateFactorOffset>1.0</hungerRateFactorOffset>		
+		<statOffsets>		</statOffsets>
+		<vomitMtbDays>1.5</vomitMtbDays>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.65</postFactor>		
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.20</postFactor>
+          </li>	  	  
+		 </capMods>
+		</li>	 
+	</stages>
+  	<modExtensions>
+			<li Class="Nephila.NephilaBroodExtension">
+				<kilosPerDay>6</kilosPerDay>
+				<kilosOnCompletion>0</kilosOnCompletion>
+			</li>
+		</modExtensions>
+	</HediffDef>  
+
+
+  <HediffDef ParentName="MechanitesBase">
+    <defName>NephilaInitialTransformation</defName>
+    <label>nephila sickness</label>
+    <labelNoun>a case of nephila sickness</labelNoun>
+    <description>Nephila nanites infest potential hosts, slowly driving them to painful, gluttonous excess while girding their bodies for transformation. Should the infected host meet the nanites' programmed requirements, they will eventually transform them into a Nephilim Handmaiden. Otherwise, the host will get over the infection in no more than a year.</description>	
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+    <initialSeverity>0.99</initialSeverity>	
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>4.5</severityPerDay>
+      </li>
+    </comps>
+    <hediffClass>Nephila.HediffWithComps_NephilaSicknessTransformation</hediffClass> 	
+    <stages>
+      <li>
+        <painOffset>-0.2</painOffset>
+        <label>mild hunger</label>
+		<hungerRateFactorOffset>0.1</hungerRateFactorOffset>		
+        <restFallFactorOffset>-0.2</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>25.0</minSeverity>	  
+        <label>moderate hunger</label>
+		<hungerRateFactorOffset>0.25</hungerRateFactorOffset>			
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>50.0</minSeverity>	  
+        <painOffset>0.25</painOffset>
+        <label>acute cravings</label>
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+		<hungerRateFactorOffset>0.45</hungerRateFactorOffset>				
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>		  
+      <li>
+        <minSeverity>80.0</minSeverity>
+        <label>intense craving</label>
+        <painOffset>0.45</painOffset>
+        <restFallFactorOffset>-0.35</restFallFactorOffset>
+		<hungerRateFactorOffset>0.5</hungerRateFactorOffset>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.35</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>99.0</minSeverity>
+        <label>all-consuming need</label>
+        <painOffset>0.6</painOffset>
+        <restFallFactorOffset>-0.7</restFallFactorOffset>
+		<hungerRateFactorOffset>1.25</hungerRateFactorOffset>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>	  
+    </stages>
+  </HediffDef>
+  
+   <HediffDef ParentName="MechanitesBase">
+    <defName>NephilaInitialTransformationFromAnimal</defName>
+    <label>nephila sickness from tentacles</label>
+    <!--<labelNoun>a case of nephila sickness</labelNoun>-->
+    <description>Nephila nanites infest potential hosts, slowly driving them to painful, gluttonous excess while girding their bodies for transformation. Should the infected host meet the nanites' programmed requirements, they will eventually transform them into a Nephilim Handmaiden. Otherwise, the host will get over the infection in no more than a year.</description>		
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+    <initialSeverity>0.001</initialSeverity>	
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>4.5</severityPerDay>
+      </li>
+    </comps>
+    <hediffClass>Nephila.HediffWithComps_NephilaSicknessTransformationFromAnimal</hediffClass>	
+    <stages>
+      <li>
+        <painOffset>-0.2</painOffset>
+        <label>mild hunger</label>
+		<hungerRateFactorOffset>0.1</hungerRateFactorOffset>		
+        <restFallFactorOffset>-0.2</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>25.</minSeverity>	  
+        <label>moderate hunger</label>
+		<hungerRateFactorOffset>0.25</hungerRateFactorOffset>			
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>50.0</minSeverity>	  
+        <painOffset>0.25</painOffset>
+        <label>acute cravings</label>
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+		<hungerRateFactorOffset>0.45</hungerRateFactorOffset>				
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>		  
+      <li>
+        <minSeverity>80.0</minSeverity>
+        <label>intense craving</label>
+        <painOffset>0.45</painOffset>
+        <restFallFactorOffset>-0.35</restFallFactorOffset>
+		<hungerRateFactorOffset>0.5</hungerRateFactorOffset>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.35</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>99.0</minSeverity>
+        <label>all-consuming need</label>
+        <painOffset>0.6</painOffset>
+        <restFallFactorOffset>-0.7</restFallFactorOffset>
+		<hungerRateFactorOffset>1.25</hungerRateFactorOffset>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>	  
+    </stages>
+  </HediffDef> 
+  
+  
+    <HediffDef ParentName="MechanitesBase">
+    <defName>NephilaSnekBombTransformation</defName>
+    <label>nephila serpent sickness</label>
+    <!--<labelNoun>a case of nephila sickness</labelNoun>-->
+    <description>An aggressive strain of Nephila mechanites that transforms those afflicted into nephila cherubim. Many of those afflicted have been heard to call out repeatedly, "wass a mannnn, wasss a mannn." It is unkown whether this indicates they retain humanoid intelligence after losing their humanoid forms.</description>		
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+    <initialSeverity>99.001</initialSeverity>	
+	<minSeverity>0.001</minSeverity>
+    <maxSeverity>100.0</maxSeverity>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>4.5</severityPerDay>
+      </li>
+    </comps>
+    <hediffClass>Nephila.HediffWithComps_NephilaGrandMatronSpewTransformer</hediffClass> 	
+    <stages>
+      <li>
+        <painOffset>-0.2</painOffset>
+        <label>mild hunger</label>
+		<hungerRateFactorOffset>0.1</hungerRateFactorOffset>		
+        <restFallFactorOffset>-0.2</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>25.</minSeverity>	  
+        <label>moderate hunger</label>
+		<hungerRateFactorOffset>0.25</hungerRateFactorOffset>			
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>50.0</minSeverity>	  
+        <painOffset>0.25</painOffset>
+        <label>acute cravings</label>
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+		<hungerRateFactorOffset>0.45</hungerRateFactorOffset>				
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>		  
+      <li>
+        <minSeverity>80.0</minSeverity>
+        <label>intense craving</label>
+        <painOffset>0.45</painOffset>
+        <restFallFactorOffset>-0.35</restFallFactorOffset>
+		<hungerRateFactorOffset>0.5</hungerRateFactorOffset>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.35</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>99.0</minSeverity>
+        <label>all-consuming need</label>
+        <painOffset>0.6</painOffset>
+        <restFallFactorOffset>-0.7</restFallFactorOffset>
+		<hungerRateFactorOffset>1.25</hungerRateFactorOffset>		
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>	  
+    </stages>
+  </HediffDef>  
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>NephilaMechaniteInhibitor</defName>
+    <label>nephila mechanite inhibitor</label>
+    <labelNoun>a nephila mechanite inhibitor</labelNoun>
+    <description>This implant attaches to the cerebellum and sends a pulse of anti-mechanite energy through the implanted individual's nervous system, protecting them from infection with Nephila Sickness. It also has a minor positive impact on the user's cognitive abilities.</description>		
+    <descriptionHyperlinks><ThingDef>Joywire</ThingDef></descriptionHyperlinks>
+    <scenarioCanAdd>false</scenarioCanAdd>	
+    <stages>
+      <li>
+		<partEfficiencyOffset>0.05</partEfficiencyOffset>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>Joywire</spawnThingOnRemoved>
+  </HediffDef>  
+
+
+
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Nephila_PsyAmp</defName>
+    <label>nephilim psy amp</label>
+    <labelNoun>a nephilim psy amp</labelNoun>	
+    <description>An installed nephilim psy amp.</description>
+    <descriptionHyperlinks><ThingDef>Nephila_PsyAmp</ThingDef></descriptionHyperlinks>
+	<!--<hediffClass>Hediff_ImplantWithLevel</hediffClass>-->
+	<hediffClass>Hediff_Psylink</hediffClass>
+    <spawnThingOnRemoved>Nephila_PsyAmp</spawnThingOnRemoved>
+    <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+    <minSeverity>0</minSeverity>
+    <maxSeverity>6</maxSeverity>
+    <stages>
+      <li>
+		<label>basic tier</label>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+			<TradePriceImprovement>0.05</TradePriceImprovement>
+			<NegotiationAbility>0.10</NegotiationAbility>
+			<SocialImpact>0.05</SocialImpact>
+			<ResearchSpeed>0.04</ResearchSpeed>
+			<MentalBreakThreshold>0.01</MentalBreakThreshold>
+			<PsychicSensitivity>0.40</PsychicSensitivity>
+		</statOffsets>
+      </li>
+      <li>
+		<label>standard tier</label>
+        <minSeverity>2</minSeverity>
+        <statOffsets>
+			<TradePriceImprovement>0.10</TradePriceImprovement>
+			<NegotiationAbility>0.20</NegotiationAbility>
+			<SocialImpact>0.10</SocialImpact>
+			<ResearchSpeed>0.08</ResearchSpeed>
+			<MentalBreakThreshold>0.02</MentalBreakThreshold>
+			<PsychicSensitivity>0.80</PsychicSensitivity>
+		</statOffsets>
+      </li>
+      <li>
+		<label>advanced tier</label>
+        <minSeverity>3</minSeverity>
+        <statOffsets>
+			<TradePriceImprovement>0.15</TradePriceImprovement>
+			<NegotiationAbility>0.30</NegotiationAbility>
+			<SocialImpact>0.15</SocialImpact>
+			<ResearchSpeed>0.12</ResearchSpeed>
+			<MentalBreakThreshold>0.03</MentalBreakThreshold>
+			<PsychicSensitivity>1.20</PsychicSensitivity>
+		</statOffsets>
+      </li>
+	  <li>
+		<label>expert tier</label>
+        <minSeverity>4</minSeverity>
+        <statOffsets>
+			<TradePriceImprovement>0.20</TradePriceImprovement>
+			<NegotiationAbility>0.40</NegotiationAbility>
+			<SocialImpact>0.20</SocialImpact>
+			<ResearchSpeed>0.16</ResearchSpeed>
+			<MentalBreakThreshold>0.4</MentalBreakThreshold>
+			<PsychicSensitivity>1.60</PsychicSensitivity>
+		</statOffsets>
+      </li>
+	  <li>
+		<label>ultra tier</label>
+        <minSeverity>5</minSeverity>
+        <statOffsets>
+			<TradePriceImprovement>0.25</TradePriceImprovement>
+			<NegotiationAbility>0.50</NegotiationAbility>
+			<SocialImpact>0.30</SocialImpact>
+			<ResearchSpeed>0.2</ResearchSpeed>
+			<MentalBreakThreshold>0.5</MentalBreakThreshold>
+			<PsychicSensitivity>2.00</PsychicSensitivity>
+		</statOffsets>
+      </li>
+    </stages>
+	<!--<comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+    </comps>-->
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>Nephila_PsyAmp</defName>
+    <label>nephila psy amp</label>
+    <description>The nephilim psy amp concentrates psionic power using nephilim mechanite technology. Those possessed of one develop a growing obsession with realizing the birth of ascended matrons through the conversion of untamed worlds.</description>
+    <graphicData>
+      <texPath>Things/Item/Special/PsylinkNeuroformer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(1,1,1)</color>
+    </graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+	<thingClass>ThingWithComps</thingClass>	
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>NeuralComputation</researchPrerequisite>
+    </recipeMaker>
+	<comps>
+	  <li Class="CompProperties_RoyalImplant">
+		<implantHediff>Nephila_PsyAmp</implantHediff>
+      </li>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Install nephilim psy amp</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>Nephila_PsyAmp</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+	<techHediffsTags>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>Nephila_DowngradeNephilaPsyAmp</defName>
+    <label>downgrade nephilim psy amp</label>
+    <description>Downgrade a nephilim psy amp.</description>
+    <descriptionHyperlinks><ThingDef>Nephila_PsyAmp</ThingDef></descriptionHyperlinks>
+    <workerClass>Recipe_ChangeImplantLevel</workerClass>
+    <jobString>Downgrading a nephila psy amp.</jobString>
+    <recipeUsers>
+      <li>Human</li>
+	  <li>Nephila</li>
+	  <li>NephilaHandmaiden</li>
+	  <li>NephilaMatron</li>
+	  <li>NephilaGrandMatron</li>
+	  <li>NephilaQueensGuard</li>
+    </recipeUsers>
+    <isViolation>true</isViolation>
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>1</Medicine>
+    </skillRequirements>
+    <products>
+      <Nephila_PsyAmp>1</Nephila_PsyAmp>
+    </products>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <changesHediffLevel>Nephila_PsyAmp</changesHediffLevel>
+    <hediffLevelOffset>-1</hediffLevelOffset>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>Nephila_UpgradeNephilaPsyAmp</defName>
+    <label>upgrade nephilim psy amp</label>
+    <description>Upgrade a nephilim psy amp.</description>
+    <descriptionHyperlinks><ThingDef>Nephila_PsyAmp</ThingDef></descriptionHyperlinks>
+    <workerClass>Recipe_ChangeImplantLevel</workerClass>
+    <jobString>Downgrading a nephila psy amp.</jobString>
+    <recipeUsers>
+      <li>Human</li>
+	  <li>Nephila</li>
+	  <li>NephilaHandmaiden</li>
+	  <li>NephilaMatron</li>
+	  <li>NephilaGrandMatron</li>
+	  <li>NephilaQueensGuard</li>
+    </recipeUsers>
+    <isViolation>true</isViolation>
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>1</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Nephila_PsyAmp</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>Nephila_PsyAmp</li>
+      </thingDefs>	  
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <changesHediffLevel>Nephila_PsyAmp</changesHediffLevel>
+    <hediffLevelOffset>1</hediffLevelOffset>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+  </RecipeDef>	
+		
+
+	<!-- Induced lactation's swelling (HediffWithComps_NephilaBreastIncrease): more milk, held longer. -->
+	<HediffDef>
+		<defName>NephilaSwollenBreasts</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>swollen breasts</label>
+		<labelNoun>swollen, milk-heavy breasts</labelNoun>
+		<description>Mechanites have swollen this person's breasts well past their natural size. They make and hold far more milk than they used to, and their weight gets in the way a little.</description>
+		<defaultLabelColor>(1, 0.55, 0.8)</defaultLabelColor>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<initialSeverity>0.35</initialSeverity>
+		<maxSeverity>2</maxSeverity>
+		<stages>
+			<li>
+				<label>swollen</label>
+				<statOffsets>
+					<SEX_LactationPerDay MayRequire="euterpe.milkytitfuck">0.25</SEX_LactationPerDay>
+					<SEX_LactationCapacity MayRequire="euterpe.milkytitfuck">0.25</SEX_LactationCapacity>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>heavy</label>
+				<statOffsets>
+					<SEX_LactationPerDay MayRequire="euterpe.milkytitfuck">0.5</SEX_LactationPerDay>
+					<SEX_LactationCapacity MayRequire="euterpe.milkytitfuck">0.6</SEX_LactationCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.03</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1.4</minSeverity>
+				<label>enormous</label>
+				<statOffsets>
+					<SEX_LactationPerDay MayRequire="euterpe.milkytitfuck">1</SEX_LactationPerDay>
+					<SEX_LactationCapacity MayRequire="euterpe.milkytitfuck">1.2</SEX_LactationCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.06</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.04</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

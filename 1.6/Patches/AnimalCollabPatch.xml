@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>AnimalCollabProj</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+	
+
+
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPLion"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.05</Nephila_NephiliticEden>
+
+
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPTiger"]/race/wildBiomes</xpath>
+				<value>
+
+
+					<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPChipmunk"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.15</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPFerret"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.15</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPGreatBustard"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.025</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPGuineaPig"]/race/wildBiomes</xpath>
+				<value>
+
+
+					<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPHippopotamus"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.05</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPSilkspider"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPLlama"]/race/wildBiomes</xpath>
+				<value>
+					
+						<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPPanda"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.03</Nephila_NephiliticEden>
+				</value>
+			</li>
+
+
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="ACPTapir"]/race/wildBiomes</xpath>
+				<value>
+					
+						<Nephila_NephiliticEden>0.02</Nephila_NephiliticEden>
+					
+
+				</value>
+			</li>
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

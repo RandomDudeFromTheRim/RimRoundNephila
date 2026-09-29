@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef Name="NephBaseGun" Abstract="True" ParentName="BaseWeapon">
+		<techLevel>Ultra</techLevel>
+		<smeltable>true</smeltable>
+		<thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="NephBaseMakeableGun" ParentName="NephBaseGun" Abstract="True">
+    <recipeMaker>
+      <!--<workSpeedStat>SmithingSpeed</workSpeedStat>-->
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+    <ThingDef Name="BaseNephGun" ParentName="NephBaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <ThingDef Name="BaseNephMakeableGun" ParentName="NephBaseMakeableGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+
+
+  
+     <ThingDef ParentName="BaseBullet">
+		<defName>Bullet_NephRifle</defName>
+		<label>charge shot</label>
+		<graphicData>
+			<texPath>Spells/nephGMShotOther</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+		<flyOverhead>false</flyOverhead>
+			<damageDef>StatueSpew</damageDef>
+			<damageAmountBase>16</damageAmountBase>
+			<speed>120</speed>			
+      <stoppingPower>0.8</stoppingPower>
+		</projectile>
+	</ThingDef>
+
+
+  <ThingDef ParentName="BaseNephMakeableGun">
+    <defName>Gun_NephStatue</defName>
+    <label>nephilim carved lance</label>
+    <description>At first glance, this stone statue would seem an odd choice for a weapon. The nephila mechanite swarm that it exhudes can be quite deadly at close range, however, and the advanced artifact is even capable of inflicting nephilim sickness.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/NephilaStatueLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>		  
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>.3</AccuracyLong>
+      <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.9</MoveSpeed>		
+	</equippedStatOffsets>		
+    <recipeMaker>
+		<researchPrerequisites>
+			<li>ChargedShot</li>
+			<li>NephilaUnlocker</li>	  		
+		</researchPrerequisites>	  
+	  <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+	  <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>	  
+    </recipeMaker>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>140</costStuffCount>	
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+	  <Uranium>35</Uranium>
+    </costList>
+    <techLevel>Ultra</techLevel>
+    <weaponTags>
+      <li>NephRifle</li>
+      <li>NephRanged</li>
+	  <!--<li>Bladelink</li>-->
+    </weaponTags>
+	    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>4.0</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+		<comps>
+		  <!--<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			  <eastOffset>(0.31,0,0)</eastOffset>
+			  <westOffset>(-0.31,0,0)</westOffset>
+		  </li>-->
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <li Class="CompProperties_BladelinkWeapon" />
+		  <li Class="CompProperties_GeneratedName">
+			<nameMaker>NamerWeaponBladelink</nameMaker>
+		  </li>		  
+		</comps>		
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_NephRifle</defaultProjectile>
+        <warmupTime>1.3</warmupTime>
+        <range>20</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>45</ticksBetweenBurstShots>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<!--<targetParams>
+          <canTargetLocations>false</canTargetLocations>
+        </targetParams>-->
+      </li>
+    </verbs>
+  </ThingDef>
+
+ 
+  
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_nephlance</defName>
+    <label>nephilim knight's lance</label>
+    <description>A crude looking stone lance wrapped in cloth. The cloth is infused with dormant nephilim mechanites. While they cannot inflict nephila sickness, they do injure and distract those that come in contact with them.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/NephilaFlaggedLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.0</drawSize>	  
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>NonNeolithicOnlyMelee</li>
+      <li>NephMelee</li>
+    </weaponTags>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>75</costStuffCount>
+    <costList>
+    <Cloth>30</Cloth>
+</costList>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>1.6</Mass>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.9</MoveSpeed>		
+	</equippedStatOffsets>		
+    <!--<equippedStatOffsets>
+	  <MeleeDodgeChance>0.15</MeleeDodgeChance> 
+    </equippedStatOffsets>-->	
+    <equippedAngleOffset>-75</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>breadth</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>5</cooldownTime>
+      </li>
+      <li>
+        <label>tip</label>
+        <capacities>
+          <li>NephilaLustBash</li>
+        </capacities>
+        <power>34</power>
+        <cooldownTime>6</cooldownTime>
+      </li>
+    </tools>
+		<comps>
+		  <!--<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			  <eastOffset>(0.31,0,0)</eastOffset>
+			  <westOffset>(-0.31,0,0)</westOffset>
+		  </li>-->
+		</comps>	
+    <recipeMaker>
+		<researchPrerequisites>
+			<li>LongBlades</li>
+			<li>NephilaUnlocker</li>	  		
+		</researchPrerequisites>	
+	  <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>	
+    </recipeMaker>
+  </ThingDef>
+
+  
+</Defs>

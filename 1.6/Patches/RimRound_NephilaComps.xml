@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RimRound's weight system on the Nephila -->
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHumanEquiv"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHumanEquiv"]/comps</xpath>
+			<value>
+				<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+				<li><compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass></li>
+				<li><compClass>RimRound.Comps.HideCovers_ThingComp</compClass></li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHumanEquiv"]</xpath>
+			<value>
+				<comps>
+					<li><compClass>RimRound.Comps.FullnessAndDietStats_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.ThingComp_PawnAttitude</compClass></li>
+					<li><compClass>RimRound.Comps.PawnBodyType_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.MakeBlobIntoBed_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.SleepingPosition_ThingComp</compClass></li>
+					<li><compClass>RimRound.Comps.HideCovers_ThingComp</compClass></li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	<!-- Nephila bodies: breasts and constant lactation (CompNephilaBody) -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaVH"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaiden"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaHandmaidenVH"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatron"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaMatronVH"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaGrandMatron"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="NephilaQueensGuard"]/comps</xpath>
+		<value>
+			<li Class="Nephila.CompProperties_NephilaBody">
+				<breasts>NephilaSlimeBreasts</breasts>
+			</li>
+		</value>
+	</Operation>
+</Patch>

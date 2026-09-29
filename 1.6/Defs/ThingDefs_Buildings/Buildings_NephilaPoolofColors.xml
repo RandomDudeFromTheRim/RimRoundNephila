@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>NephilaPoolofColors</defName>
+    <label>pool of scintillating colors</label>
+    <description>A swirling miasma of subtle neon colors has gathered in the hollows of these rocks. It is beautiful, but dangerous: the miasma is composed of nephilim nanites, which are programmed to resurrect humanoids and convert them to the purpose of reproducing nephilim until they are returned to death, generally in a gory fashion.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+        <texPath>Things/Buildings/Production/NephilaPoolofColors</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(3,3)</drawSize>
+        <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <costList>
+        <CoalescingSeraphim>1</CoalescingSeraphim>
+        <CoalescingCherubim>2</CoalescingCherubim>
+        <IridiscentMilk>35</IridiscentMilk>
+    </costList>
+    <stuffCategories>
+		<li>Metallic</li>
+		<li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <statBases>
+        <WorkToBuild>0</WorkToBuild>
+        <WorkTableEfficiencyFactor>0.7</WorkTableEfficiencyFactor>
+    </statBases>
+    <scatterableOnMapGen>true</scatterableOnMapGen>
+    <useHitPoints>false</useHitPoints>
+    <size>(3,3)</size>
+    <designationCategory>Production</designationCategory>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>170</pathCost>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <recipes>
+        <li>PrepareHostFlesh</li>
+        <li>PrepareCherubimTurret</li>
+        <li>GenerateNephilaMaidenHeartCore</li>
+        <li>GenerateNephilaHandmaidenHeartCore</li>
+        <li>GenerateNephilaMatronHeartCore</li>
+    </recipes>
+    <inspectorTabs>
+        <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+        <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+        <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+        <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <comps>
+        <li Class="CompProperties_AffectedByFacilities">
+            <linkableFacilities>
+                <li>ToolCabinet</li>
+            </linkableFacilities>
+        </li>
+        <li Class="Nephila.CompProperties_ReportWorkSpeed"/>
+        <li Class="CompProperties_Glower">
+            <glowRadius>14</glowRadius>
+            <glowColor>(85,85,85,85)</glowColor>
+        </li>
+        <li Class="CompProperties_Spawner">
+            <thingToSpawn>CoalescingCherubim</thingToSpawn>
+            <spawnCount>1</spawnCount>
+            <spawnIntervalRange>
+                <min>900000</min>
+                <max>2700000</max>
+            </spawnIntervalRange>
+            <spawnMaxAdjacent>40</spawnMaxAdjacent>
+            <spawnForbidden>false</spawnForbidden>
+            <saveKeysPrefix>CoalescingCherubim</saveKeysPrefix>
+        </li>
+        <li Class="CompProperties_Refuelable">
+            <fuelConsumptionRate>0.2</fuelConsumptionRate>
+            <fuelCapacity>35.0</fuelCapacity>
+            <fuelFilter>
+                <categories>
+                    <li>MeatRaw</li>
+                </categories>
+            </fuelFilter>
+            <initialFuelPercent>1</initialFuelPercent>
+        </li>
+    </comps>
+    <researchPrerequisites>
+        <li>AdvancedFabrication</li>
+        <li>VitalsMonitor</li>
+        <li>NephilaUnlocker</li>
+    </researchPrerequisites>
+    <placeWorkers>
+        <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+</ThingDef>
+
+</Defs>

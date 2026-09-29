@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Tropical Swamp</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+
+			
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="AEXP_Alligator"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.05</Nephila_NephiliticEden>
+					
+					
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="AEXP_Anaconda"]/race/wildBiomes</xpath>
+				<value>
+
+					
+					
+					<Nephila_NephiliticEden>0.10</Nephila_NephiliticEden>
+					
+					
+				</value>
+			</li>
+			
+		
+			
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+	
+</Patch>

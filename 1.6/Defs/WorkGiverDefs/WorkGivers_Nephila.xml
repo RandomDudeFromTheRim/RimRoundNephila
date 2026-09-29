@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+  	<WorkGiverDef>
+		<defName>NephilaMilkyLover</defName>
+		<label>assisting lover's labor</label>
+		<giverClass>Nephila.WorkGiver_MilkHumanoid</giverClass>
+		<workType>Handling</workType>
+		<verb>assisting</verb>
+		<gerund>gathering</gerund>
+		<priorityInType>10</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  	<WorkGiverDef>
+		<defName>NephilaMilkySelf</defName>
+		<label>giving birth</label>
+		<giverClass>Nephila.WorkGiver_MilkHumanoid</giverClass>
+		<workType>Handling</workType>
+		<verb>birthing</verb>
+		<gerund>gathering</gerund>
+		<priorityInType>10</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+  	<WorkGiverDef>
+		<defName>QGMilkyLover</defName>
+		<label>milking lover</label>
+		<giverClass>Nephila.WorkGiver_MilkHumanoid</giverClass>
+		<workType>Handling</workType>
+		<verb>assisting</verb>
+		<gerund>milking</gerund>
+		<priorityInType>10</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  	<WorkGiverDef>
+		<defName>QGMilkySelf</defName>
+		<label>milking self</label>
+		<giverClass>Nephila.WorkGiver_MilkHumanoid</giverClass>
+		<workType>Handling</workType>
+		<verb>milking</verb>
+		<gerund>gathering</gerund>
+		<priorityInType>10</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+  	
+	
+  <WorkGiverDef>
+    <defName>DoBillsPrepareHostFlesh</defName>
+    <label>prepare nephila host</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>NephilaPoolofColors</li>
+    </fixedBillGiverDefs>
+    <verb>prepare</verb>
+    <gerund>preparing host at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsPrepareCherubimTurret</defName>
+    <label>prepare nephila host</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>NephilaPoolofColors</li>
+    </fixedBillGiverDefs>
+    <verb>prepare</verb>
+    <gerund>preparing cherubim at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>  
+
+
+  <WorkGiverDef>
+    <defName>DoBillsGenerateNephilaMaidenHeartCore</defName>
+    <label>generate Nephila maiden's core</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>NephilaPoolofColors</li>
+    </fixedBillGiverDefs>
+    <verb>generating</verb>
+    <gerund>generating heart core at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsGenerateNephilaHandmaidenHeartCore</defName>
+    <label>generate Nephila handmaiden's core</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>NephilaPoolofColors</li>
+    </fixedBillGiverDefs>
+    <verb>generating</verb>
+    <gerund>generating heart core at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>  
+
+  <WorkGiverDef>
+    <defName>DoBillsGenerateNephilaMatronHeartCore</defName>
+    <label>generate Nephila matron's core</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>NephilaPoolofColors</li>
+    </fixedBillGiverDefs>
+    <verb>generating</verb>
+    <gerund>generating heart core at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+    <WorkGiverDef>
+    <defName>DoBillsGenerateNephilaGrandMatronHeartCore</defName>
+    <label>generate Nephila grand matron's core</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>NephilaPoolofColors</li>
+    </fixedBillGiverDefs>
+    <verb>generating</verb>
+    <gerund>generating heart core at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+	
+</Defs>

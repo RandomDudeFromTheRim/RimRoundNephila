@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========================= Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+
+
+	<ResearchProjectDef>
+		<defName>NephilaUnlocker</defName>
+		<label>A Treatise Concerning the Nephilim Menace</label>
+		<description>This data module is encrypted but, surprisingly, it seems to be designed to encourage ease of decription, as if the beings who made it wanted their secrets to be discovered and the module was designed as temptation... (This research is necessary to unlock all Nephilim items and recipes; some items still also require other researches to become available).</description>
+		<baseCost>60</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tab>NephilaResearch</tab>
+		<!--<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>-->
+		<researchViewX>4</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+
+
+</Defs>

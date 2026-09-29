@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GameConditionDef>
+    <defName>NephiliticFogCondition</defName>
+    <conditionClass>Nephila.GameCondition_NephiliticFog</conditionClass>
+    <label>nephilitic fog</label>
+    <description>Nephilitic fog reduces the accuracy of ranged weapons and can sicken humanoid pawns that spend too much time outside in it.</description>
+    <descriptionFuture>a cloud of nephila nanites will blanket the area around [map_definite] for [gameConditionDuration_duration], infesting those who walk outside and slowly driving them to go berserk with lust.</descriptionFuture>
+    <endMessage>The nephilitic nanite fog has passed on.</endMessage>
+    <letterText>It starts with a strange wind, kicking up white dust from some distant land. The dust sticks to the lungs and fills the air with a faint, sickly sweet smell. As the dust storm becomes intense enough to make it difficult to see, a large, snakelike creature emerges. It's abdomen is bulbous and swollen and it's clear that it is soon to give birth. Deal with it swiftly or prepare for the worst.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <canBePermanent>true</canBePermanent>
+  </GameConditionDef>
+
+</Defs>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef ParentName="DiseaseIncident">
+    <defName>NephilaInitialTransformationFromAnimal</defName>
+    <label>nephila sickness</label>
+    <diseaseIncident>NephilaInitialTransformationFromAnimal</diseaseIncident>
+    <letterLabel>Disease: Nephila sickness</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="DiseaseIncident">
+    <defName>Nephila_LustNanites</defName>
+    <label>nephililitic lust</label>
+    <diseaseIncident>Nephila_LustNanites</diseaseIncident>
+    <letterLabel>Disease: Nephilitic lust</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="DiseaseIncident">
+    <defName>NephilaSnekBombTransformation</defName>
+    <label>nephila serpent sickness</label>
+    <diseaseIncident>NephilaSnekBombTransformation</diseaseIncident>
+    <letterLabel>Disease: Nephila serpent sickness</letterLabel>
+  </IncidentDef>
+
+</Defs>

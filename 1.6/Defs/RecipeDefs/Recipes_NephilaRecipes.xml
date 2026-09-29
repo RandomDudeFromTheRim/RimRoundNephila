@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNephilaMechaniteInhibitor</defName>
+    <label>install nephila mechanite inhibitor</label>
+    <description>Install a nephila mechanite inhibitor.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing nephila mechanite inhibitor.</jobString>
+    <workAmount>3700</workAmount>
+    <deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>NephilaMechaniteInhibitor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>NephilaMechaniteInhibitor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>NephilaMechaniteInhibitor</addsHediff>
+  </RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RemoveNephilaMechaniteInhibitor</defName>
+		<label>remove nephila mechanite inhibitor</label>
+		<description>remove nephila mechanite inhibitor.</description>
+		<jobString>removing nephila mechanite inhibitor.</jobString>
+		<workAmount>300</workAmount>
+		<dontShowIfAnyIngredientMissing>false</dontShowIfAnyIngredientMissing>
+		<removesHediff>NephilaMechaniteInhibitor</removesHediff>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNephila_PsyAmp</defName>
+    <label>install nephila psy amp</label>
+    <description>Install a nephila psy amp.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing nephila psy amp.</jobString>
+    <workAmount>3700</workAmount>
+    <deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Nephila_PsyAmp</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>Nephila_PsyAmp</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Nephila_PsyAmp</addsHediff>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>	
+  </RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RemoveNephila_PsyAmp</defName>
+		<label>remove nephila psy amp</label>
+		<description>remove nephila psy amp.</description>
+		<jobString>removing nephila psy amp.</jobString>
+		<workAmount>300</workAmount>
+		<dontShowIfAnyIngredientMissing>false</dontShowIfAnyIngredientMissing>
+		<removesHediff>Nephila_PsyAmp</removesHediff>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>	
+	
+
+	<RecipeDef>
+		<defName>PrepareHostFlesh</defName>
+		<label>prepare humanoid as host</label>
+		<description>Revitalize a recently slain humanoid and implant them with a nephila symbiont.</description>
+    <workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>
+		<jobString>Preparing host flesh.</jobString>
+		<workAmount>450</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<!--<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>-->
+		<fixedIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<disallowedCategories>
+				<li>CorpsesMechanoid</li>
+				<li>CorpsesInsect</li>
+				<li>CorpsesAnimal</li>
+			</disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+
+    <!--<ingredients>
+		<li>
+			<filter>
+				<categories>
+			  <thingDefs>
+				<li>Corpse_Human</li>
+			  </thingDefs>
+				</categories>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<disallowedCategories>
+				<li>CorpsesInsect</li>			
+				<li>CorpsesMechanoid</li>
+				<li>CorpsesAnimal</li>				
+			</disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Corpse_Human</li>
+			</categories>
+		</defaultIngredientFilter>-->
+		
+    <products>
+      <CocoonedOne>1</CocoonedOne>
+    </products>	
+	</RecipeDef>
+	
+	
+	<RecipeDef>
+		<defName>PrepareCherubimTurret</defName>
+		<label>prepare cherubim as turret</label>
+		<description>Use herbal medicine and the mechanites in a pool of scintillating color to transform a gestating cherub into a projectile spewing turret-equivalent that clouds the minds of those it hits, eventually driving them into a berserk rage.</description>
+    <!--<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>-->
+		<jobString>Preparing cherubim turret.</jobString>
+		<workAmount>350</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+		<!--<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>-->
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+     <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CoalescingCherubim</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CoalescingCherubim</li>
+      </thingDefs>	
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+		
+    <products>
+      <NephilaGooTurretItem>1</NephilaGooTurretItem>
+    </products>	
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>PrepareNephilaAngelsNectar</defName>
+		<label>produce angel's nectar</label>
+		<description>Combine medicine and the mechanites in a pool of scintillating color to reduce the breast milk of Nephilim Seraphim and Queen's Guard to Angel's Nectar, a cheap luciferium equivalent that, while always lethal to non-Nephila users, can trigger the early conversion of a worth Nephilim Matron to the status of a Grand Matron.</description>
+    <!--<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>-->
+		<jobString>Preparing angel's nectar.</jobString>		
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<workAmount>350</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+		<!--<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>-->
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+     <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IridiscentMilk</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IridiscentMilk</li>
+      </thingDefs>	
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+		
+    <products>
+      <NephilaAngelsNectar>1</NephilaAngelsNectar>
+    </products>	
+	<researchPrerequisite>NephilaUnlocker</researchPrerequisite>	
+	</RecipeDef>
+	
+
+	<RecipeDef>
+		<defName>GenerateNephilaMaidenHeartCore</defName>
+		<label>generate nephila maiden cores</label>
+		<description>Harness the nanites of two coalescing cherubim in order to generate a heart core--a crafting item that reflects the sentiments and desires of the maiden that makes it.</description>
+    <!--<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>-->
+		<jobString>Generating Nephila maiden core.</jobString>
+		<workAmount>500</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<!--<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>-->
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+     <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CoalescingCherubim</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CoalescingCherubim</li>
+      </thingDefs>	
+    </fixedIngredientFilter>
+		
+    <products>
+      <NephilaCore>2</NephilaCore>
+    </products>	
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>GenerateNephilaHandmaidenHeartCore</defName>
+		<label>generate nephila handmaiden cores</label>
+		<description>Harness the nanites of three coalescing cherubim in order to generate a handmaiden's heart core--a crafting item that reflects the sentiments and desires of the handmaiden that makes it.</description>
+    <!--<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>-->
+		<jobString>Generating Nephila handmaiden core.</jobString>
+		<workAmount>500</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<!--<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>-->
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+     <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CoalescingCherubim</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CoalescingCherubim</li>
+      </thingDefs>	
+    </fixedIngredientFilter>
+		
+    <products>
+      <NephilaHandmaidenCore>2</NephilaHandmaidenCore>
+    </products>	
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>GenerateNephilaMatronHeartCore</defName>
+		<label>generate nephila matron cores</label>
+		<description>Harness the nanites of two coalescing seraphim in order to generate a handmaiden's heart core--a crafting item that reflects the sentiments and desires of the matron that makes it.</description>
+    <!--<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>-->
+		<jobString>Generating Nephila handmaiden core.</jobString>
+		<workAmount>500</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<!--<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>-->
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+     <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CoalescingSeraphim</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CoalescingSeraphim</li>
+      </thingDefs>	
+    </fixedIngredientFilter>
+		
+    <products>
+      <NephilaMatronCore>2</NephilaMatronCore>
+    </products>	
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>GenerateNephilaGrandMatronHeartCore</defName>
+		<label>generate nephila matron core</label>
+		<description>Harness the nanites of a coalescing queen's in order to generate a handmaiden's heart core--a crafting item that reflects the sentiments and desires of the grand matron that makes it. This item can be used to generate objects of tremendous power.</description>
+    <!--<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>-->
+		<jobString>Generating Nephila grand matron core.</jobString>
+		<workAmount>500</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<!--<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>-->
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+
+
+     <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CoalescingNephilaQueensGuard</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CoalescingNephilaQueensGuard</li>
+      </thingDefs>	
+    </fixedIngredientFilter>
+		
+    <products>
+      <NephilaGrandMatronCore>1</NephilaGrandMatronCore>
+    </products>	
+	</RecipeDef>	
+
+						<RecipeDef>
+							<defName>MakeLactationInductionPsytrainer</defName>
+							<label>Make Psytrainer (Lactation Induction) (Nephila Only)</label>
+							<description>Make a Psytrainer (Lactation Induction).</description>
+							<jobString>Making Psytrainer (Lactation Induction).</jobString>
+							<workAmount>800</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<recipeUsers>
+								<li>ElectricSmithy</li>
+								<li>CraftingSpot</li>
+								<li>FueledSmithy</li>
+							</recipeUsers>							
+							<effectWorking>ButcherFlesh</effectWorking>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Silver</li>
+										</thingDefs>
+									</filter>
+									<count>35</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Steel</li>
+										</thingDefs>
+									</filter>
+									<count>65</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>MedicineIndustrial</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<products>
+								<Psytrainer_LactationInduction>1</Psytrainer_LactationInduction>
+							</products>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Silver</li>
+									<li>Steel</li>
+									<li>MedicineIndustrial</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<workSkill>Medicine</workSkill>
+							<researchPrerequisite>NephilaUnlocker</researchPrerequisite>							
+						</RecipeDef>
+						
+						<RecipeDef>
+							<defName>MakeNephila_CallofLustPsytrainer</defName>
+							<label>Make Psytrainer (Nephilim Call of Lust) (Nephila Handmaidens + Only)</label>
+							<description>Make a Psytrainer (Nephilim Call of Lust).</description>
+							<jobString>Making Psytrainer (Nephilim Call of Lust).</jobString>
+							<workAmount>800</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<recipeUsers>
+								<li>ElectricSmithy</li>
+								<li>CraftingSpot</li>
+								<li>FueledSmithy</li>
+							</recipeUsers>							
+							<effectWorking>ButcherFlesh</effectWorking>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Silver</li>
+										</thingDefs>
+									</filter>
+									<count>35</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Steel</li>
+										</thingDefs>
+									</filter>
+									<count>65</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>MedicineIndustrial</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<products>
+								<Psytrainer_Nephila_CallofLust>1</Psytrainer_Nephila_CallofLust>
+							</products>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Silver</li>
+									<li>Steel</li>
+									<li>MedicineIndustrial</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<workSkill>Medicine</workSkill>
+						</RecipeDef>						
+						
+						<RecipeDef>
+							<defName>MakeNephila_SnekBomb</defName>
+							<label>Make Psytrainer (Serpent Pulse) (Nephila Matrons + Only)</label>
+							<description>Make a Psytrainer (Serpent Pulse).</description>
+							<jobString>Making Psytrainer (Serpent Pulse).</jobString>
+							<workAmount>800</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<recipeUsers>
+								<li>ElectricSmithy</li>
+								<li>CraftingSpot</li>
+								<li>FueledSmithy</li>
+							</recipeUsers>							
+							<effectWorking>ButcherFlesh</effectWorking>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Silver</li>
+										</thingDefs>
+									</filter>
+									<count>35</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Steel</li>
+										</thingDefs>
+									</filter>
+									<count>65</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>MedicineIndustrial</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<products>
+								<Psytrainer_Nephila_SnekBomb>1</Psytrainer_Nephila_SnekBomb>
+							</products>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Silver</li>
+									<li>Steel</li>
+									<li>MedicineIndustrial</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<workSkill>Medicine</workSkill>
+							<researchPrerequisite>NephilaUnlocker</researchPrerequisite>							
+						</RecipeDef>	
+  
+</Defs>

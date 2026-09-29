@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=====================================================================-->
+  <!--=============================== Nephila Worm Milk ===================-->
+  <!--=====================================================================-->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>IridiscentMilk</defName>
+    <label>iridiscent milk</label>
+    <description>Glowing multicolored milk gathered from a milk producing Nephila's heaving breasts. High in both nutrition value and taste. Can be reduced in a pool of nephila nanites to produce Angel's Nectar, a royal jelly equivalent that is vital to the process of triggering the ascension of a Nephila Grand Matron.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaLactase</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+      <Mass>0.045</Mass>
+	  <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.15</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>24</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+
+
+  <!--=====================================================================-->
+  <!--=============================== Eggs ================================-->
+  <!--=====================================================================-->
+
+
+  <ThingDef Abstract="True" Name="EggNephilaFertBase" ParentName="EggBase" >
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsFertilized</li>
+    </thingCategories>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>5</minSafeTemperature>
+				<maxSafeTemperature>75</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef Abstract="True" Name="EggNephilaUnfertBase" ParentName="EggBase" >
+    <ingestible>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsUnfertilized</li>
+    </thingCategories>
+  </ThingDef>  
+
+  <!-- Animals -->
+
+  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>CoalescingCherubim</defName>
+    <label>coalescing cherubim</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a Nephila Cherubim.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+      <!--<color>(245,245,245)</color>-->
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>NephilaCherubim</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>3.5</overlightRadius>
+        <glowRadius>7</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>		
+  </ThingDef>
+
+  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>RapidlyCoalescingCherubim</defName>
+    <label>rapidly coalescing cherubim</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a Nephila Cherubim.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+      <!--<color>(245,245,245)</color>-->
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>0.3</hatcherDaystoHatch>
+        <hatcherPawn>MutantNephilaCherubim</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>3.5</overlightRadius>
+        <glowRadius>7</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>		
+  </ThingDef>
+
+
+  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>CoalescingSeraphim</defName>
+    <label>coalescing seraphim</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a Nephila Seraphim.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+      <!--<color>(245,245,245)</color>-->
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>NephilaSeraphim</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>3.5</overlightRadius>
+        <glowRadius>7</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>	
+	
+  </ThingDef>
+
+  <!-- Humanoids -->
+
+  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>CoalescingNephila</defName>
+    <label>coalescing nephila maiden</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a base Nephila Maiden.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+      <!--<color>(245,245,245)</color>-->
+    </graphicData>
+    <tradeNeverStack>true</tradeNeverStack>	
+	<tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>1500.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Nephila.CompProperties_NephilaHatcher">
+        <hatcherDaystoHatch>0.25</hatcherDaystoHatch>
+        <hatcherPawn>NephilaVillager</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>3.5</overlightRadius>
+        <glowRadius>7</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>	
+	
+  </ThingDef>
+
+<!--  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>CoalescingNephilaHandmaiden</defName>
+    <label>coalescing nephila handmaiden</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a Nephila Handmaiden.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Nephila.CompProperties_NephilaHatcher">
+        <hatcherDaystoHatch>0.25</hatcherDaystoHatch>
+        <hatcherPawn>NephilaHandmaiden</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>	
+	
+  </ThingDef>
+  
+
+  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>CoalescingNephilaMatron</defName>
+    <label>coalescing nephila matron</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a Nephila Matron.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Nephila.CompProperties_NephilaHatcher">
+        <hatcherDaystoHatch>0.25</hatcherDaystoHatch>
+        <hatcherPawn>NephilaMatron</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>	
+	
+  </ThingDef>  -->
+
+
+  <ThingDef ParentName="EggNephilaFertBase">
+    <defName>CoalescingNephilaQueensGuard</defName>
+    <label>coalescing nephila queen's guard</label>
+    <description>This swirling puddle of nanites is quickly coalescing into a Nephila Queen's Guard.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCoalescingNanites</texPath>
+      <color>(85,125,180)</color>
+    </graphicData>
+    <tradeNeverStack>true</tradeNeverStack>	
+	<tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>1500.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Nephila.CompProperties_NephilaHatcher">
+        <hatcherDaystoHatch>0.05</hatcherDaystoHatch>
+        <hatcherPawn>NephilaQueensGuardVillager</hatcherPawn>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <overlightRadius>3.5</overlightRadius>
+        <glowRadius>7</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>	  
+    </comps>	
+	
+  </ThingDef>  
+
+
+<!--=====================================Gem Cores========================================-->
+  
+ <ThingDef ParentName="ResourceBase">
+    <defName>NephilaCore</defName>
+    <label>nephila maiden gem core</label>
+    <description>This heart shaped gemstone glows and darkens in tandem to the heartbeat of the Nephila Maiden who created it. Its rarity and beauty make it highly valuable, and the nanites within it can be used in the creation of advanced Nephilim arms and armor.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaCore</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>100</MarketValue>
+      <Mass>0.008</Mass>
+    </statBases>
+    <thingCategories>
+      <li>NephilaHeartCores</li>
+    </thingCategories>
+    <stackLimit>10</stackLimit>
+    <smallVolume>true</smallVolume>
+    <stuffProps>
+      <stuffAdjective>gemlike</stuffAdjective>
+      <categories>
+        <li>NephilaCore</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(255,235,122)</color>
+      <statOffsets>
+        <Beauty>20</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.6</MaxHitPoints>
+        <Flammability>0.4</Flammability>
+        <Beauty>4</Beauty>
+      </statFactors>
+      <!--<smeltable>false</smeltable>-->
+    </stuffProps>
+	
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>	  
+    </researchPrerequisites>		
+	
+  </ThingDef>  
+
+ <ThingDef ParentName="ResourceBase">
+    <defName>NephilaHandmaidenCore</defName>
+    <label>nephila handmaiden gem core</label>
+    <description>This heart shaped gemstone glows and darkens in tandem to the heartbeat of the Nephila Handmaiden who created it. Its rarity and beauty make it highly valuable, and the nanites within it can be used in the creation of advanced Nephilim arms and armor.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaHandmaidenCore</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>250</MarketValue>
+      <Mass>0.008</Mass>
+    </statBases>
+    <thingCategories>
+      <li>NephilaHeartCores</li>
+    </thingCategories>
+    <stackLimit>10</stackLimit>
+    <smallVolume>true</smallVolume>
+    <stuffProps>
+      <stuffAdjective>gemlike</stuffAdjective>
+      <categories>
+        <li>NephilaCore</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(255,235,122)</color>
+      <statOffsets>
+        <Beauty>35</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.6</MaxHitPoints>
+        <Flammability>0.4</Flammability>
+        <Beauty>4</Beauty>
+      </statFactors>
+      <!--<smeltable>false</smeltable>-->
+    </stuffProps>
+	
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>	  
+    </researchPrerequisites>		
+	
+  </ThingDef>  
+  
+ <ThingDef ParentName="ResourceBase">
+    <defName>NephilaMatronCore</defName>
+    <label>nephila matron gem core</label>
+    <description>This heart shaped gemstone glows and darkens in tandem to the heartbeat of the Nephila Matron who created it. Its rarity and beauty make it highly valuable, and the nanites within it can be used in the creation of advanced Nephilim arms and armor.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaMatronCore</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>0.008</Mass>
+    </statBases>
+    <thingCategories>
+      <li>NephilaHeartCores</li>
+    </thingCategories>
+    <stackLimit>10</stackLimit>
+    <smallVolume>true</smallVolume>
+    <stuffProps>
+      <stuffAdjective>gemlike</stuffAdjective>
+      <categories>
+        <li>NephilaCore</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(255,235,122)</color>
+      <statOffsets>
+        <Beauty>50</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.6</MaxHitPoints>
+        <Flammability>0.4</Flammability>
+        <Beauty>4</Beauty>
+      </statFactors>
+      <!--<smeltable>false</smeltable>-->
+    </stuffProps>
+	
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>	  
+    </researchPrerequisites>		
+	
+  </ThingDef>  
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>NephilaGrandMatronCore</defName>
+    <label>nephila matron gem core</label>
+    <description>This heart shaped gemstone glows and darkens in tandem to the heartbeat of the Nephila Grand Matron who created it. Its rarity and beauty make it nearly peerless in terms of raw value, and the nanites within it can be used to craft items of wondrous power.</description>
+    <graphicData>
+      <texPath>Things/Item/NephilaMatronCore</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <Mass>0.008</Mass>
+    </statBases>
+    <thingCategories>
+      <li>NephilaHeartCores</li>
+    </thingCategories>
+    <stackLimit>10</stackLimit>
+    <smallVolume>true</smallVolume>
+    <stuffProps>
+      <stuffAdjective>gemlike</stuffAdjective>
+      <categories>
+        <li>NephilaCore</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(112,112,235)</color>
+      <statOffsets>
+        <Beauty>50</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.6</MaxHitPoints>
+        <Flammability>0.4</Flammability>
+        <Beauty>4</Beauty>
+      </statFactors>
+      <!--<smeltable>false</smeltable>-->
+    </stuffProps>
+	
+     <researchPrerequisites>
+      <li>NephilaUnlocker</li>	  
+    </researchPrerequisites>		
+	
+  </ThingDef>   
+
+	<ThingDef ParentName="ResourceVerbBase">
+		<defName>Nephila_NephilaCollectedOoze</defName>
+		<label>nephilim mechanite ooze</label>
+		<description>This fine, oozelike powder was collected from nephilim flora. It glitters in the sunlight and can be used to craft flame resistant, if brittle, objects as if it were either stone or wood.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/NephilaCollectedOoze</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<tradeability>Sellable</tradeability>
+		<equippedAngleOffset>-20</equippedAngleOffset>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<statBases>
+			<MarketValue>0.7</MarketValue>
+			<MaxHitPoints>70</MaxHitPoints>
+			<Mass>0.1</Mass>
+			<Flammability>0.05</Flammability>
+			<DeteriorationRate>1</DeteriorationRate>
+			<StuffPower_Armor_Sharp>0.75</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.2</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.35</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<stuffAdjective>nephilitic</stuffAdjective>
+			<categories>
+				<li>Woody</li>
+				<li>Stony</li>
+			</categories>
+			<commonality>0</commonality>
+			<color>(190,170,180)</color>
+			<constructEffect>ConstructWood</constructEffect>
+			<appearance>Planks</appearance>
+			<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+			<statFactors>
+				<Beauty>0.7</Beauty>
+				<MaxHitPoints>0.25</MaxHitPoints>    
+				<Flammability>0.05</Flammability>
+				<WorkToMake>1</WorkToMake>
+				<WorkToBuild>1.1</WorkToBuild>
+				<DoorOpenSpeed>1.0</DoorOpenSpeed>				
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<tools>
+			<li>
+				<label>hefty jar of nephila mechanite ooze</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</ThingDef>  
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>HumanMilkNephila</defName>
+    <label>human milk</label>
+    <description>Milk from a human. Sweet, and essential for newborn life.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>6.1</MarketValue>
+      <Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.085</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="DrugBase">
+    <defName>SucculentUrchinTendrils</defName>
+    <label>succulent urchin tendrils</label>
+    <description>Plucked from a Nephilim urchin plant. Meaty, but still sweet, and quite palatable even when raw.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Berries</texPath>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>	
+      <MarketValue>1.2</MarketValue>
+      <Mass>0.027</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+			<li Class="CompProperties_Drug">
+				<chemical>UrchinTendrils</chemical>
+				<addictiveness>0.050</addictiveness>
+				<minToleranceToAddict>0.15</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>	  
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Ingredients" />			
+    </comps>
+	
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>UrchinTendrilsEffect</hediffDef>
+					<severity>0.50</severity>
+					<toleranceChemical>UrchinTendrils</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>HumpShroomTolerance</hediffDef>
+					<severity>0.032</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed" MayRequire="lovelydovey.sex.witheuterpe">
+					<need>SEX_Intimacy</need>
+					<offset>-0.5</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>1.0</offset>
+				</li>
+		</outcomeDoers>	
+	
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 	<ThingDef ParentName="DrugBase">
+		<defName>SucculentUrchinTendrils</defName>
+		<label>succulent urchin tendrils</label>
+		<description>Plucked from a Nephilim urchin plant. Meaty, but still sweet, and quite palatable even when raw. Those who frequently partake of the urchin plant's berries are known to get a bit... heated.</description>
+		<tradeability>Sellable</tradeability>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<tickerType>Rare</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Resource/PlantFoodRaw/Berries</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>PlantFoodRaw</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>0.1</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
+			<Nutrition>0.65</Nutrition>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<ingestible>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<preferability>RawTasty</preferability>
+			<tasteThought></tasteThought>
+			<foodType>VegetableOrFruit</foodType>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+			<joy>0.5</joy>
+			<joyKind>Social</joyKind>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>UrchinTendrilsEffect</hediffDef>
+					<severity>0.50</severity>
+					<toleranceChemical>UrchinTendrils</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>UrchinTendrilsTolerance</hediffDef>
+					<severity>0.017</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed" MayRequire="lovelydovey.sex.witheuterpe">
+					<need>SEX_Intimacy</need>
+					<offset>-0.35</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>0.5</offset>
+				</li>
+		</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Ingredients" />
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>UrchinTendrils</chemical>
+				<addictiveness>0.025</addictiveness>
+				<minToleranceToAddict>0.35</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>UrchinTendrilsEffect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Induced libido</label>
+		<description>Urchin tendrils's aphrodisiac effects.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>1.33</restFallFactor>
+				<statOffsets>
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">1</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>UrchinTendrilsEffectTwo</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Spore cloud libido</label>
+		<description>Wild urchin tendrils's aphrodisiac effects from breathing in spores. There are legends in the Rim of castaways finding themselves in urchin tendril groves and, driven by the soporific and aphrodesiac effects of their spores, spending the rest of their lives partaking of the bush's fruit and making love.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.9</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.05</offset>
+				  </li>
+				</capMods>			
+				<statOffsets>
+					<!--<Consciousness>0.9</Consciousness>-->
+					<SEX_LovinFrequencyMultiplier MayRequire="lovelydovey.sex.witheuterpe">0.65</SEX_LovinFrequencyMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>	
+	
+	<ThoughtDef>
+		<defName>UrchinTendrilsEffect</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>UrchinTendrilsEffect</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Urchin tendrils aftertaste</label>
+				<description>Unusual flavor.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Ambrosia addiction -->
+	<ChemicalDef>
+		<defName>UrchinTendrils</defName>
+		<label>urchin tendrils</label>
+		<addictionHediff>UrchinTendrilsAddiction</addictionHediff>
+		<toleranceHediff>UrchinTendrilsTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+	
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>Chemical_UrchinTendrils</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>urchin tendrils</label>
+		<description>Person is now hooked on urchin tendrils. Without them, their bedroom performance may fall.</description>
+		<listPriority>10</listPriority>
+	</NeedDef>
+	
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>UrchinTendrilsTolerance</defName>
+		<label>urchin tendrils tolerance</label>
+		<description>Urchin tendrils effects tolerance.</description>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.020</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>UrchinTendrils</chemical>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="AddictionBase">
+		<defName>UrchinTendrilsAddiction</defName>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<label>urchin tendrils addiction</label>
+		<description>Effects of urchin tendrils addiction.</description>
+		<chemicalNeed>Chemical_UrchinTendrils</chemicalNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+			</li>
+		</stages>
+	</HediffDef>
+		
+	<ThoughtDef>
+		<defName>UrchinTendrilsWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>UrchinTendrilsAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>urchin tendrils withdrawal</label>
+				<description>I just feel nothing down there.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+
+
+ 
+</Defs>

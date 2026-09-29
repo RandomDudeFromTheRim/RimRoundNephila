@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="NephilaFactionBase">
+    <colorSpectrum>
+      <li>(0, 0.837, 0.847)</li>
+    </colorSpectrum>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>	
+  </FactionDef>
+  
+  <FactionDef Parent="NephilaFactionBase">
+    <defName>NephilaPlayerColony</defName>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <label>Nephila Garden</label>
+    <description>A nephila "garden" controlled by the player. OwO, what is this!</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>NephilaEscapedSlave</basicMemberKind>
+    <pawnsPlural>Nephilim</pawnsPlural>
+    <techLevel>Spacer</techLevel>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>Offworld</li>
+				<li>Tribal</li>
+			</categories>
+			<commonality>1</commonality>
+		</li>	
+    </backstoryFilters>			
+    <factionIconPath>Things/World/NephilaBaseIcon</factionIconPath>
+    <settlementTexturePath>Things/World/NephilaBaseIcon</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <!--<pawnNameMaker>NamerPersonNephila</pawnNameMaker>
+    <pawnNameMakerFemale>NamerPersonNephilaFemale</pawnNameMakerFemale>-->		
+		<!--<geneticVariance>1</geneticVariance>-->
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+		<!--<hairTags><li>Rural</li></hairTags>-->
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+
+  </FactionDef>
+
+</Defs>

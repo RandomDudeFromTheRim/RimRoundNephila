@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Nephila Hosts ====================-->
+
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CocoonedOne</defName>
+    <label>cocooned one</label>
+    <description>A humanoid modified to serve as a potential host for a juvenile nephila. Their straining wombs are packed with vital nutrients and held together by a complex life support system. This system can keep them alive indefinitely, so long as it does not degrade.</description>
+    <graphicData>
+      <texPath>Things/Item/CocoonedOneIngredient</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>250</stackLimit>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>100</MarketValue>
+      <Mass>1.6</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2.5</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>NephilaGooTurretItem</defName>
+    <label>dormant cherub</label>
+    <description>A cherub modified to serve as a turret. Once installed, it will protect a small area with a lust inducing spew attack. Will require a steady supply of meat as fuel.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Security/Turret/NephilaGooTurretBase</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>250</stackLimit>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>400</MarketValue>
+      <Mass>1.6</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2.5</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>  
+  
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>NephilaMechaniteInhibitor</defName>
+    <label>nephila mechanite inhibitor</label>
+    <description>This small, tadpole-like robot adheres to the base of the cerebellum on implantation, projecting a signal that prevents nephila nanites from replicating uncontrollably in a host. While it will not stop the advance of nephila pregnancy and infections, it does prevent transformation into a more advanced stage of the condition. The device also invokes a slight improvement in cognitive abilities.</description>
+   <descriptionHyperlinks><RecipeDef>InstallJoywire</RecipeDef></descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+		<researchPrerequisites>
+			<li>Bionics</li>
+			<li>NephilaUnlocker</li>	  		
+		</researchPrerequisites>	  
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>	
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MarketValue>750</MarketValue>
+      <Mass>0.2</Mass>
+    </statBases>	
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<!--<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>-->	
+  </ThingDef>  
+  
+  
+  <!--<ThingDef ParentName="ResourceBase">
+    <defName>GrandMatronInWaiting</defName>
+    <label>GrandMatronInWaiting</label>
+    <description>This preserved Nephila Matron is bubbling with a potent brew of specially programmed nanites straight from the pool from which her kind was born. Held in stasis, with the right materials she will expand exponentially, eventually ascending to Grand Matronhood.</description>
+    <graphicData>
+      <texPath>Things/Item/AscendingMatronIngredient</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>250</stackLimit>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>400</MarketValue>
+      <Mass>1.6</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2.5</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef> --> 
+  
+  
+</Defs>

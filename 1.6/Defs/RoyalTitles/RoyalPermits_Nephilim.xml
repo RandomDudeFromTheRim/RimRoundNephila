@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================= Permits from royal titles ============================= -->
+
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeCaravan</defName>
+    <label>trade with caravans</label>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeSettlement</defName>
+    <label>trade with settlements</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Bulk</defName>
+    <label>trade with orbital bulk goods merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Slaves</defName>
+    <label>trade with orbital slave merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Prosthetics</defName>
+    <label>trade with orbital prosthetics merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Drugs</defName>
+    <label>trade with orbital drug merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Weapons</defName>
+    <label>trade with orbital weapons merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Exotic</defName>
+    <label>trade with orbital exotic merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_Animal</defName>
+    <label>trade with orbital livestock merchants</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>Nephila_TradeOrbital_ExoticAnimal</defName>
+    <label>trade with orbital exotic creature merchants</label>
+  </RoyalTitlePermitDef>
+
+
+  <RoyalTitlePermitDef>
+    <defName>CallNephilimMilitaryAidSmall</defName>
+    <label>call seraphim</label>
+    <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+	<minTitle>NephilimVeiledOne</minTitle>
+    <faction>NephilaNPCFaction</faction>
+    <permitPointCost>1</permitPointCost>
+	<uiPosition>(0,3)</uiPosition>
+    <royalAid>
+      <favorCost>4</favorCost>
+      <pawnKindDef>NephilaSeraphim</pawnKindDef>
+      <pawnCount>5</pawnCount>
+	  <targetingRange>39.9</targetingRange>
+    </royalAid>
+    <cooldownDays>45</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+    <defName>CallNephilimMilitaryAidLarge</defName>
+    <label>call seraphim swarm</label>
+    <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+	<minTitle>NephilimGrayOne</minTitle>
+    <faction>NephilaNPCFaction</faction>
+    <permitPointCost>1</permitPointCost>
+	<uiPosition>(0,7)</uiPosition>
+    <royalAid>
+      <favorCost>6</favorCost>
+      <pawnKindDef>NephilaSeraphim</pawnKindDef>
+      <pawnCount>10</pawnCount>
+	  <targetingRange>39.9</targetingRange>
+    </royalAid>
+    <cooldownDays>45</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+    <defName>CallNephilimMilitaryAidGrand</defName>
+    <label>call Queen's Guard</label>
+    <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+	<minTitle>NephilimVeiledOne</minTitle>
+    <faction>NephilaNPCFaction</faction>
+    <permitPointCost>1</permitPointCost>
+	<prerequisite>CallNephilimMilitaryAidLarge</prerequisite>
+    <uiPosition>(1,7)</uiPosition>
+    <royalAid>
+      <favorCost>12</favorCost>
+      <pawnKindDef>NephilaQueensGuardSlasher</pawnKindDef>
+      <pawnCount>3</pawnCount>
+	  <targetingRange>39.9</targetingRange>
+    </royalAid>
+    <cooldownDays>45</cooldownDays>
+  </RoyalTitlePermitDef>
+
+</Defs>

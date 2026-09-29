@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <FleshTypeDef>
+    <defName>NephilaCore</defName>
+    <ateDirect>AteNephilaCoreDirect</ateDirect>
+    <ateAsIngredient>AteNephilaCoreAsIngredient</ateAsIngredient>
+    <corpseCategory>CorpsesNephila</corpseCategory>
+    <!--<wounds>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundA</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundB</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundC</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+    </wounds>-->
+  </FleshTypeDef>
+  
+  <FleshTypeDef>
+    <defName>NephilaHandmaidenCore</defName>
+    <ateDirect>AteNephilaCoreDirect</ateDirect>
+    <ateAsIngredient>AteNephilaCoreAsIngredient</ateAsIngredient>
+    <corpseCategory>CorpsesNephilaHandmaiden</corpseCategory>
+    <!--<wounds>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundA</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundB</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundC</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+    </wounds>-->
+  </FleshTypeDef> 
+
+  <FleshTypeDef>
+    <defName>NephilaMatronCore</defName>
+    <ateDirect>AteNephilaCoreDirect</ateDirect>
+    <ateAsIngredient>AteNephilaCoreAsIngredient</ateAsIngredient>
+    <corpseCategory>CorpsesNephilaMatron</corpseCategory>
+    <!--<wounds>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundA</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundB</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundC</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+    </wounds>-->
+  </FleshTypeDef> 
+
+  <FleshTypeDef>
+    <defName>NephilaQueensGuardCore</defName>
+    <ateDirect>AteNephilaCoreDirect</ateDirect>
+    <ateAsIngredient>AteNephilaCoreAsIngredient</ateAsIngredient>
+    <corpseCategory>CorpsesNephilaQueensGuard</corpseCategory>
+    <!--<wounds>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundA</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundB</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundC</texture>
+        <color>0.23,0.20,0.17</color>
+      </li>
+    </wounds>-->
+  </FleshTypeDef>
+
+
+
+  
+</Defs>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_Nephila</defName>
+    <label>coalesced nephila goo</label>
+    <description>The congealed remnants of a deceased nephila, minus its core. Given its nanetic origins, this leather is of reasonable insulating and defensive value, but is expensive and disconcerting to wear.</description>
+    <graphicData>
+      <color>(235,205,180)</color>
+      <colorTwo>(235,235,235)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <StuffPower_Armor_Sharp>0.15</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>	  
+      <StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(220,235,220)</color>
+      <commonality>0.001</commonality>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_CherubimOoze</defName>
+    <label>oozing cherubim flesh</label>
+    <description>Oozing cherubim flesh. Reasonable and efficient "leather."</description>
+    <graphicData>
+      <color>(235,205,180)</color>
+      <colorTwo>(235,235,235)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <StuffPower_Armor_Sharp>0.05</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.05</StuffPower_Armor_Blunt>	  
+      <StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(220,235,220)</color>
+      <commonality>0.001</commonality>
+    </stuffProps>
+  </ThingDef>
+  
+  <!--<ThingDef>
+    <defName>NephilaMatronCorpse</defName>
+    <label>dead nephila matron</label>
+    <eType>Corpse</eType>
+    <thingClass>CorpsesNephilaMatron</thingClass>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>  -->
+  
+
+</Defs>

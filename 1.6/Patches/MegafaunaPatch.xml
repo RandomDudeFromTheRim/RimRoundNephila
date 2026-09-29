@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Megafauna</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Arthropleura"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.001</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Daeodon"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.05</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Gigantopithecus"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Titanis"]/race/wildBiomes</xpath>
+				<value>
+
+
+					<Nephila_NephiliticEden>0.005</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Titanoboa"]/race/wildBiomes</xpath>
+				<value>
+			
+					<Nephila_NephiliticEden>0.01</Nephila_NephiliticEden>
+					
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Smilodon"]/race/wildBiomes</xpath>
+				<value>
+
+
+					<Nephila_NephiliticEden>0.005</Nephila_NephiliticEden>
+					
+					
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Megalania"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.007</Nephila_NephiliticEden>				
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Dinornis"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.001</Nephila_NephiliticEden>
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Quinkana"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Megalochelys"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Josephoartigasia"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.005</Nephila_NephiliticEden>	
+
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Gigantophis"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>			
+					
+				</value>
+			</li>
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Meganeura"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>
+				
+				</value>
+			</li>
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Purussaurus"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="Castoroides"]/race/wildBiomes</xpath>
+				<value>
+					<Nephila_NephiliticEden>0.008</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

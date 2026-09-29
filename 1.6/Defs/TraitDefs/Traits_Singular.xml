@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TraitDef>
+		<defName>ActualViolenceInhibition</defName>
+		<commonality>0.001</commonality>
+		<disabledWorkTags>Violent</disabledWorkTags>
+		<degreeDatas>
+			<li>
+				<label>nephilim aggression dampener</label>
+				<description>{PAWN_nameDef} has been rendered unable to defend herself by the programming nanites infusing her gelatinous form.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ViolenceInhibition</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>nephilim mind warmth</label>
+				<description>[PAWN_nameDef]'s hyper-fecund body serves as an industrial manufactory for nephilim mechanites. The cloud of mechanites surrounding her spread out for miles, infiltrating the bodies of those around them and encouraging them to adore her with unhealthy fervor. The false pheromones affect their creator, too, leaving [PAWN_nameDef] in a constant state of extreme sexual arousal.</description>
+				<degree>3</degree>
+			</li>
+			<li>
+				<label>nephilim ascendency</label>
+				<description>[PAWN_nameDef]'s body is a perfect expression of fertility and sex, sculpted by the nephilim nanites to grab the attention of all pawns around her. Though her physical aspects could be seen to be revolting by some, there's something about her that draws others in. Like a living fertility idol, [PAWN_nameDef] effortlessly attracts the worship of others.</description>
+				<degree>2</degree>
+			</li>
+			<li>
+				<label>nephilim residuum</label>
+				<description>{PAWN_nameDef} is under the effect of the residual conditioning nanites exuded by a Nephila Garden's core. Her sexual drive is stronger than even the exaggerated average of her kind and other pawns can find it difficult to avoid thinking of her in a sexual light. This can allow her to get away with more than would be typical when dealing with others.</description>
+				<degree>1</degree>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Beauty</li>
+		</conflictingTraits>
+	</TraitDef>
+
+
+</Defs>

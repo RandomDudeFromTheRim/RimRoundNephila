@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<ThinkTreeDef>
+		<defName>NephilaMilk</defName>
+		<insertTag>Humanlike_PreMain</insertTag>
+		<insertPriority>100</insertPriority>
+		<thinkRoot Class="ThinkNode_Tagger">
+			<tagToGive>SatisfyingNeeds</tagToGive>
+			<subNodes>
+        		<li Class="Nephila.JobGiver_NephilaMilkSelf"/>			
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>		
+	
+	</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+   <Nephila.NephilaSpecialSpawnsDef>
+      <defName>Nephila_NephilaPoolofColors</defName>
+      <thingDef>NephilaPoolofColors</thingDef>
+      <allowOnWater>false</allowOnWater>
+      <numberToSpawn>
+         <min>2</min>
+         <max>2</max>
+      </numberToSpawn>
+      <terrainValidationDisallowed>
+         <!-- Add disallowed terrain types here -->
+      </terrainValidationDisallowed>
+      <!--<terrainValidationAllowed>
+         <li>AB_CrackedMud</li>
+         <li>AB_RichCrackedMud</li>
+      </terrainValidationAllowed>-->
+      <biomesWithExtraGeneration>
+         <!-- Add biomes for extra generation here -->
+      </biomesWithExtraGeneration>
+      <allowedBiome>Nephila_NephiliticEden</allowedBiome>
+   </Nephila.NephilaSpecialSpawnsDef>
+</Defs>

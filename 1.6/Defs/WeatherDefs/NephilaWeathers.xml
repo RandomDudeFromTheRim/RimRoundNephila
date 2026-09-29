@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WeatherDef>
+    <defName>NephiliticFog</defName>
+    <label>nephilitic fog</label>
+    <isBad>true</isBad>
+    <description>Nephilitic fog reduces the accuracy of ranged weapons. On its own, it's largely harmless, but, if it become more severe, it can sicken humanoid pawns that spend too much time outside in it.</description>
+    <windSpeedFactor>0.5</windSpeedFactor>
+    <accuracyMultiplier>0.5</accuracyMultiplier>
+    <favorability>Neutral</favorability>
+    <perceivePriority>1</perceivePriority>
+    <ambientSounds>
+      <li>Ambient_Wind_Fog</li>
+    </ambientSounds>
+    <overlayClasses>
+      <li>WeatherOverlay_Fog</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1300, 1)</li>
+      </points>
+    </commonalityRainfallFactor>    
+    <!-- Colors are Overcast -->
+    <skyColorsDay>
+      <sky>(0.85,0.85,0.85)</sky>
+      <shadow>(0.97,0.97,0.97)</shadow>
+      <overlay>(0.75,0.75,0.75)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(1.05,1.05,1.05)</sky>
+      <shadow>(0.97,0.97,0.97)</shadow>
+      <overlay>(0.65,0.65,0.65)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.4,0.45,0.5)</sky>
+      <shadow>(0.97,0.97,0.97)</shadow>
+      <overlay>(0.55,0.55,0.55)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.4,0.45,0.5)</sky>
+      <shadow>(0.97,0.97,0.97)</shadow>
+      <overlay>(0.55,0.55,0.55)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsNightMid>
+  </WeatherDef>
+
+</Defs>
+
+
+
+
+
+
+
+

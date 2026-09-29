@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Name="NephilaBase" Abstract="True">
+	<!--<defName>NephilaBase</defName>-->
+	<label>Nephila Garden</label>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>	
+    <categoryTag>NephilaEmpire</categoryTag>	
+    <description>A small enclave of the Nephilim.\n\nThese hyper-fecund "goo" sluts have come to co-opt the locals and convert their women into permanent installations in their "gardens" so as to reproduce.</description>
+    <basicMemberKind>NephilaEscapedSlave</basicMemberKind>
+    <royalTitleTags>
+      <li>NephilimEmpireTitle</li>
+    </royalTitleTags>	
+    <listOrderPriority>30</listOrderPriority>
+	<pawnSingular>Nephila</pawnSingular>
+    <pawnsPlural>Nephilim</pawnsPlural>
+    <maxCountAtGameStart>1</maxCountAtGameStart>	
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>	
+    <royalFavorLabel>nephilim favor</royalFavorLabel>	
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>ascendent</leaderTitle>
+    <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>		
+    <factionNameMaker>NamerFactionNephila</factionNameMaker>
+    <settlementNameMaker>NamerSettlementNephila</settlementNameMaker>
+    <!--<pawnNameMaker>NamerPersonNephila</pawnNameMaker>
+    <pawnNameMakerFemale>NamerPersonNephilaFemale</pawnNameMakerFemale>-->	
+    <factionIconPath>Things/World/NephilaBaseIcon</factionIconPath>	
+    <fixedLeaderKinds>
+      <li>NephilaGrandMatronTownCouncilman</li>
+    </fixedLeaderKinds>		
+    <!--<startingGoodwill>
+      <min>-40</min>
+      <max>40</max>
+    </startingGoodwill>-
+	<goodwillDailyGain>0.40</goodwillDailyGain>
+    <goodwillDailyFall>0.40</goodwillDailyFall>-->	
+    <!--<hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+    </hairTags>-->
+	<techLevel>Spacer</techLevel>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>ImperialCommon</li>
+        </categories>
+		<commonality>0.50</commonality>		
+      </li> 
+    </backstoryFilters>	
+	<!--<geneticVariance>0.8</geneticVariance>-->
+    <!--<apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+        <li>Hyperweave</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>-->
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>	
+    <!--<naturalColonyGoodwill>
+      <min>-60</min>
+      <max>5</max>
+    </naturalColonyGoodwill>-->
+    <settlementTexturePath>Things/World/NephilaBaseIcon</settlementTexturePath>	
+    <colorSpectrum>
+      <li>(0.95, 0.95, 0.55)</li>
+    </colorSpectrum>	
+    <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>	
+    <!--<royalTitleInheritanceWorkerClass>Nephila.RoyalTitleInheritanceWorkerNephila</royalTitleInheritanceWorkerClass>-->
+    <royalTitleInheritanceRelations>
+	  <li>Child</li>
+      <li>Grandchild</li>
+      <li>GreatGrandchild</li>
+      <li>Spouse</li>
+      <li>Sibling</li>
+      <li>Cousin</li>
+	  <!--<li>Kin</li>
+	  <li>Lover</li>
+	  <li>ExLover</li>
+	  <li>ExSpouse</li>
+	  <li>Fiance</li>-->
+      <!--<li>Child</li>
+      <li>Grandchild</li>
+      <li>GreatGrandchild</li>
+      <li>NephewOrNiece</li>
+      <li>Spouse</li>
+      <li>Sibling</li>
+      <li>HalfSibling</li>
+      <li>Cousin</li>
+      <li>Parent</li>
+      <li>UncleOrAunt</li>-->
+    </royalTitleInheritanceRelations>
+    <!--<minTitleForBladelinkWeapons>NephilimGrayOne</minTitleForBladelinkWeapons>-->
+    <!--<royalImplantRules>
+      <li>
+        <implantHediff>Nephila_PsyAmp</implantHediff>
+		<implantHediff>PsychicAmplifier</implantHediff>
+        <maxLevel>1</maxLevel>
+        <minTitle>NephilimSupplicant</minTitle>
+      </li>
+      <li>
+        <implantHediff>Nephila_PsyAmp</implantHediff> 
+		<implantHediff>PsychicAmplifier</implantHediff>		
+        <maxLevel>2</maxLevel>
+        <minTitle>NephilimVeiledOne</minTitle>
+      </li>
+      <li>
+        <implantHediff>Nephila_PsyAmp</implantHediff>
+		<implantHediff>PsychicAmplifier</implantHediff>		
+        <maxLevel>3</maxLevel>
+        <minTitle>NephilimGrayOne</minTitle>
+      </li>
+      <li>
+        <implantHediff>Nephila_PsyAmp</implantHediff>
+		<implantHediff>PsychicAmplifier</implantHediff>		
+        <maxLevel>4</maxLevel>
+        <minTitle>NephilimGardenTender</minTitle>
+      </li>
+      <li>
+        <implantHediff>Nephila_PsyAmp</implantHediff>
+		<implantHediff>PsychicAmplifier</implantHediff>		
+        <maxLevel>5</maxLevel>
+        <minTitle>NephilimBaroness</minTitle>
+      </li>
+      <li>
+        <implantHediff>Nephila_PsyAmp</implantHediff>
+		<implantHediff>PsychicAmplifier</implantHediff>		
+        <maxLevel>6</maxLevel>
+        <minTitle>NephilimCountess</minTitle>
+      </li>
+    </royalImplantRules>-->
+
+    <renounceTitleMessage>Bladelink and psycast use will become illegal</renounceTitleMessage>	
+    <caravanTraderKinds>
+      <li>NephilaBase_Caravan_TraderGeneral</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>NephilaBase_Caravan_TraderGeneral</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Nephila_Standard</li>
+    </baseTraderKinds>
+    <!--<allowedArrivalTemperatureRange>
+      <min>-45</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>-->
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(500, 100)</li> <!-- Can always use relatively strong pawns, because empire doesn't really have weak ones -->
+        <li>(1000, 150)</li>
+        <li>(2000, 250)</li>
+        <li>(2001, 10000)</li>
+		<li>(3001, 100000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix, mooks and knights with a low chance of queen's guard -->
+        <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
+        <options>
+          <NephilaMookGrenadier_Destructive>10</NephilaMookGrenadier_Destructive>
+		  <NephilaCherubim>15</NephilaCherubim>
+          <NephilaMookGrenadier_EMP>5</NephilaMookGrenadier_EMP>
+          <NephilaMookGrenadier_Smoke>10</NephilaMookGrenadier_Smoke>
+          <NephilaMookMercenary_Gunner>10</NephilaMookMercenary_Gunner>
+		  <NephilaMookMercenary_Slasher>10</NephilaMookMercenary_Slasher>
+		  <NephilaMookMercenary_Slasher_Acidifier>5</NephilaMookMercenary_Slasher_Acidifier>
+	      <NephilaMookMercenary_Gunner_Acidifier>5</NephilaMookMercenary_Gunner_Acidifier>
+		  <NephilaMookMercenary_Heavy>2.5</NephilaMookMercenary_Heavy>	  
+		  <NephilaSeraphim>8</NephilaSeraphim>
+		  <NephilaMookMercenary_Sniper>5</NephilaMookMercenary_Sniper>
+		  <NephilaMookMercenary_Elite>5</NephilaMookMercenary_Elite>
+		  <NephilaMookMercenary_Elite_Acidifier>2.5</NephilaMookMercenary_Elite_Acidifier>
+		  <NephilaMookMercenary_Sniper_Acidifier>2.5</NephilaMookMercenary_Sniper_Acidifier>	  
+		  <NephilaMookPirateBoss>2</NephilaMookPirateBoss>
+		  <NephilaQueensGuardSlasher>1</NephilaQueensGuardSlasher>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, snekssss -->
+        <kindDef>Combat</kindDef>
+		<commonality>45</commonality>
+        <options>
+		  <NephilaCherubim>20</NephilaCherubim>	  
+		  <NephilaSeraphim>10</NephilaSeraphim>	  
+		  <NephilaQueensGuardSlasher>1</NephilaQueensGuardSlasher>
+        </options>
+      </li>	  
+      <li>
+        <!-- Normal fights, standard mix, elites only -->
+        <kindDef>Combat</kindDef>
+		<commonality>35</commonality>
+        <options>
+		  <NephilaMookMercenary_Heavy>2.5</NephilaMookMercenary_Heavy>
+		  <NephilaSeraphim>8</NephilaSeraphim>
+		  <NephilaMookMercenary_Sniper>5</NephilaMookMercenary_Sniper>
+		  <NephilaMookMercenary_Elite>5</NephilaMookMercenary_Elite>
+		  <NephilaMookMercenary_Elite_Acidifier>2.5</NephilaMookMercenary_Elite_Acidifier>
+		  <NephilaMookMercenary_Sniper_Acidifier>2.5</NephilaMookMercenary_Sniper_Acidifier>		  
+		  <NephilaMookPirateBoss>2</NephilaMookPirateBoss>
+		  <NephilaQueensGuardSlasher>1</NephilaQueensGuardSlasher>
+        </options>
+      </li>	
+      <li>
+        <!-- Normal fights, queen's guard elite penetration team: HOO RAH -->
+        <kindDef>Combat</kindDef>
+		<commonality>15</commonality>
+        <options>
+		  <NephilaQueensGuardSlasher>1</NephilaQueensGuardSlasher>
+        </options>
+      </li>	    
+      <li>
+        <!-- Normal fights, acid and grenades -->
+        <kindDef>Combat</kindDef>
+		<commonality>45</commonality>
+        <options>
+          <NephilaMookGrenadier_Destructive>10</NephilaMookGrenadier_Destructive>
+          <NephilaMookGrenadier_EMP>5</NephilaMookGrenadier_EMP>
+          <NephilaMookGrenadier_Smoke>10</NephilaMookGrenadier_Smoke>
+		  <NephilaMookMercenary_Slasher_Acidifier>5</NephilaMookMercenary_Slasher_Acidifier>
+	      <NephilaMookMercenary_Gunner_Acidifier>5</NephilaMookMercenary_Gunner_Acidifier>
+		  <NephilaMookMercenary_Elite_Acidifier>2.5</NephilaMookMercenary_Elite_Acidifier>
+		  <NephilaMookMercenary_Sniper_Acidifier>2.5</NephilaMookMercenary_Sniper_Acidifier>	  
+		  <NephilaMookPirateBoss>2</NephilaMookPirateBoss>
+        </options>
+      </li>	  	  
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <NephilaCherubim>20</NephilaCherubim>
+		  <NephilaMookMercenary_Gunner>10</NephilaMookMercenary_Gunner>
+		  <NephilaMookMercenary_Heavy>5</NephilaMookMercenary_Heavy>		  
+          <NephilaMookMercenary_Slasher_Acidifier>50</NephilaMookMercenary_Slasher_Acidifier>
+        </options>
+      </li>
+		<!-- Trader, Low-Tier -->
+		<li>
+        <kindDef>Trader</kindDef>
+		<commonality>5</commonality>
+        <traders>
+          <NephilaMookTrader_Gunner>1</NephilaMookTrader_Gunner>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Muffalo>6</Muffalo>		  
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>		  
+        </carriers>
+        <guards>		
+		  <NephilaCherubim>20</NephilaCherubim>
+          <NephilaMookMercenary_Gunner>10</NephilaMookMercenary_Gunner>
+		  <NephilaMookMercenary_Slasher_Acidifier>5</NephilaMookMercenary_Slasher_Acidifier>
+		  <NephilaMookMercenary_Heavy>2.5</NephilaMookMercenary_Heavy>	  
+        </guards>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+		<commonality>3</commonality>
+        <traders>
+          <NephilaMookTrader_Gunner>1</NephilaMookTrader_Gunner>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Muffalo>6</Muffalo>		  
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>		  
+        </carriers>
+        <guards>		
+		  <NephilaCherubim>20</NephilaCherubim>
+          <NephilaMookMercenary_Gunner>10</NephilaMookMercenary_Gunner>
+		  <NephilaMookMercenary_Slasher_Acidifier>5</NephilaMookMercenary_Slasher_Acidifier>
+		  <NephilaMookMercenary_Heavy>2.5</NephilaMookMercenary_Heavy>	 	
+		  <NephilaCherubim>10</NephilaCherubim>
+          <NephilaQueensGuardSlasher>.5</NephilaQueensGuardSlasher>
+        </guards>
+      </li>
+	  <!-- Trader, High-Tier -->
+      <li>
+        <kindDef>Trader</kindDef>
+		<commonality>1</commonality>
+        <traders>
+          <NephilaMookTrader_Gunner>1</NephilaMookTrader_Gunner>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Muffalo>6</Muffalo>		  
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>		  
+        </carriers>
+        <guards>		
+		  <NephilaCherubim>20</NephilaCherubim>
+          <NephilaMookMercenary_Gunner>10</NephilaMookMercenary_Gunner>
+		  <NephilaMookMercenary_Slasher_Acidifier>5</NephilaMookMercenary_Slasher_Acidifier>
+		  <NephilaMookMercenary_Heavy>2.5</NephilaMookMercenary_Heavy>	 
+		  <NephilaMookMercenary_Elite>5</NephilaMookMercenary_Elite>		  
+		  <NephilaCherubim>10</NephilaCherubim>
+          <NephilaQueensGuardSlasher>.5</NephilaQueensGuardSlasher>
+        </guards>
+      </li>
+	  <!-- Settlement, Moderate-->
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+		  <NephilaCherubim>10</NephilaCherubim>
+          <NephilaHandmaidenTownGuard>10</NephilaHandmaidenTownGuard>
+          <NephilaMatronTownCouncilman>1</NephilaMatronTownCouncilman>
+          <NephilaHandmaidenSoldier>10</NephilaHandmaidenSoldier>
+          <NephilaHandmaidenSniper>10</NephilaHandmaidenSniper>
+          <NephilaHandmaidenGunner>10</NephilaHandmaidenGunner>
+		  <NephilaSeraphim>5</NephilaSeraphim>
+          <NephilaQueensGuardSlasher>1</NephilaQueensGuardSlasher>
+	      <NephilaHandmaidenGrenadier>1</NephilaHandmaidenGrenadier>
+        </options>
+      </li>
+	  <!-- Settlement, Important-->
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+		  <NephilaCherubim>10</NephilaCherubim>
+          <NephilaVillager>20</NephilaVillager>		  
+          <NephilaHandmaidenTownGuard>20</NephilaHandmaidenTownGuard>
+          <NephilaMatronTownCouncilman>1</NephilaMatronTownCouncilman>
+          <NephilaMookGrenadier_Destructive>10</NephilaMookGrenadier_Destructive>
+		  <NephilaCherubim>20</NephilaCherubim>
+          <NephilaMookGrenadier_EMP>5</NephilaMookGrenadier_EMP>
+          <NephilaMookGrenadier_Smoke>10</NephilaMookGrenadier_Smoke>
+          <NephilaMookMercenary_Gunner>10</NephilaMookMercenary_Gunner>
+		  <NephilaMookMercenary_Slasher>10</NephilaMookMercenary_Slasher>
+		  <NephilaMookMercenary_Slasher_Acidifier>5</NephilaMookMercenary_Slasher_Acidifier>
+	      <NephilaMookMercenary_Gunner_Acidifier>5</NephilaMookMercenary_Gunner_Acidifier>
+		  <NephilaMookMercenary_Heavy>2.5</NephilaMookMercenary_Heavy>	  
+		  <NephilaSeraphim>10</NephilaSeraphim>
+		  <NephilaMookMercenary_Sniper>5</NephilaMookMercenary_Sniper>
+		  <NephilaMookMercenary_Elite>5</NephilaMookMercenary_Elite>
+		  <NephilaMookMercenary_Elite_Acidifier>2.5</NephilaMookMercenary_Elite_Acidifier>
+		  <NephilaMookMercenary_Sniper_Acidifier>2.5</NephilaMookMercenary_Sniper_Acidifier>	  
+		  <NephilaMookPirateBoss>2</NephilaMookPirateBoss>
+		  <NephilaQueensGuardSlasher>1</NephilaQueensGuardSlasher>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+  
+  <FactionDef ParentName="NephilaBase">
+    <defName>NephilaNPCFaction</defName>
+    <label>nephila garden</label>
+	<colorSpectrum>
+      <li>(0.63, 0.70, 0.71)</li>
+    </colorSpectrum>
+    <!--<startingGoodwill>0</startingGoodwill>-->
+    <!--<naturalColonyGoodwill>0</naturalColonyGoodwill>-->
+	<listOrderPriority>150</listOrderPriority>
+	<allowedCultures><li>Astropolitan</li></allowedCultures>
+	<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+	<leaderTitle>Garden Tender Supremus</leaderTitle>
+	<factionIconPath>Things/World/NephilaBaseIcon</factionIconPath>
+	<royalFavorLabel>nephilim favor</royalFavorLabel>
+	<fixedLeaderKinds>
+      <li>NephilaGrandMatronTownCouncilman</li>
+    </fixedLeaderKinds>
+	<baseTraderKinds>
+      <li>Base_Nephila_Standard</li>
+    </baseTraderKinds>
+    <caravanTraderKinds>
+      <li>NephilaBase_Caravan_TraderGeneral</li>
+    </caravanTraderKinds>
+	<royalTitleTags>
+      <li>NephilimEmpireTitle</li>
+    </royalTitleTags>
+    <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+    <royalTitleInheritanceRelations>
+      <li>Child</li>
+      <li>Grandchild</li>
+      <li>GreatGrandchild</li>
+      <li>Spouse</li>
+      <li>Sibling</li>
+      <li>Cousin</li>
+    </royalTitleInheritanceRelations>
+  </FactionDef>  
+  
+  <RulePackDef>
+    <defName>NamerFactionNephila</defName>
+    <include>
+      <li>EmpireNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=2)->[empire] of [ofThing]</li>
+        <li>r_name(p=2)->The [empire] of [ofThing]</li>
+        <li>r_name->The Exodus [empire]</li>
+        <li>r_name->The Refugee [empire]</li>
+        <li>r_name->The Broken [empire]</li>
+        <li>r_name->The Shattered [empire]</li>
+        <li>r_name->The Fallen [empire]</li>
+        <li>r_name->The [Color] [empire]</li>
+
+        <li>empire(p=4)->Empire</li>
+        <li>empire->Commonwealth</li>
+        <li>empire->Imperium</li>
+        <li>empire->Dominion</li>
+        <li>empire->Sovereignty</li>
+
+        <li>ofThing(p=4)->[WordImperial]</li>
+        <li>ofThing->the Sun</li>
+        <li>ofThing->the Moon</li>
+        <li>ofThing->the Universe</li>
+        <li>ofThing->God</li>
+        <li>ofThing->Perfection</li>
+        <li>ofThing->Eternity</li>
+        <li>ofThing->the Spirit</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerSettlementNephila</defName>
+    <include>
+      <li>EmpireNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[townname_wordgen]</li>
+        <li>r_name->[townname_fixed]</li>
+
+        <li>townname_wordgen->[WordImperial]</li>
+        <li>townname_wordgen->[WordImperial][townend]</li>
+        <li>townend(p=3)->ium</li>
+        <li>townend(p=3)->ior</li>
+        <li>townend(p=3)->polis</li>
+        <li>townend->nor</li>
+        <li>townend->lan</li>
+        <li>townend->lax</li>
+        <li>townend->lix</li>
+        <li>townend->lin</li>
+        <li>townend->lian</li>
+        <li>townend->phrum</li>
+        <li>townend->phor</li>
+        <li>townend->teor</li>
+        <li>townend->ople</li>
+        <li>townend->opium</li>
+        <li>townend->or</li>
+        <li>townend->aetor</li>
+        <li>townend->aeum</li>
+        <li>townend->aetium</li>
+        <li>townend->am</li>
+        <li>townend->aeum</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>townname_fixed->Names/EmpireTown</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonNephila</defName>
+    <include>
+      <li>EmpireNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=3)->[ImperialNameFirstMale] [ImperialNameLast]</li>
+        <li>r_name(p=2)->[ImperialNameFirstMale] [WordImperial]</li>
+        <li>r_name(p=2)->[WordImperial] [WordImperial]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonNephilaFemale</defName>
+    <include>
+      <li>EmpireNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=3)->[ImperialNameFirstFemale] [ImperialNameLast]</li>
+        <li>r_name(p=2)->[ImperialNameFirstFemale] [WordImperial]</li>
+        <li>r_name(p=2)->[WordImperial] [WordImperial]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>  
+
+</Defs>

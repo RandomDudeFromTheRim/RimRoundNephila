@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Loaded only with Intimacy - Gender Works. -->
+<Defs>
+	<HediffDef ParentName="SEX_ReproductiveOrganHediffBase">
+		<defName>NephilaGelWomb</defName>
+		<label>gel womb</label>
+		<labelNoun>a nanite gel womb</labelNoun>
+		<description>A Nephila's womb: a knot of warm, living gel shot through with nanites. It takes to pregnancy far more readily than a human uterus, and it is where a Nephila's broods swell.</description>
+		<tags>
+			<li>SEX_FemaleReproductiveOrgan</li>
+			<li>SEX_ReproductiveOrgan</li>
+		</tags>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<statFactors>
+					<Fertility>1.5</Fertility>
+				</statFactors>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>false</solid>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+</Defs>

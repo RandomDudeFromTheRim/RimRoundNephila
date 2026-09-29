@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Neph_NephilaSoil</defName>
+    <label>soil</label>
+    <texturePath>Terrain/Neph_NephilaSoil</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>340</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <scatterType>Rocky</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.0</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Neph_NephilaMossyTerrain</defName>
+    <label>lichen-covered soil</label>
+    <texturePath>Terrain/Neph_NephilaMossy</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>315</renderPrecedence>
+    <pathCost>3</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>1</fertility>
+    <takeFootprints>True</takeFootprints>
+    <avoidWander>false</avoidWander>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Neph_NephilaSoilRich</defName>
+    <label>rich soil</label>
+    <texturePath>Terrain/Neph_NephilaSoilRich</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>335</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.4</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>  
+  
+
+<!--===========Artificial Floors==============-->
+   <TerrainDef Name="NephilaFloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <designationCategory>Floors</designationCategory>
+    <fertility>0</fertility>
+    <constructEffect>ConstructDirt</constructEffect>
+    <!--<acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>-->
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+
+  <TerrainDef Name="NephilaBurnedFloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <pathCost>4</pathCost>
+    <fertility>0</fertility>
+    <!--<acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>-->
+    <statBases>
+      <Beauty>-1</Beauty>
+    </statBases>
+  </TerrainDef> 
+
+	<!--<TerrainDef  ParentName="NephilaFloorBase">
+		<defName>NephilaTentacleFunFloor</defName>
+		<label>Betentacled Goo Floor</label>
+		<renderPrecedence>245</renderPrecedence>
+		<description>This elaborately worked silver floor is inset with holes that have become hosts for nephilim tentacles. These tentacles take hold of other nephila, ushering them forward (while occasionally sneaking a playful grope).</description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<burnedDef>NephilaBurnedTile</burnedDef>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToBuild>800</WorkToBuild>
+			<Flammability>0.55</Flammability>
+    </statBases>
+		<costList>
+      <Steel>6</Steel>
+      <Silver>24</Silver>
+		</costList>
+    <constructEffect>ConstructDirt</constructEffect>
+		<researchPrerequisites>
+			    <li>Stonecutting</li>
+		</researchPrerequisites>	
+		<pathCost>100</pathCost>
+		<modExtensions>
+		<li Class="Nephila.NephilaTerrainCost">
+				<costToAdd>0</costToAdd>
+				<costToRefund>200</costToRefund>
+				<tags>
+					<li>Nephila</li>
+				</tags>
+			</li>
+		</modExtensions>
+		</TerrainDef>-->
+		
+		
+		
+	<TerrainDef  ParentName="NephilaFloorBase">
+		<defName>NephilaTentacleFunFloor</defName>
+		<label>Betentacled Goo Floor</label>
+		<renderPrecedence>245</renderPrecedence>
+		<description>This elaborately worked silver floor is inset with holes that have become hosts for nephilim tentacles. These tentacles take hold of other nephila, ushering them forward (while occasionally sneaking a playful grope).</description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<burnedDef>NephilaBurnedTile</burnedDef>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToBuild>800</WorkToBuild>
+			<Flammability>0.55</Flammability>
+    </statBases>
+		<costList>
+      <Steel>6</Steel>
+      <Silver>24</Silver>
+		</costList>
+    <constructEffect>ConstructDirt</constructEffect>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+			<li>NephilaUnlocker</li>  				
+		</researchPrerequisites>	
+		<pathCost>0</pathCost>
+		<modExtensions>
+		<li Class="Nephila.NephilaTerrainCost">
+				<costToAdd>25</costToAdd>
+				<costToRefund>25</costToRefund>
+				<tags>
+					<li>Nephila</li>
+				</tags>
+			</li>
+		</modExtensions>		
+		</TerrainDef>		
+
+	<TerrainDef ParentName="NephilaBurnedFloorBase">
+		<defName>NephilaBurnedTile</defName>
+		<label>burned nephilim flooring</label>
+		<renderPrecedence>251</renderPrecedence>
+		<description>An artificially constructed floor of nephilim design that has been burned near to ashes. Whatever bizarre creatures might once have lived here are long since dead.</description>
+		<texturePath>Terrain/Surfaces/Concrete</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<pathCost>150</pathCost>
+	</TerrainDef>
+
+
+
+
+  
+</Defs>

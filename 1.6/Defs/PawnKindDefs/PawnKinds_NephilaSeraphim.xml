@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<PawnKindDef Name="NephFighterBase" Abstract="True">
+    <race>Nephila</race>
+    <defaultFactionType>NephilaNPCFaction</defaultFactionType>
+    <minTitleRequired>Freeholder</minTitleRequired>
+    <maxGenerationAge>55</maxGenerationAge>
+    <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>ImperialFighter</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <styleItemTags>
+      <li>
+        <tag>Soldier</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <weaponMoney>1100~2500</weaponMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <apparelMoney>1250~2500</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>Western</li>
+    </apparelDisallowTags>
+    <techHediffsChance>0.3</techHediffsChance>
+    <techHediffsMoney>1000~1500</techHediffsMoney>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <biocodeWeaponChance>0.15</biocodeWeaponChance>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!-- Trooper -->
+
+  <PawnKindDef Name="NephTrooperBase" Abstract="True" ParentName="NephFighterBase">
+    <combatPower>65</combatPower>
+    <apparelMoney>5000~8000</apparelMoney>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <apparelRequired>
+      <li>Apparel_FlakJacket</li>
+      <li>Apparel_FlakVest</li>
+      <li>Apparel_FlakPants</li>
+    </apparelRequired>
+    <initialWillRange>2~4</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="NephTrooperBase">
+    <defName>NephilaSeraphim</defName>
+  <label>nephila seraphim</label>
+    <apparelColor>(130,130,130)</apparelColor>
+    <specificApparelRequirements>
+      <li>
+        <bodyPartGroup>UpperHead</bodyPartGroup>
+        <alternateTagChoices>
+          <li>
+            <tag>Gunlink</tag>
+            <chance>0.25</chance>
+          </li>
+        </alternateTagChoices>
+      </li>
+    </specificApparelRequirements>
+    <techHediffsTags>
+      <li>Nephila_ImplantManager</li>
+    </techHediffsTags>
+    <initialResistanceRange>15~24</initialResistanceRange>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+</Defs>

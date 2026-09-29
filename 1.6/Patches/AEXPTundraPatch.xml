@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Tundra</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+
+				
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[defName="AEXP_Porcupine"]/race/wildBiomes</xpath>
+				<value>
+
+					<Nephila_NephiliticEden>0.07</Nephila_NephiliticEden>
+					
+				</value>
+			</li>
+			
+			
+			
+			
+			
+			
+			
+		</operations>
+		</match>
+	</Operation>
+	
+	
+</Patch>

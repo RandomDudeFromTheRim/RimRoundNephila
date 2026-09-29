@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<HairDef>
+    <label>Nephila Tentacles</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/NephilaTentacles</texPath>
+    <defName>NephilaTentacles</defName>
+		<hairTags>
+			<li>NephilaTentacles</li>
+		</hairTags>
+  </HairDef>
+  
+ <HairDef>
+    <label>Nephila Matron Tentacles</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/NephilaMatronTentacles</texPath>
+    <defName>NephilaMatronTentacles</defName>
+		<hairTags>
+			<li>NephilaMatronTentacles</li>
+		</hairTags>
+  </HairDef>  
+
+ <HairDef>
+    <label>Bald</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/Perfection</texPath>
+    <defName>BaldIsBeautiful</defName>
+		<hairTags>
+			<li>BaldIsBeautiful</li>
+		</hairTags>
+  </HairDef> 
+
+
+</Defs>

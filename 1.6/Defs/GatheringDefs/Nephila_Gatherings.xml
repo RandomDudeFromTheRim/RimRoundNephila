@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GatheringDef>
+    <defName>Nephila_Concert</defName>
+    <label>nephilim concert</label>
+    <randomSelectionWeight>1</randomSelectionWeight>
+    <letterTitle>Concert</letterTitle>
+    <letterText>{ORGANIZER_labelShort} is holding a concert! Everyone who goes will gain recreation and social energy, and a lasting positive mood boost, both from social contact and from the music itself.</letterText>
+    <calledOffMessage>The concert has been cancelled.</calledOffMessage>
+    <finishedMessage>The concert has concluded.</finishedMessage>
+    <duty>Nephila_Concert</duty>
+    <workerClass>GatheringWorker_Concert</workerClass>
+    <requiredTitleAny>
+      <li>NephilimSupplicant</li>
+      <li>NephilimVeiledOne</li>
+      <li>NephilimGrayOne</li>
+      <li>NephilimGardenTender</li>
+	  <li>NephilimBaroness</li>	  
+      <li>NephilimCountess</li>
+      <li>NephilimDuchess</li>
+	  <li>NephilimConsul</li>
+      <li>NephilimGrandMatronTitle</li>
+      <li>NephilimAscendedMatron</li>	  	  
+    </requiredTitleAny>
+  </GatheringDef>
+
+  <!--<GatheringDef>
+    <defName>Nephila_ThroneSpeech</defName>
+    <label>huddle</label>
+    <randomSelectionWeight>3</randomSelectionWeight>
+    <letterTitle>Manager has called a huddle</letterTitle>
+    <letterText>{ORGANIZER_labelShort} has called for a facility-wide huddle to talk about current events.
+	\nIf all goes well, listeners will feel inspired, and gain respect for {ORGANIZER_labelShort}. If it goes poorly, the speech will do social damage. The outcome depends on {ORGANIZER_labelShort}'s social abilities.</letterText>
+    <workerClass>GatheringWorker_Speech</workerClass>
+    <duty>Spectate</duty>
+    <respectTimetable>true</respectTimetable>
+    <gatherSpotDefs>
+      <li>Throne</li>
+    </gatherSpotDefs>
+    <requiredTitleAny>
+      <li>NephilimGardenTender</li>
+	  <li>NephilimBaroness</li>	  
+      <li>NephilimCountess</li>
+      <li>NephilimDuchess</li>
+	  <li>NephilimConsul</li>
+      <li>NephilimGrandMatronTitle</li>
+      <li>NephilimAscendedMatron</li>	  
+    </requiredTitleAny>
+  </GatheringDef>
+  
+  <GatheringDef>
+    <defName>Nephila_ThroneSpeechExecutive</defName>
+    <label>meeting</label>
+    <randomSelectionWeight>3</randomSelectionWeight>
+    <letterTitle>Executive has called a meeting</letterTitle>
+    <letterText>{ORGANIZER_labelShort} has called for a facility-wide faculty meeting to talk about current events.
+	\nIf all goes well, listeners will feel inspired, and gain respect for {ORGANIZER_labelShort}. If it goes poorly, the speech will do social damage. The outcome depends on {ORGANIZER_labelShort}'s social abilities.
+	\nUnlike a huddle, meetings can happen at any time of the day.. and attendance is mandatory.</letterText>
+    <workerClass>GatheringWorker_Speech</workerClass>
+    <duty>Nephila_Spectate</duty>
+    <respectTimetable>false</respectTimetable>
+    <gatherSpotDefs>
+      <li>Throne</li>
+    </gatherSpotDefs>
+    <requiredTitleAny>
+      <li>NephilimGrandMatronTitle</li>
+      <li>NephilimAscendedMatron</li>	  
+    </requiredTitleAny>
+  </GatheringDef>-->
+  
+  <GatheringDef>
+    <defName>Nephila_Party</defName>
+    <label>company party</label>
+    <randomSelectionWeight>1</randomSelectionWeight>
+    <letterTitle>Company Party</letterTitle>
+    <letterText>{ORGANIZER_labelShort} is throwing a company party! Everyone who goes will gain recreation and social energy, and a lasting positive mood boost.</letterText>
+    <calledOffMessage>The company party has been called off.</calledOffMessage>
+    <finishedMessage>The company party has finished.</finishedMessage>
+    <duty>Party</duty>
+    <workerClass>GatheringWorker_Party</workerClass>
+    <gatherSpotDefs>
+      <li>Throne</li>
+    </gatherSpotDefs>
+	<requiredTitleAny>
+      <li>NephilimSupplicant</li>
+      <li>NephilimVeiledOne</li>
+      <li>NephilimGrayOne</li>
+      <li>NephilimGardenTender</li>
+	  <li>NephilimBaroness</li>	  
+      <li>NephilimCountess</li>
+      <li>NephilimDuchess</li>
+	  <li>NephilimConsul</li>
+      <li>NephilimGrandMatronTitle</li>
+      <li>NephilimAscendedMatron</li>	  
+    </requiredTitleAny>
+  </GatheringDef>
+</Defs>

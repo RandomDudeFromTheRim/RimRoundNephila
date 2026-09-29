@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--=======================True Gathering Stuffs============================-->
+	
+	<ThoughtDef>
+		<defName>NephilaMilkGather</defName>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>milked lover</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>NephilaMilkGatherMood</thoughtToMake>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NephilaMilkGatherMood</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>milked lover</label>
+				<description>I helped my nephila lover to relieve the pressure in her burgeoning tits. Squeezing all those rows of tightly packed fun pillows has brightened my day.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>	
+
+	<ThoughtDef>
+		<defName>NephilaGatheredMilkFrom</defName>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>was milked</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>NephilaGatheredMilkFromMood</thoughtToMake>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NephilaGatheredMilkFromMood</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>was recently milked</label>
+				<description>My lover helped me to relieve my aching tits. They'd gotten so filled with milk that I thought they were going to pop!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NephilaGatheredMilkFromSelfMood</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>recently milked self</label>
+				<description>My tits feel several gallons lighter.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+<!--======================================OriginalGatheringThoughts==========================================-->
+
+	<ThoughtDef>
+		<defName>NephilaGatheredFromSelfMood</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>recently birthed</label>
+				<description>Soon my little spawnlings will be frolicking. My pussy quivers at the thought of birthing again soon.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NephilaGatheredFrom</defName>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>birthed with aid</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>NephilaGatheredFromMood</thoughtToMake>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>NephilaGatheredFromMood</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>birthed with aid</label>
+				<description>My lover recently helped me to give birth. Mmm. I can think of a few other things I'd like them to help me with.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NephilaGather</defName>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>assisted lover's birth</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>NephilaGatherMood</thoughtToMake>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>NephilaGatherMood</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>assisted lover's birth</label>
+				<description>I helped my nephila lover to birth one of her spawn. The process is... arousing.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+
+
+<!--===========================================Flesh Eating Thoughts===================================================-->
+
+  <ThoughtDef>
+    <defName>AteNephilaCoreDirect</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>nephila direct cannibalism</label>
+        <description>I ate a nephila core. Immoral and disgusting.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AteNephilaCore</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>nephila direct cannibalism</label>
+        <description>I ate a nephila core. Is this really alright?</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+  <ThoughtDef>
+    <defName>AteNephilaCoreAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>nephila cannibalism</label>
+        <description>Did we really need to eat this? I can still taste the mechanites that Nephila was made out of.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+<!--=============Nephila Alluring Trait==================-->
+  <ThoughtDef>
+    <defName>NephilaPretty</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>Nephila.ThoughtWorker_NephilaPretty</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>allure of the nephilim</label>
+	    <baseOpinionOffset>25</baseOpinionOffset>	
+        <description>Did you see the size of those things? And she didn't even blink when I stared right at them--just kept up that passive, knowing smile.</description>		
+      </li>
+      <li>
+        <label>nephilim madness</label>
+        <baseOpinionOffset>45</baseOpinionOffset>
+        <description>I can't... she shouldn't turn me on so much. But every time she looks at me, my whole body starts heating up.</description>		
+      </li>
+      <li>
+        <label>nephilim mind warmth</label>
+        <baseOpinionOffset>100</baseOpinionOffset>
+        <description>She is everything. Beloved. Nothing else matters. Only she does. Poor thing! So thin. So hungry. We must find more for her. She must grow.</description>		
+      </li>	  
+    </stages>
+  </ThoughtDef>
+
+	
+</Defs>
