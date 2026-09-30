@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using AlienRace;
 using HarmonyLib;
 using UnityEngine;
@@ -16,14 +16,10 @@ namespace Nephila
     [HarmonyPatch(typeof(AlienRenderTreePatches), nameof(AlienRenderTreePatches.TrySetupGraphIfNeededPrefix))]
     public static class NephilaDrawSizePatch
     {
-        static readonly Dictionary<ThingDef, bool> castes = new Dictionary<ThingDef, bool>();
+        // render trees are set up on several threads at once (parallel pre-render)
+        static readonly ConcurrentDictionary<ThingDef, bool> castes = new ConcurrentDictionary<ThingDef, bool>();
 
-        static bool IsCaste(ThingDef def)
-        {
-            if (!castes.TryGetValue(def, out bool caste))
-                castes[def] = caste = def.HasComp(typeof(CompNephilaMass));
-            return caste;
-        }
+        static bool IsCaste(ThingDef def) => castes.GetOrAdd(def, d => d.HasComp(typeof(CompNephilaMass)));
 
         // HAR's prefix is static and takes the tree as its first argument
         public static void Postfix(PawnRenderTree __0)
