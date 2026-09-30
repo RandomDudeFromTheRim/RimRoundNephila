@@ -1,3 +1,5 @@
 Source/**/bin/
 Source/**/obj/
 *.pdb
+*.dds
+*.DDS
