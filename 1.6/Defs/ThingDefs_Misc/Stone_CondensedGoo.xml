@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Condensed goo: the overgrown broodmother's "rock" - her body, set hard. The only stone
+     her biome has (forceRockTypes), and nowhere else (biomeSpecific). Barely useful: soft,
+     weak, ugly. Mined out, it stays mined. Vanilla's shared rock, chunk and block art,
+     tinted Nephila white. -->
+<Defs>
+
+  <ThingDef ParentName="UglyRockBase" Name="Neph_CondensedGooBase">
+    <defName>Neph_CondensedGoo</defName>
+    <label>condensed goo</label>
+    <description>Nephila goo, packed and set into something like stone by the sheer weight of the broodmother's body above it. Soft, faintly warm and slightly tacky to the touch. It mines easily and makes poor building material.</description>
+    <graphicData>
+      <color>(222,214,222)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>Neph_ChunkCondensedGoo</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <smoothedThing>Neph_SmoothedCondensedGoo</smoothedThing>
+      <biomeSpecific>true</biomeSpecific>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="Neph_CondensedGooBase">
+    <defName>Neph_SmoothedCondensedGoo</defName>
+    <label>smoothed condensed goo</label>
+    <description>Condensed Nephila goo, worked smooth. It has a soft pearly sheen, and it never quite stops feeling warm.</description>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+      <MarketValue>4</MarketValue>
+    </statBases>
+    <building>
+      <isNaturalRock>false</isNaturalRock>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <smoothedThing />
+      <paintable>true</paintable>
+    </building>
+    <saveCompressible>false</saveCompressible>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkRockBase">
+    <defName>Neph_ChunkCondensedGoo</defName>
+    <label>condensed goo chunk</label>
+    <graphicData>
+      <color>(222,214,222)</color>
+    </graphicData>
+    <statBases>
+      <Mass>18</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <butcherProducts>
+      <Neph_BlocksCondensedGoo>20</Neph_BlocksCondensedGoo>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>Neph_BlocksCondensedGoo</defName>
+    <label>condensed goo blocks</label>
+    <description>Blocks of condensed Nephila goo. Light, soft and weak - about the poorest stone there is. They work quickly, at least.</description>
+    <graphicData>
+      <color>(222,214,222)</color>
+    </graphicData>
+    <statBases>
+      <Mass>0.9</Mass>
+      <SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(222,214,222)</color>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <stuffAdjective>goo</stuffAdjective>
+      <statFactors>
+        <MaxHitPoints>0.7</MaxHitPoints>
+        <WorkToBuild>4.0</WorkToBuild>
+        <Beauty>0.6</Beauty>
+      </statFactors>
+      <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

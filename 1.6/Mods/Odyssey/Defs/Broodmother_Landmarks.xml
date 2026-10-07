@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Odyssey extras for the overgrown broodmother: milk welling up in the caves of every tile
+     of her, and two landmarks. Vanilla mutator workers do the shaping; they take their
+     liquid from her biome, so it's milk. -->
+<Defs>
+
+  <!-- milk pools in her caves, on every tile of her -->
+  <TileMutatorDef>
+    <defName>Neph_MilkPools</defName>
+    <label>milk-filled hollows</label>
+    <description>Milk wells up in the hollows and caves of her body, pooling warm and still in the dark.</description>
+    <categories>
+      <li>Caves</li>
+      <li>Groundwater</li>
+    </categories>
+    <priority>3</priority>
+    <workerClass>TileMutatorWorker_CaveLakes</workerClass>
+    <genOrder>-100</genOrder>
+    <chanceOnNonLandmarkTile>1</chanceOnNonLandmarkTile>
+    <preventGenSteps>
+      <li>CaveHives</li> <!-- her caves hold her children, not insects -->
+    </preventGenSteps>
+    <biomeWhitelist>
+      <li>Neph_OvergrownBroodmother</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <!-- the weeping fold: a great lake of milk among her folds -->
+  <TileMutatorDef>
+    <defName>Neph_WeepingFold</defName>
+    <label>weeping fold</label>
+    <description>A deep fold of her body that never stops weeping milk, filled into a broad, warm lake.</description>
+    <categories>
+      <li>Lake</li>
+    </categories>
+    <workerClass>TileMutatorWorker_Lake</workerClass>
+    <genOrder>0</genOrder>
+    <biomeWhitelist>
+      <li>Neph_OvergrownBroodmother</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <LandmarkDef>
+    <defName>Neph_WeepingFoldLandmark</defName>
+    <label>weeping fold</label>
+    <iconTexturePath>World/Landmarks/Lake</iconTexturePath>
+    <atlasSize>(2, 2)</atlasSize>
+    <drawScale>0.7</drawScale>
+    <commonality>3</commonality>
+    <nameMaker>Neph_NamerLandmark_WeepingFold</nameMaker>
+    <category>lake</category>
+    <mutatorChances>
+      <Neph_WeepingFold Required="True"/>
+      <Neph_BroodmotherFolds>1</Neph_BroodmotherFolds>
+      <Neph_MilkPools>0.5</Neph_MilkPools>
+      <FoggyMutator>0.2</FoggyMutator>
+    </mutatorChances>
+  </LandmarkDef>
+
+  <!-- the navel: the one open place on her, a hollow walled in by her folds -->
+  <TileMutatorDef>
+    <defName>Neph_Navel</defName>
+    <label>navel</label>
+    <description>A broad, sunken hollow in her body, walled in by the folds all around - the only place on her with room to breathe.</description>
+    <categories>
+      <li>Mountain</li>
+    </categories>
+    <priority>5</priority>
+    <workerClass>TileMutatorWorker_Hollow</workerClass>
+    <genOrder>-200</genOrder>
+    <minHilliness>Mountainous</minHilliness>
+    <preventNaturalElevation>true</preventNaturalElevation>
+    <preventGenSteps>
+      <li>CaveHives</li> <!-- her caves hold her children, not insects -->
+    </preventGenSteps>
+    <biomeWhitelist>
+      <li>Neph_OvergrownBroodmother</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <LandmarkDef>
+    <defName>Neph_NavelLandmark</defName>
+    <label>navel</label>
+    <iconTexturePath>World/Landmarks/Hollow</iconTexturePath>
+    <atlasSize>(2, 2)</atlasSize>
+    <commonality>2</commonality>
+    <nameMaker>Neph_NamerLandmark_Navel</nameMaker>
+    <category>mountain</category>
+    <mutatorChances>
+      <Neph_Navel Required="True"/>
+      <Neph_MilkPools>1</Neph_MilkPools>
+      <FoggyMutator>0.2</FoggyMutator>
+    </mutatorChances>
+  </LandmarkDef>
+
+  <RulePackDef>
+    <defName>Neph_NamerLandmark_WeepingFold</defName>
+    <include>
+      <li>WorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->weeping fold</li>
+        <li>terrain_word->milkwell</li>
+        <li>terrain_word->milk lake</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Neph_NamerLandmark_Navel</defName>
+    <include>
+      <li>WorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->navel</li>
+        <li>terrain_word->hollow</li>
+        <li>terrain_word->dimple</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

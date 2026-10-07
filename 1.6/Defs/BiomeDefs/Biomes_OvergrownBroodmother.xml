@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- The land IS the broodmother: a Nephila grand matron who never stopped growing,
+	     long since overgrown into a landscape. Her rivers and pools run with milk, and her
+	     body set hard is the only stone there is (condensed goo). -->
+	<BiomeDef>
+		<defName>Neph_OvergrownBroodmother</defName>
+		<label>overgrown broodmother</label>
+		<description>Somewhere beneath this soft white country lies a Nephila broodmother - or rather, this country is her. She grew until she could no longer move, and kept growing, until moss and Nephila flora took root on her and the land forgot where she ends. Her milk wells up into warm, iridescent streams and pools; her body, pressed hard under its own weight, is the only stone to be found.\n\nNephila flourish here, and mechanite infections are rife.\n\n&lt;color=#33d733&gt;NOTES: Rivers and lakes are milk. The only rock is condensed goo - soft, weak and poor building material.&lt;/color&gt;</description>
+		<workerClass>Nephila.BiomeWorker_OvergrownBroodmother</workerClass>
+		<animalDensity>3.2</animalDensity>
+		<plantDensity>0.75</plantDensity>
+		<settlementSelectionWeight>0.4</settlementSelectionWeight>
+		<movementDifficulty>1.5</movementDifficulty>
+		<texture>Biomes/Neph_OvergrownBroodmother</texture>
+		<forageability>0.8</forageability>
+		<foragedFood>SucculentUrchinTendrils</foragedFood>
+		<wildPlantRegrowDays>18</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Jungle</li>
+			<li>Ambient_DayInsects_Jungle</li>
+		</soundsAmbient>
+
+		<!-- milk where there would be water; her body for stone -->
+		<waterShallowTerrain>Neph_MilkShallow</waterShallowTerrain>
+		<waterDeepTerrain>Neph_MilkDeep</waterDeepTerrain>
+		<waterMovingShallowTerrain>Neph_MilkMovingShallow</waterMovingShallowTerrain>
+		<waterMovingChestDeepTerrain>Neph_MilkMovingChestDeep</waterMovingChestDeepTerrain>
+		<forceRockTypes>
+			<li>Neph_CondensedGoo</li>
+		</forceRockTypes>
+		<extraRockTypes>
+			<li>Neph_CondensedGoo</li>
+		</extraRockTypes>
+
+		<diseaseMtbDays>30</diseaseMtbDays>
+		<diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>8</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>70</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>70</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+			<li>
+				<diseaseInc>Nephila_LustNanites</diseaseInc>
+				<commonality>130</commonality>
+			</li>
+			<li>
+				<diseaseInc>NephilaInitialTransformationFromAnimal</diseaseInc>
+				<commonality>120</commonality>
+			</li>
+			<li>
+				<diseaseInc>NephilaSnekBombTransformation</diseaseInc>
+				<commonality>12</commonality>
+			</li>
+		</diseases>
+
+		<terrainsByFertility>
+			<li>
+				<terrain>Neph_NephilaSoil</terrain>
+				<min>-999</min>
+				<max>0.80</max>
+			</li>
+			<li>
+				<terrain>Neph_NephilaSoilRich</terrain>
+				<min>0.80</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.017</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>Neph_NephilaMossyTerrain</terrain>
+						<min>0.55</min>
+						<max>0.72</max>
+					</li>
+					<li>
+						<terrain>Neph_MilkShallow</terrain>
+						<min>0.72</min>
+						<max>0.90</max>
+					</li>
+					<li>
+						<terrain>Neph_MilkDeep</terrain>
+						<min>0.90</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+
+		<baseWeatherCommonalities>
+			<Clear>2</Clear>
+			<Fog>14</Fog>
+			<Rain>3</Rain>
+			<FoggyRain>3</FoggyRain>
+			<RainyThunderstorm>1</RainyThunderstorm>
+		</baseWeatherCommonalities>
+
+		<wildPlants>
+			<Plant_NephilaGrass>5.0</Plant_NephilaGrass>
+			<Plant_NephiliticTallGrass>3.0</Plant_NephiliticTallGrass>
+			<Plant_NephilaUrchinPlant>0.3</Plant_NephilaUrchinPlant>
+			<Plant_NephilaSerpentsGrass>1.0</Plant_NephilaSerpentsGrass>
+			<Plant_NephilimLadyTree>0.15</Plant_NephilimLadyTree>
+			<Plant_NephilaPaperbark>0.9</Plant_NephilaPaperbark>
+			<Plant_Ambrosia>0.04</Plant_Ambrosia>
+		</wildPlants>
+		<!-- her children only -->
+		<wildAnimals>
+			<NephilaCherubim>3.0</NephilaCherubim>
+			<NephilaSeraphim>1.6</NephilaSeraphim>
+			<TickleMeSlugmo>3.0</TickleMeSlugmo>
+		</wildAnimals>
+	</BiomeDef>
+
+</Defs>

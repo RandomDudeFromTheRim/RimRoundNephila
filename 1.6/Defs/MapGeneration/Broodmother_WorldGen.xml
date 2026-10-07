@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- after rivers, before landmarks, mutators and factions: her tiles go mountainous and
+       get milk rivers (Nephila.WorldGenStep_BroodmotherShape). Added to the surface layer's
+       steps by Patches/Broodmother_WorldGenStep.xml. -->
+  <WorldGenStepDef>
+    <defName>Neph_BroodmotherShape</defName>
+    <order>250</order>
+    <worldGenStep Class="Nephila.WorldGenStep_BroodmotherShape" />
+  </WorldGenStepDef>
+
+  <!-- every non-landmark tile of her: cramped creases between hard folds of goo -->
+  <TileMutatorDef>
+    <defName>Neph_BroodmotherFolds</defName>
+    <label>her folds</label>
+    <description>The ground here is her body, packed hard into folds of condensed goo. There is barely room to move: only the narrow creases between the folds, the odd soft chamber, and a hollow to settle in.</description>
+    <workerClass>Nephila.TileMutatorWorker_BroodmotherFolds</workerClass>
+    <genOrder>-150</genOrder> <!-- after the mountain side, before caves, lakes and rivers cut through her -->
+    <preventGenSteps>
+      <li>CaveHives</li> <!-- her caves hold her children, not insects -->
+    </preventGenSteps>
+    <chanceOnNonLandmarkTile>1</chanceOnNonLandmarkTile>
+    <biomeWhitelist>
+      <li>Neph_OvergrownBroodmother</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+</Defs>

@@ -5,5 +5,6 @@
 		<li>1.6</li>
 		<li IfModActive="lovelydovey.sex.withrosaline">1.6/Mods/GenderWorks</li>
 		<li IfModActive="vanillaexpanded.vpsycastse">1.6/Mods/VPE</li>
+		<li IfModActive="Ludeon.RimWorld.Odyssey">1.6/Mods/Odyssey</li>
 	</v1.6>
 </loadFolders>

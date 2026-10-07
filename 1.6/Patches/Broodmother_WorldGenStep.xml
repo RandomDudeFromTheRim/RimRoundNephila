@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- the surface layer only runs the world-gen steps it lists -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PlanetLayerDef[defName="Surface"]/worldGenSteps</xpath>
+    <value>
+      <li>Neph_BroodmotherShape</li>
+    </value>
+  </Operation>
+</Patch>

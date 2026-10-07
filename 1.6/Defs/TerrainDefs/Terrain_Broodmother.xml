@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Milk, for the overgrown broodmother biome: its rivers and pools run with Nephila milk
+     (Biomes_OvergrownBroodmother.xml sets these as its water terrains). Coloured by our own
+     depth ramps; Source/TextureGen/broodmother_tex.py makes them. -->
+<Defs>
+
+  <TerrainDef ParentName="WaterShallowBase">
+    <defName>Neph_MilkMovingShallow</defName>
+    <label>shallow milk stream</label>
+    <description>A slow, warm stream of iridescent Nephila milk, welling up from the broodmother's body. Ankle-deep, sticky and sweet.</description>
+    <texturePath>Terrain/Neph_MilkRamp</texturePath>
+    <pollutedTexturePath>Terrain/Neph_MilkRamp</pollutedTexturePath>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <traversedThought>Neph_BathedInMilk</traversedThought>
+    <renderPrecedence>398</renderPrecedence>
+    <pathCost>36</pathCost>
+    <canFreeze>false</canFreeze>
+    <affordances>
+      <li>MovingFluid</li>
+    </affordances>
+    <tags>
+      <li>River</li>
+      <li>Neph_Milk</li>
+    </tags>
+    <waterDepthShaderParameters>
+      <_UseWaterOffset>1</_UseWaterOffset>
+    </waterDepthShaderParameters>
+  </TerrainDef>
+
+  <TerrainDef ParentName="WaterChestDeepBase">
+    <defName>Neph_MilkMovingChestDeep</defName>
+    <label>chest-deep milk river</label>
+    <description>A river of iridescent Nephila milk, chest-deep, thick and warm. Wading through it is slow going.</description>
+    <texturePath>Terrain/Neph_MilkDeepRamp</texturePath>
+    <pollutedTexturePath>Terrain/Neph_MilkDeepRamp</pollutedTexturePath>
+    <traversedThought>Neph_BathedInMilk</traversedThought>
+    <renderPrecedence>399</renderPrecedence>
+    <pathCost>50</pathCost>
+    <canFreeze>false</canFreeze>
+    <affordances>
+      <li>MovingFluid</li>
+    </affordances>
+    <tags>
+      <li>River</li>
+      <li>Neph_Milk</li>
+    </tags>
+    <waterDepthShaderParameters>
+      <_UseWaterOffset>1</_UseWaterOffset>
+    </waterDepthShaderParameters>
+  </TerrainDef>
+
+  <TerrainDef ParentName="WaterShallowBase">
+    <defName>Neph_MilkShallow</defName>
+    <label>shallow milk</label>
+    <description>A still pool of iridescent Nephila milk, ankle-deep, sticky and sweet.</description>
+    <texturePath>Terrain/Neph_MilkRamp</texturePath>
+    <pollutedTexturePath>Terrain/Neph_MilkRamp</pollutedTexturePath>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <traversedThought>Neph_BathedInMilk</traversedThought>
+    <renderPrecedence>394</renderPrecedence>
+    <pathCost>36</pathCost>
+    <canFreeze>false</canFreeze>
+    <driesTo>Neph_NephilaSoilRich</driesTo>
+    <tags>
+      <li>Neph_Milk</li>
+    </tags>
+  </TerrainDef>
+
+  <TerrainDef ParentName="WaterDeepBase">
+    <defName>Neph_MilkDeep</defName>
+    <label>deep milk</label>
+    <description>A deep pool of iridescent Nephila milk. Nothing that sinks into it comes back up.</description>
+    <texturePath>Terrain/Neph_MilkDeepRamp</texturePath>
+    <traversedThought>Neph_BathedInMilk</traversedThought>
+    <renderPrecedence>395</renderPrecedence>
+    <forcePassableByFlyingPawns>true</forcePassableByFlyingPawns>
+    <gravshipReplacementTerrain>Neph_MilkShallow</gravshipReplacementTerrain>
+    <tags>
+      <li>Neph_Milk</li>
+    </tags>
+  </TerrainDef>
+
+</Defs>

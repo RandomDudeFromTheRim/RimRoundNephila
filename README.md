@@ -58,6 +58,28 @@ cherubim and seraphim that serve them, and their fog turns the women it touches.
   loop in the fog, a pathfinding patch that only works on Nephilitic ground (and actually
   gets applied now), seeded Eden placement, keyed letters, 1.6 APIs throughout.
 
+## The overgrown broodmother
+
+A rare biome where the land *is* a Nephila broodmother who never stopped growing - never a
+pawn, the whole biome. Warm and wet, and rarer than a Nephilitic Eden.
+
+- **Cramped.** Every tile of her is mountainous, and her folds of **condensed goo** fill
+  most of the map, leaving narrow creases between them, the odd soft chamber and a hollow
+  in the middle to settle in. Condensed goo is the only stone (soft, weak, poor building
+  material); mined out, it stays mined. No insect hives in her caves.
+- **Milk.** Her rivers and pools run with iridescent milk, and every tile of her gets a
+  milk river on the world map. With Odyssey, milk also wells up in her caves, and she has
+  two landmarks: a **weeping fold** (a great milk lake) and the **navel** (the one open
+  hollow on her).
+- **Drinking and bathing.** Pawns drink straight from a stream for recreation, getting a
+  little food and RimRound fullness; wading or swimming in milk (Odyssey's swimming works
+  in it) is a pleasant warm bath.
+- **Milk siphon.** Once the colony has found her milk, *milk siphoning* research appears
+  (it's "???" until then). The siphon stands in shallow milk and pumps it into RimRound's
+  feed lines - more from a stream than a still pool. It never bottles anything.
+
+Textures are procedural (`Source/TextureGen/broodmother_tex.py`).
+
 ## Building
 `Source/build.sh` builds `1.6/Assemblies/Nephila.dll` against the game's own assemblies
 (it expects RimRound, Harmony and HAR next to it in `Mods/`), and the VPE support

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The overgrown broodmother's milk: siphoning it into RimRound's feed lines, drinking it
+     straight from the stream, and bathing in it. Code: Source/Nephila/Broodmother/BroodmotherMilk.cs -->
+<Defs>
+
+  <!-- hidden ("???") until the colony has come across her milk (GameComponent_NephMilkDiscovery) -->
+  <ResearchProjectDef>
+    <defName>Neph_MilkSiphoning</defName>
+    <label>milk siphoning</label>
+    <description>The broodmother's streams and pools run with milk. A powered siphon stood in one can draw it up and pump it straight into the feed lines.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>NephilaResearch</tab>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Neph_MilkSiphon</defName>
+    <label>milk siphon</label>
+    <description>A powered siphon stood in the broodmother's milk. It draws the milk up and pumps it into a connected feed line - more from a flowing stream than from a still pool. It doesn't bottle anything: when the lines are full, it stops.\n\nMust be built in shallow milk.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/MoisturePump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(236, 222, 230)</color>
+      <shadowData>
+        <volume>(0.58, 0.35, 0.25)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.15</fillPercent>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>ShallowWater</terrainAffordanceNeeded>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>1800</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-6</Beauty>
+    </statBases>
+    <costList>
+      <Steel>70</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <researchPrerequisites>
+      <li>Neph_MilkSiphoning</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>Nephila.PlaceWorker_NephOnMilk</li>
+      <li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>100</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="RimRound.FeedingTube.Comps.FoodNetTrader_CompProperties">
+        <compClass>RimRound.FeedingTube.Comps.FoodNetTrader_ThingComp</compClass>
+      </li>
+      <li Class="Nephila.CompProperties_NephMilkSiphon">
+        <nutritionPerDay>3</nutritionPerDay>
+        <density>1.3</density>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- drinking straight from the stream: recreation, and a sliver of food and fullness -->
+  <JobDef>
+    <defName>Neph_DrinkMilk</defName>
+    <driverClass>Nephila.JobDriver_NephDrinkMilk</driverClass>
+    <reportString>drinking milk from the stream.</reportString>
+    <joyDuration>1500</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joyKind>Gluttonous</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JoyGiverDef>
+    <defName>Neph_DrinkMilk</defName>
+    <giverClass>Nephila.JoyGiver_NephDrinkMilk</giverClass>
+    <baseChance>1.5</baseChance>
+    <jobDef>Neph_DrinkMilk</jobDef>
+    <joyKind>Gluttonous</joyKind>
+  </JoyGiverDef>
+
+  <!-- wading or swimming in it (Odyssey's swimming works in milk too): warm, sweet, sticky -->
+  <ThoughtDef>
+    <defName>Neph_BathedInMilk</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.4</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>bathed in warm milk</label>
+        <description>Warm, sweet and a little sticky. Like being held.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
