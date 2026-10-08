@@ -77,8 +77,26 @@ pawn, the whole biome. Warm and wet, and rarer than a Nephilitic Eden.
 - **Milk siphon.** Once the colony has found her milk, *milk siphoning* research appears
   (it's "???" until then). The siphon stands in shallow milk and pumps it into RimRound's
   feed lines - more from a stream than a still pool. It never bottles anything.
+- **Her heart (a sidequest).** Live on her for 20-35 days and her **navel** opens: a way
+  down into a pocket map deep inside her. It is solid goo under an overhead mountain, with
+  one long passage winding past three chambers to her heart at the centre. The passage is
+  clenched shut between chambers by **heart-goo** (very slow to dig), the heart's chamber
+  sits inside a shell of it, and a moat of deep milk rings the heart with one shallow
+  causeway across. Her **brood** - a hidden, hostile faction of queen's guards, half again
+  the colony's usual threat - hold every chamber. Once they're dealt with, a colonist can
+  commune with her heart and choose:
+  - **tear it out** - an implant that knits wounds (even old scars) and fights sickness.
+    It's made of her nanites: anyone who isn't already a Nephila swells with goo and
+    ravenous hunger for about four days, then becomes a Nephila handmaiden (a man becomes
+    a cherub). A mechanite inhibitor stalls it at the last stage. She has many hearts, but
+    after this she never opens up to you again; or
+  - **let her embrace them** - a lasting mood and psychic boost, and one of her daughters
+    (a Nephila matron) comes back up with them and joins. Stay on her, and some weeks later
+    her navel may open again onto another heart.
 
-Textures are procedural (`Source/TextureGen/broodmother_tex.py`).
+  Either way her navel closes a day later, crushing anyone still inside.
+
+Textures are procedural (`Source/TextureGen/broodmother_tex.py`, `core_tex.py`).
 
 ## Building
 `Source/build.sh` builds `1.6/Assemblies/Nephila.dll` against the game's own assemblies

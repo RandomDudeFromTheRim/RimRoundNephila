@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The broodmother's core: a sidequest. Linger on her long enough and her navel opens onto a
+     pocket map deep inside her, where her brood - hostile queen's guards - keep her heart.
+     Code: Source/Nephila/Broodmother/BroodmotherCore.cs, art: Source/TextureGen/core_tex.py -->
+<Defs>
+
+  <!-- ================================================================ the trigger -->
+
+  <!-- fired by GameComponent_BroodmotherCore once a colony has lived on her long enough;
+       never picked by the storyteller (baseChance 0), but the dev menu can fire it -->
+  <IncidentDef>
+    <defName>Neph_BroodmotherNavelOpens</defName>
+    <label>the broodmother's navel opens</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Nephila.IncidentWorker_BroodmotherNavel</workerClass>
+    <baseChance>0</baseChance>
+    <letterLabel>Her navel opens</letterLabel>
+    <letterText>You have lived on the broodmother long enough for her to notice you.\n\nThe goo here has shuddered, softened and drawn back into a wet, puckered opening. It leads down, deep into her body, to wherever she keeps her heart.\n\nHer brood will be waiting there: queen's guards who will not let anyone near her. The way to the heart is long, cramped and sealed shut in places by goo far tougher than the rest of her.</letterText>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Neph_BroodmotherNavel</defName>
+    <label>broodmother's navel</label>
+    <description>A wet, puckered opening in the broodmother's body. It leads down into her, to the chambers where her brood keep her heart.\n\nIt won't stay open forever: once her heart has been dealt with, it will close again - with anyone still inside.</description>
+    <thingClass>Nephila.BroodmotherNavel</thingClass>
+    <size>(3,3)</size>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Buildings/Misc/Neph_BroodmotherNavel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.6,3.6)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Impassable</passability>
+    <holdsRoof>true</holdsRoof>
+    <destroyable>false</destroyable>
+    <building>
+      <isEdifice>true</isEdifice>
+      <deconstructible>false</deconstructible>
+      <isTargetable>false</isTargetable>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <expandHomeArea>false</expandHomeArea>
+    </building>
+    <portal>
+      <pocketMapGenerator>Neph_BroodmotherDepths</pocketMapGenerator>
+      <exitDef>CaveExit</exitDef>
+      <pocketMapSize>100</pocketMapSize>
+      <enteredLetterLabel>Inside the broodmother</enteredLetterLabel>
+      <enteredLetterText>{PAWN_nameDef} has climbed down into the broodmother. It is dark, warm and close in here, and the walls give slightly to the touch.\n\nSomewhere at the end of these passages lies her heart. Her brood guard the way, and parts of it are sealed shut by tough, rubbery heart-goo that will take a long time to dig through.</enteredLetterText>
+      <enteredLetterDef>ThreatBig</enteredLetterDef>
+    </portal>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_ContentsMapPortal</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <!-- ================================================================ inside her -->
+
+  <BiomeDef ParentName="Biome_Underground">
+    <defName>Neph_BroodmotherDepths</defName>
+    <label>inside the broodmother</label>
+    <description>The inside of the broodmother: close, warm, dark passages through her body, running with milk.</description>
+    <animalDensity>0</animalDensity>
+    <plantDensity>0</plantDensity>
+    <diseaseMtbDays>200</diseaseMtbDays>
+  </BiomeDef>
+
+  <MapGeneratorDef>
+    <defName>Neph_BroodmotherDepths</defName>
+    <label>inside the broodmother</label>
+    <isUnderground>true</isUnderground>
+    <ignoreAreaRevealedLetter>true</ignoreAreaRevealedLetter>
+    <disableCallAid>true</disableCallAid>
+    <pocketMapProperties>
+      <biome>Neph_BroodmotherDepths</biome>
+      <temperature>30</temperature>
+    </pocketMapProperties>
+    <genSteps>
+      <li>Neph_BroodmotherDepths</li>
+      <li>Fog</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <GenStepDef>
+    <defName>Neph_BroodmotherDepths</defName>
+    <order>100</order>
+    <genStep Class="Nephila.GenStep_BroodmotherDepths" />
+  </GenStepDef>
+
+  <!-- the sphincters that seal her passages, and the shell around her heart -->
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Neph_HeartGoo</defName>
+    <label>heart-goo</label>
+    <description>Goo from deep inside the broodmother, close to her heart: dense, rubbery and ridged with muscle. It clenches shut around her passages, and it takes a very long time to dig through.</description>
+    <graphicData>
+      <color>(236,196,210)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing />
+      <smoothedThing />
+      <!-- only ever placed inside her (GenStep_BroodmotherDepths): no biome lists it, so it
+           never turns up as a map's stone -->
+      <biomeSpecific>true</biomeSpecific>
+    </building>
+  </ThingDef>
+
+  <!-- ================================================================ her heart -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Neph_BroodmotherHeart</defName>
+    <label>broodmother's heart</label>
+    <description>The broodmother's heart: a great iridescent gem the size of a person, nested in her flesh and beating slow and heavy. Milk-white veins run out from it in every direction.\n\nSomeone could commune with it - once her brood are no longer guarding it.</description>
+    <thingClass>Building</thingClass>
+    <size>(3,3)</size>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Buildings/Misc/Neph_BroodmotherHeart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.4,3.4)</drawSize>
+      <shadowData>
+        <volume>(2.4, 0.6, 2.4)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.8</fillPercent>
+    <holdsRoof>true</holdsRoof>
+    <hasInteractionCell>false</hasInteractionCell>
+    <building>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <isInert>true</isInert>
+      <expandHomeArea>false</expandHomeArea>
+    </building>
+    <statBases>
+      <Beauty>30</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(255,190,225,0)</glowColor>
+      </li>
+      <li Class="Nephila.CompProperties_BroodmotherHeart" />
+    </comps>
+  </ThingDef>
+
+  <JobDef>
+    <defName>Neph_CommuneWithHeart</defName>
+    <driverClass>Nephila.JobDriver_CommuneWithHeart</driverClass>
+    <reportString>communing with TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <!-- ================================================================ rewards -->
+
+  <!-- choice one: tear her heart out -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Neph_BroodmotherHeartItem</defName>
+    <label>broodmother's heart</label>
+    <description>The broodmother's heart, torn out of her: an iridescent gem heart that still beats, slow and heavy, in the hand.\n\nPressed to someone's chest, it sinks in and settles alongside their own heart, and beats with it from then on - knitting their wounds, even old ones, and steeling them against sickness.\n\nIt is made of Nephila nanites, and it does not stop at beating. Anyone who isn't already a Nephila will be rebuilt as one within days, swelling with goo as it happens. A Nephila mechanite inhibitor can hold it off.</description>
+    <descriptionHyperlinks>
+      <HediffDef>Neph_BroodmotherHeartImplant</HediffDef>
+      <HediffDef>Neph_HeartTakeover</HediffDef>
+    </descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Neph_BroodmotherHeart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <techLevel>Archotech</techLevel>
+    <statBases>
+      <MarketValue>6000</MarketValue>
+      <Mass>2</Mass>
+      <Beauty>20</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>NephilaHeartCores</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Press the broodmother's heart to one's chest</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>Neph_BroodmotherHeartImplant</hediffDef>
+        <bodyPart>Heart</bodyPart>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>Neph_BroodmotherHeartImplant</defName>
+    <label>broodmother's heart</label>
+    <description>The broodmother's heart beats alongside this person's own. It knits their wounds - even old scars and lost function - and steels them against sickness.\n\nAnyone who isn't already a Nephila, it rebuilds into one (see "her heartbeat").</description>
+    <hediffClass>Nephila.Hediff_BroodmotherHeart</hediffClass>
+    <defaultLabelColor>(0.95, 0.75, 0.88)</defaultLabelColor>
+    <isBad>false</isBad>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <statOffsets>
+          <ImmunityGainSpeed>0.4</ImmunityGainSpeed>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_HealPermanentWounds" />
+    </comps>
+  </HediffDef>
+
+  <!-- what the heart does to anyone who isn't already hers: four days of swelling and ravenous
+       hunger, then a Nephila handmaiden (or, for a man, a cherub). Weight piles on faster with
+       every stage (Hediff_HeartTakeover.KilosPerDay). A mechanite inhibitor stalls it at the end. -->
+  <HediffDef>
+    <defName>Neph_HeartTakeover</defName>
+    <label>her heartbeat</label>
+    <description>The broodmother's heart is rewriting this person's body to match it. Their own heartbeat is falling into step with hers; they are hungry all the time, and swelling with soft goo faster than they can eat.\n\nWithin days they will become a Nephila: a handmaiden if she's a woman, and - since the heart has no idea what else to do with a man - a cherub if he isn't. A Nephila mechanite inhibitor will stop it at the very end.</description>
+    <hediffClass>Nephila.Hediff_HeartTakeover</hediffClass>
+    <defaultLabelColor>(0.95, 0.6, 0.8)</defaultLabelColor>
+    <isBad>true</isBad>
+    <makesSickThought>false</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>0.001</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>100</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>25</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>two heartbeats</label>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <restFallFactorOffset>-0.2</restFallFactorOffset>
+      </li>
+      <li>
+        <minSeverity>25</minSeverity>
+        <label>falling into step</label>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <painOffset>0.1</painOffset>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>-0.05</offset></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>50</minSeverity>
+        <label>softening</label>
+        <hungerRateFactorOffset>1.75</hungerRateFactorOffset>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>-0.1</offset></li>
+          <li><capacity>Moving</capacity><offset>-0.1</offset></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>75</minSeverity>
+        <label>running to goo</label>
+        <hungerRateFactorOffset>2.5</hungerRateFactorOffset>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>-0.15</offset></li>
+          <li><capacity>Moving</capacity><offset>-0.2</offset></li>
+          <li><capacity>Manipulation</capacity><offset>-0.15</offset></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>99</minSeverity>
+        <label>hers</label>
+        <hungerRateFactorOffset>3.5</hungerRateFactorOffset>
+        <painOffset>0.4</painOffset>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>-0.2</offset></li>
+          <li><capacity>Moving</capacity><offset>-0.3</offset></li>
+          <li><capacity>Manipulation</capacity><offset>-0.2</offset></li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- choice two: let her embrace the one who communed - and one of her daughters comes up with them -->
+  <HediffDef>
+    <defName>Neph_BroodmotherEmbrace</defName>
+    <label>broodmother's embrace</label>
+    <description>This person let the broodmother embrace them, deep inside her. They still feel held - warm, safe, and never quite alone.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.95, 0.75, 0.88)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.3</PsychicSensitivity>
+          <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+          <SocialImpact>0.15</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>Neph_HeldByHer</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Neph_BroodmotherEmbrace</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>held by her</label>
+        <description>The broodmother embraced me. I can still feel it.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- ================================================================ her brood -->
+
+  <FactionDef ParentName="FactionBase">
+    <defName>Neph_Brood</defName>
+    <label>the broodmother's brood</label>
+    <description>The queen's guards who live inside the overgrown broodmother and keep her heart. They answer to no garden and no empire: only to her.</description>
+    <fixedName>The broodmother's brood</fixedName>
+    <pawnSingular>brood guard</pawnSingular>
+    <pawnsPlural>brood guards</pawnsPlural>
+    <categoryTag>Neph_Brood</categoryTag>
+    <hidden>true</hidden>
+    <permanentEnemy>true</permanentEnemy>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <canGenerateQuestSites>false</canGenerateQuestSites>
+    <raidsForbidden>true</raidsForbidden>
+    <autoFlee>false</autoFlee>
+    <rescueesCanJoin>false</rescueesCanJoin>
+    <techLevel>Spacer</techLevel>
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <factionIconPath>Things/World/NephilaBaseIcon</factionIconPath>
+    <colorSpectrum>
+      <li>(0.93, 0.76, 0.84)</li>
+    </colorSpectrum>
+    <leaderTitle>first daughter</leaderTitle>
+    <basicMemberKind>Neph_BroodGuard</basicMemberKind>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>NephilaQueensGuard_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400, 140)</li>
+        <li>(1000, 200)</li>
+        <li>(2000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Neph_BroodGuard>10</Neph_BroodGuard>
+          <Neph_BroodGuardEnticer>4</Neph_BroodGuardEnticer>
+          <Neph_BroodGuardSniper>3</Neph_BroodGuardSniper>
+          <Neph_BroodGuardHeavy>2</Neph_BroodGuardHeavy>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <!-- queen's guards without the garden's royal titles, kitted out better than the garden's own -->
+  <PawnKindDef ParentName="NephilaQueensGuardNoTitle" Name="Neph_BroodGuardBase" Abstract="True">
+    <defaultFactionType>Neph_Brood</defaultFactionType>
+    <invNutrition>6</invNutrition>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <apparelTags>
+      <li>NephilaQueensGuard</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>800</min>
+      <max>1400</max>
+    </apparelMoney>
+    <weaponMoney>500~1200</weaponMoney>
+    <techHediffsChance>0.4</techHediffsChance>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Neph_BroodGuardBase">
+    <defName>Neph_BroodGuard</defName>
+    <label>brood guard</label>
+    <combatPower>90</combatPower>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+      <li>Gun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Neph_BroodGuardBase">
+    <defName>Neph_BroodGuardEnticer</defName>
+    <label>brood enticer</label>
+    <combatPower>140</combatPower>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <apparelTags>
+      <li>NephilaQueensGuardQueensGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Neph_BroodGuardBase">
+    <defName>Neph_BroodGuardSniper</defName>
+    <label>brood sniper</label>
+    <combatPower>130</combatPower>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <weaponMoney>600~1200</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Neph_BroodGuardBase">
+    <defName>Neph_BroodGuardHeavy</defName>
+    <label>brood heavy</label>
+    <combatPower>200</combatPower>
+    <weaponTags>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <weaponMoney>1200~2200</weaponMoney>
+  </PawnKindDef>
+
+</Defs>

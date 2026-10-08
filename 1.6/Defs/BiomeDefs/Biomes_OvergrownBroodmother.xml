@@ -100,6 +100,11 @@
 				</thresholds>
 			</li>
 		</terrainPatchMakers>
+		<!-- no vanilla sand or gravel on her: beaches, riverbanks and the rubble round her folds are her own soil -->
+		<coastalBeachTerrain>Neph_NephilaSoilRich</coastalBeachTerrain>
+		<lakeBeachTerrain>Neph_NephilaSoilRich</lakeBeachTerrain>
+		<riverbankTerrain>Neph_NephilaSoilRich</riverbankTerrain>
+		<gravelTerrain>Neph_NephilaMossyTerrain</gravelTerrain>
 
 		<baseWeatherCommonalities>
 			<Clear>2</Clear>
