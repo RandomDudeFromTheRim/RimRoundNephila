@@ -1,4 +1,4 @@
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace Nephila
@@ -9,6 +9,12 @@ namespace Nephila
         public HediffDef breasts;
         /// <summary>Grown ones lactate all the time.</summary>
         public bool lactates = true;
+        /// <summary>
+        /// Milk her nanites make a day on top of ordinary lactation, sized to the caste's breasts.
+        /// It's her gel, not digested food, so it costs her nothing - and her breasts hold a day
+        /// of it on top of what they'd hold anyway (StatPart_NephilaMilkCapacity).
+        /// </summary>
+        public float naniteMilkPerDay;
 
         public CompProperties_NephilaBody() => compClass = typeof(CompNephilaBody);
     }
@@ -53,14 +59,37 @@ namespace Nephila
                     p.health.AddHediff(Props.breasts, p.RaceProps.body.corePart);
             }
             if (Props.lactates && p.gender == Gender.Female)
+            {
                 NephilaLactationUtility.StartLactating(p);
+                if (Props.naniteMilkPerDay > 0f && p.needs?.food?.Starving != true)
+                    RimRound.Utilities.RRLactationUtility.InduceAndFill(p, Props.naniteMilkPerDay * CheckInterval / GenDate.TicksPerDay);
+            }
         }
 
+
+        public float NaniteMilkPerDay => Props.lactates && Pawn?.gender == Gender.Female ? Props.naniteMilkPerDay : 0f;
 
         public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref organsSet, "organsSet");
+        }
+    }
+
+    /// <summary>A caste's breasts hold a day of her nanite milk on top of the rest (CompProperties_NephilaBody.naniteMilkPerDay).</summary>
+    public class StatPart_NephilaMilkCapacity : StatPart
+    {
+        public override void TransformValue(StatRequest req, ref float val)
+        {
+            if (req.Thing is Pawn p && p.TryGetComp<CompNephilaBody>() is CompNephilaBody body)
+                val += body.NaniteMilkPerDay;
+        }
+
+        public override string ExplanationPart(StatRequest req)
+        {
+            if (req.Thing is Pawn p && p.TryGetComp<CompNephilaBody>() is CompNephilaBody body && body.NaniteMilkPerDay > 0f)
+                return $"Nephila nanite milk: +{body.NaniteMilkPerDay:0.##}";
+            return null;
         }
     }
 }

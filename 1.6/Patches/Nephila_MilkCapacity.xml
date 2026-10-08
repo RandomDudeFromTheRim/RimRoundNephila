@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Lactation Expansion: a Nephila caste's breasts hold a day of her nanite milk on top of the
+     rest (Nephila.StatPart_NephilaMilkCapacity) -->
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/StatDef[defName="SEX_LactationCapacity"]/parts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/StatDef[defName="SEX_LactationCapacity"]/parts</xpath>
+			<value>
+				<li Class="Nephila.StatPart_NephilaMilkCapacity"/>
+			</value>
+		</match>
+	</Operation>
+</Patch>

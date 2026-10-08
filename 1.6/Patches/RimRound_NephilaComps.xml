@@ -165,12 +165,17 @@
 			</value>
 		</nomatch>
 	</Operation>
-	<!-- Nephila bodies: breasts and constant lactation (CompNephilaBody) -->
+	<!-- Nephila bodies: breasts and constant lactation (CompNephilaBody), plus the milk their
+	     nanites make a day for free, sized by the caste's breasts as drawn: a maiden's are
+	     nearly as big as the rest of her, a matron's bigger again, the queen's guard has rows
+	     of them, and the grand matron's (small beside her womb) are already scaled by her body
+	     size of 6 on the ordinary lactation. -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Nephila"]/comps</xpath>
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>4</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -179,6 +184,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>4</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -187,6 +193,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>6</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -195,6 +202,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>6</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -203,6 +211,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>10</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -211,6 +220,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>10</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -219,6 +229,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaBreasts</breasts>
+				<naniteMilkPerDay>12</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
@@ -227,6 +238,7 @@
 		<value>
 			<li Class="Nephila.CompProperties_NephilaBody">
 				<breasts>NephilaSlimeBreasts</breasts>
+				<naniteMilkPerDay>10</naniteMilkPerDay>
 			</li>
 		</value>
 	</Operation>
