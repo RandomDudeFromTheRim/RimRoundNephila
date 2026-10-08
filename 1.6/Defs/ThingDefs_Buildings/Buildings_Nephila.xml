@@ -513,7 +513,7 @@
         <fuelConsumptionPerTickInRain>0.0</fuelConsumptionPerTickInRain>
         <fuelFilter>
           <thingDefs>
-            <li>HumanMilkNephila</li>
+            <li MayRequire="euterpe.milkytitfuck">SEX_BreastMilk</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>
@@ -663,7 +663,7 @@
         <fuelConsumptionPerTickInRain>0.0</fuelConsumptionPerTickInRain>
         <fuelFilter>
           <thingDefs>
-            <li>HumanMilkNephila</li>
+            <li MayRequire="euterpe.milkytitfuck">SEX_BreastMilk</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>
