@@ -26,13 +26,18 @@ namespace Nephila
             bool wasSelected = Find.Selector.IsSelected(old);
             bool humanlike = kind.RaceProps.Humanlike;
 
-            Pawn fresh = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
+            var request = new PawnGenerationRequest(
                 kind, faction, PawnGenerationContext.NonPlayer, forceGenerateNewPawn: true,
                 canGeneratePawnRelations: false, mustBeCapableOfViolence: false, colonistRelationChanceFactor: 0f,
                 allowGay: true, allowPregnant: false, allowFood: false, allowAddictions: false,
                 fixedBiologicalAge: old.ageTracker.AgeBiologicalYearsFloat,
                 fixedChronologicalAge: old.ageTracker.AgeChronologicalYearsFloat,
-                fixedGender: old.gender, forceNoGear: true));
+                fixedGender: old.gender, forceNoGear: true);
+            // the nanites build a plain Nephila: without this the new body would take the
+            // faction's xenotype (a modded player faction's, say Expies), body and head genes and all
+            if (humanlike && ModsConfig.BiotechActive)
+                request.ForcedXenotype = XenotypeDefOf.Baseliner;
+            Pawn fresh = PawnGenerator.GeneratePawn(request);
 
             if (humanlike)
                 CarryOverPerson(old, fresh);
