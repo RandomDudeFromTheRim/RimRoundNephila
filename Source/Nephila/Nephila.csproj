@@ -14,7 +14,12 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
     <RimWorld>..\..\..\..</RimWorld>
-    <Managed>$(RimWorld)\RimWorldWin64_Data\Managed</Managed>
+    <!-- RimWorld 1.7 (Waylith) has no Managed folder: build.sh points Managed at the 1.6 game
+         assemblies kept in RimRound's Source/Dev and Framework at the .NET Framework 4.8
+         reference assemblies. The net48 DLL runs on 1.6 and, through 1.7's Unity shim, on 1.7. -->
+    <Managed Condition="'$(Managed)' == ''">$(RimWorld)\RimWorldWin64_Data\Managed</Managed>
+    <Framework Condition="'$(Framework)' == ''">$(Managed)</Framework>
+    <FrameworkFacades Condition="'$(FrameworkFacades)' == ''">$(Framework)</FrameworkFacades>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp"><HintPath>$(Managed)\Assembly-CSharp.dll</HintPath><Private>False</Private></Reference>
@@ -22,11 +27,11 @@
     <Reference Include="UnityEngine.CoreModule"><HintPath>$(Managed)\UnityEngine.CoreModule.dll</HintPath><Private>False</Private></Reference>
     <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(Managed)\UnityEngine.IMGUIModule.dll</HintPath><Private>False</Private></Reference>
     <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(Managed)\UnityEngine.TextRenderingModule.dll</HintPath><Private>False</Private></Reference>
-    <Reference Include="mscorlib"><HintPath>$(Managed)\mscorlib.dll</HintPath><Private>False</Private></Reference>
-    <Reference Include="System"><HintPath>$(Managed)\System.dll</HintPath><Private>False</Private></Reference>
-    <Reference Include="System.Core"><HintPath>$(Managed)\System.Core.dll</HintPath><Private>False</Private></Reference>
-    <Reference Include="System.Xml"><HintPath>$(Managed)\System.Xml.dll</HintPath><Private>False</Private></Reference>
-    <Reference Include="netstandard"><HintPath>$(Managed)\netstandard.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="mscorlib"><HintPath>$(Framework)\mscorlib.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><HintPath>$(Framework)\System.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System.Core"><HintPath>$(Framework)\System.Core.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><HintPath>$(Framework)\System.Xml.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="netstandard"><HintPath>$(FrameworkFacades)\netstandard.dll</HintPath><Private>False</Private></Reference>
     <Reference Include="0Harmony"><HintPath>$(RimWorld)\Mods\RimRound\Source\Dev\harmony16\Current\Assemblies\0Harmony.dll</HintPath><Private>False</Private></Reference>
     <Reference Include="AlienRace"><HintPath>$(RimWorld)\Mods\RimRound\Source\Dev\har\1.6\Assemblies\AlienRace.dll</HintPath><Private>False</Private></Reference>
     <Reference Include="RimRound"><HintPath>$(RimWorld)\Mods\RimRound\1.6\Assemblies\RimRound.dll</HintPath><Private>False</Private></Reference>
